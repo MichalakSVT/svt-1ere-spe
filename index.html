@@ -1049,7 +1049,18 @@ var NIVEAUX = [
       ["Le schéma fonctionnel attendu", "À gauche, une personne goûteuse ; à droite, une personne non goûteuse, avec les mêmes éléments aux mêmes endroits. Dans le noyau, le gène TAS2R38 est transcrit en ARNm ; l'ARNm sort par un pore nucléaire ; dans le cytoplasme, un ribosome le traduit ; le récepteur est placé dans la membrane plasmique. Les différences sont suivies jusqu'au bout : allèle, codons, acides aminés, récepteur activé ou non, cellule activée ou non, personne goûteuse ou non. Le schéma indique les trois échelles du phénotype et la régulation, avec un titre, des flèches légendées (transcription, traduction) et une légende des couleurs."]
      ],
      lien: {texte: "Refaire la comparaison avec GenieGen2", url: "https://www.pedagogie.ac-nice.fr/svt/productions/geniegen2/"}
-    }
+    },
+    {
+     type: "Activité", titre: "Des cellules différentes, des gènes exprimés différents",
+     resume: "Toutes les cellules d'un individu possèdent le même ADN, mais elles n'ont ni la même forme ni la même fonction. À partir de l'exemple de l'insuline, une hormone fabriquée par les cellules β des îlots de Langerhans du pancréas, on a comparé la séquence du gène dans plusieurs types de cellules, la quantité de son ARNm dans différents organes, la présence de l'insuline dans le pancréas, puis l'effet du glucose sur la quantité d'ARNm. On a ensuite rédigé un bilan.",
+     correction: [
+      ["Doc. 1 : le gène dans différentes cellules", "Aucune différence : les 7 types de cellules ont exactement la même séquence du gène de l'insuline (0 différence sur 333 nucléotides). C'est attendu, car toutes les cellules proviennent de la cellule-œuf par mitoses, après une réplication conforme de l'ADN."],
+      ["Doc. 2 : où le gène est-il transcrit ?", "L'ARNm de l'insuline est très abondant dans le pancréas (plus de 12 000) et presque absent ailleurs (moins de 100). Le gène est donc transcrit presque uniquement dans le pancréas, alors qu'il est présent partout."],
+      ["Doc. 3 : quelles cellules contiennent l'insuline ?", "Seules les cellules des îlots de Langerhans (cellules β) sont colorées. Les autres cellules du pancréas, voisines et avec le même ADN, ne contiennent pas d'insuline : l'expression d'un gène dépend du type de cellule."],
+      ["Doc. 4 : le glucose et l'ARNm de l'insuline", "En 4 h, un milieu riche en glucose multiplie environ par 5 la quantité d'ARNm de l'insuline, sans changer la quantité totale d'ARNm. Un facteur externe modifie donc l'expression d'un gène précis. Prudence : ces mesures ont été faites sur des îlots de rat."],
+      ["Exemple de bilan rédigé", "Toutes les cellules d'une personne ont la même séquence du gène de l'insuline : aucune différence sur 333 nucléotides (doc. 1). Pourtant, l'ARNm de l'insuline est très abondant dans le pancréas et presque absent ailleurs (doc. 2) : le gène n'est transcrit que dans le pancréas. Dans le pancréas, seules les cellules β des îlots de Langerhans contiennent la protéine insuline (doc. 3). Un gène peut donc être présent dans une cellule sans y être exprimé : chaque type de cellule n'exprime qu'une partie de ses gènes. Enfin, beaucoup de glucose multiplie environ par 5 la quantité d'ARNm de l'insuline (doc. 4) : un facteur de l'environnement modifie l'expression d'un gène. L'expression des gènes est donc régulée, et l'étape de l'ARN permet cette régulation."]
+     ]
+    },
    ],
 
    essentiel: {
@@ -1063,7 +1074,7 @@ var NIVEAUX = [
       {table: {legende: "L'ADN et l'ARN", entetes: ["", "ADN", "ARN"],
        lignes: [["Emplacement dans la cellule", "Noyau", "Noyau et cytoplasme"], ["Nombre de brins", "Deux", "Un"], ["Sucre", "Désoxyribose", "Ribose"], ["Bases", "A, T, C, G", "A, U, C, G"]]}},
       "**Dans le noyau, la [[transcription]] d'un gène codant une protéine produit un [[pré-ARNm]], par complémentarité avec le [[brin transcrit]] de l'ADN.** Les deux brins de l'ADN s'écartent sur la longueur du gène, et un seul d'entre eux sert de modèle : en face de A, T, C et G, l'ARN reçoit respectivement U, A, G et C. L'ARN obtenu a donc la même séquence que le brin non transcrit, U remplaçant T.",
-      "**Le pré-ARNm subit une [[maturation]] qui donne l'[[ARN messager|ARN messager (ARNm)]] (ARNm). Celui-ci est exporté vers le cytoplasme par les pores nucléaires.** L'ARNm est donc un **intermédiaire** : il transporte l'information d'un gène jusqu'aux ribosomes, où elle est utilisée pour fabriquer une protéine.",
+      "**Le pré-ARNm subit une [[maturation]] qui donne l'[[ARN messager|ARN messager (ARNm)]] (ARNm). Celui-ci est exporté vers le cytoplasme par les pores nucléaires.** Au cours de la maturation, certaines portions du pré-ARNm sont éliminées. L'ARNm est donc un **intermédiaire** : il transporte l'information d'un gène jusqu'aux ribosomes, où elle est utilisée pour fabriquer une protéine.",
       {aside: "Repère historique", texte: "Dans les années 1950-1960, des chercheurs fournissent à des cellules des molécules radioactives pour suivre leur trajet. Un acide aminé radioactif se retrouve rapidement dans le cytoplasme, au niveau des ribosomes, et non dans le noyau. De l'ARN radioactif apparaît d'abord dans le noyau, puis passe dans le cytoplasme. En 1961, on montre qu'un ARN copié sur les gènes s'associe aux ribosomes pour diriger la synthèse des protéines : c'est l'ARN messager."}
      ]},
      {titre: "De l'ARN messager à la protéine : la traduction", blocs: [
@@ -1080,10 +1091,17 @@ var NIVEAUX = [
       {table: {legende: "Les trois échelles du phénotype : le goût du PTC", entetes: ["Échelle", "Allèle PAV", "Allèle AVI seulement"],
        lignes: [["Moléculaire", "Récepteur activé par le PTC", "Récepteur non activé par le PTC"], ["Cellulaire", "Cellule gustative activée", "Cellule gustative non activée"], ["Organisme", "Personne goûteuse", "Personne non goûteuse"]]}},
       "**Le phénotype dépend donc du génotype et de l'expression des gènes, régulée selon les cellules et la quantité d'ARNm produite.** Toutes les cellules possèdent le gène TAS2R38, mais seules certaines cellules gustatives le transcrivent. Chez des personnes de même génotype, la quantité d'ARNm produite varie, et la sensibilité à l'amertume aussi : l'étape de l'ARNm permet de réguler l'expression des gènes."
+     ]},
+     {titre: "L'expression des gènes est régulée", blocs: [
+      "Toutes les cellules d'un organisme sont issues de la cellule-œuf par mitoses : **elles possèdent le même patrimoine génétique**. Pourtant, un neurone, une cellule du foie ou une cellule du pancréas n'ont ni la même forme ni la même fonction. Un gène est exprimé lorsqu'il est transcrit en ARN puis, s'il s'agit d'un ARNm, traduit en protéine : c'est l'**[[expression d'un gène]]**.",
+      "**Des cellules possédant les mêmes gènes peuvent en exprimer des ensembles différents. Elles produisent ainsi des ARN et des protéines différents, ce qui contribue à leur spécialisation.** Ainsi, le gène de l'insuline, une hormone qui fait baisser la quantité de glucose dans le sang, est présent dans toutes les cellules. Mais il n'est transcrit que dans les cellules β des îlots de Langerhans du pancréas : elles seules contiennent l'ARNm de l'insuline et fabriquent cette protéine.",
+      {table: {legende: "Un même gène, une expression différente", entetes: ["", "Cellule β du pancréas", "Autre cellule (foie, neurone…)"],
+       lignes: [["Gène de l'insuline", "Présent", "Présent, avec la même séquence"], ["Transcription du gène", "Oui : ARNm de l'insuline", "Non : pas d'ARNm de l'insuline"], ["Protéine", "Insuline fabriquée", "Pas d'insuline"]]}},
+      "**L'expression des gènes est contrôlée par des facteurs internes à l'organisme, notamment au cours du développement, et par des facteurs externes, liés aux conditions de l'environnement. Elle peut donc varier au cours du temps.** C'est la **[[régulation de l'expression des gènes]]**. Par exemple, une forte concentration de glucose augmente la quantité d'ARNm de l'insuline dans les cellules β. L'étape intermédiaire de l'ARN permet ces régulations : à partir d'un même gène, une cellule peut produire beaucoup, peu ou pas d'ARNm. Le phénotype d'une cellule dépend donc à la fois de son génotype et de l'expression de ses gènes."
      ]}
     ],
     recap: [
-     {titre: "Bilan du cours", texte: "Chez les eucaryotes, l'ADN des chromosomes se trouve dans le noyau, tandis que les protéines sont fabriquées dans le cytoplasme, au niveau des ribosomes."},
+     {titre: "Bilan 1", texte: "Chez les eucaryotes, l'ADN des chromosomes se trouve dans le noyau, tandis que les protéines sont fabriquées dans le cytoplasme, au niveau des ribosomes."},
      {texte: "L'ARN est formé d'un seul brin de nucléotides contenant du ribose et les bases A, U, C ou G : l'uracile (U) remplace la thymine (T)."},
      {texte: "Dans le noyau, la transcription d'un gène codant une protéine produit un pré-ARNm, par complémentarité avec le brin transcrit de l'ADN. Le pré-ARNm subit une maturation qui donne l'ARN messager (ARNm). Celui-ci est exporté vers le cytoplasme par les pores nucléaires."},
      {texte: "L'ARNm est donc un intermédiaire : il transporte l'information d'un gène jusqu'aux ribosomes, où elle est utilisée pour fabriquer une protéine."},
@@ -1092,7 +1110,9 @@ var NIVEAUX = [
      {texte: "Il ne faut pas confondre l'information (la séquence des nucléotides, propre à chaque gène) et le code (la règle de correspondance, la même pour tous les gènes). Une mutation qui modifie un codon peut modifier un acide aminé : dans l'allèle de la drépanocytose, le codon GAG (acide glutamique) devient GUG (valine)."},
      {titre: "Bilan du TP", texte: "Le phénotype est l'ensemble des caractères d'un individu. Il s'observe à trois échelles : moléculaire, cellulaire et de l'organisme."},
      {texte: "Les allèles PAV et AVI du gène TAS2R38 diffèrent par trois nucléotides, entraînant trois différences d'acides aminés dans le récepteur. Cela modifie l'activation des cellules gustatives et la perception du goût amer du PTC."},
-     {texte: "Le phénotype dépend donc du génotype et de l'expression des gènes, régulée selon les cellules et la quantité d'ARNm produite."}
+     {texte: "Le phénotype dépend donc du génotype et de l'expression des gènes, régulée selon les cellules et la quantité d'ARNm produite."},
+     {titre: "Bilan 2", texte: "Des cellules possédant les mêmes gènes peuvent en exprimer des ensembles différents. Elles produisent ainsi des ARN et des protéines différents, ce qui contribue à leur spécialisation."},
+     {texte: "L'expression des gènes est contrôlée par des facteurs internes à l'organisme, notamment au cours du développement, et par des facteurs externes, liés aux conditions de l'environnement. Elle peut donc varier au cours du temps."},
     ]
    },
 
@@ -1102,14 +1122,16 @@ var NIVEAUX = [
     ["ARN", "Acide nucléique à un seul brin, avec du ribose et les bases A, U, C et G."],
     ["Transcription", "Fabrication d'un ARN à partir du brin transcrit d'un gène, dans le noyau."],
     ["Pré-ARNm", "ARN produit par la transcription, avant sa maturation."],
-    ["Maturation", "Transformation du pré-ARNm en ARNm, dans le noyau."],
+    ["Maturation", "Transformation du pré-ARNm en ARNm dans le noyau : certaines portions sont éliminées."],
     ["ARN messager (ARNm)", "ARN qui sort du noyau et porte l'information d'un gène jusqu'aux ribosomes."],
     ["Traduction", "Fabrication d'une protéine à partir d'un ARNm, par les ribosomes du cytoplasme."],
     ["Ribosome", "Structure du cytoplasme qui lit l'ARNm et assemble les acides aminés."],
     ["Codon", "Groupe de trois nucléotides de l'ARNm, qui correspond à un acide aminé ou à un arrêt."],
     ["Code génétique", "Correspondance entre les 64 codons et les 20 acides aminés (ou un arrêt)."],
     ["Codon initiateur / codon stop", "AUG marque le début de la traduction ; UAA, UAG et UGA en marquent la fin."],
-    ["Génotype", "Allèles portés par un individu, pour un ou plusieurs gènes."]
+    ["Génotype", "Allèles portés par un individu, pour un ou plusieurs gènes."],
+    ["Expression d'un gène", "Un gène est exprimé lorsqu'il est transcrit en ARN, puis traduit en protéine."],
+    ["Régulation de l'expression des gènes", "Contrôle de l'expression des gènes selon la cellule, le développement et l'environnement."],
    ],
 
    qcm: [
@@ -1139,7 +1161,87 @@ var NIVEAUX = [
     {n: 3, q: "Ce même codon GAG devient UAG. Conséquence :", o: ["la chaîne β s'arrête à ce codon", "un Glu est remplacé par une Val", "la chaîne β reste identique", "la traduction saute ce codon"], r: 0, e: "UAG est un codon stop : la traduction s'arrête après le 6e acide aminé, et la chaîne β incomplète ne fonctionne pas normalement."},
     {n: 3, q: "Chez des personnes de même génotype PAV // AVI, la quantité d'ARNm PAV varie, et la sensibilité à l'amertume aussi. Cela suggère que :", o: ["l'expression du gène peut être régulée", "le génotype de ces personnes est différent", "le code génétique varie selon les personnes", "la sensibilité ne dépend pas de ce gène"], r: 0, e: "À génotype identique, la quantité d'ARNm produite varie : le phénotype dépend aussi de l'expression des gènes. C'est une corrélation, compatible avec ce rôle."},
     {n: 3, q: "Le brin non transcrit d'un gène commence par ATG GAG. L'ARNm correspondant commence par :", o: ["AUG GAG", "UAC CUC", "TAC CTC", "ATG GAG"], r: 0, e: "L'ARNm a la même séquence que le brin non transcrit, U remplaçant T. UAC CUC serait le résultat si on partait, à tort, du brin non transcrit comme modèle."},
-    {n: 3, q: "Un ARNm compte 900 nucléotides du codon AUG au codon stop compris. La chaîne produite compte :", o: ["299 acides aminés", "300 acides aminés", "900 acides aminés", "2 700 acides aminés"], r: 0, e: "900 ÷ 3 = 300 codons, dont le dernier est un codon stop, qui ne correspond à aucun acide aminé : 299 acides aminés."}
+    {n: 3, q: "Un ARNm compte 900 nucléotides du codon AUG au codon stop compris. La chaîne produite compte :", o: ["299 acides aminés", "300 acides aminés", "900 acides aminés", "2 700 acides aminés"], r: 0, e: "900 ÷ 3 = 300 codons, dont le dernier est un codon stop, qui ne correspond à aucun acide aminé : 299 acides aminés."},
+    {n: 1, q: "Les cellules d'un même individu possèdent :", o: ["les mêmes gènes", "des gènes différents selon leur fonction", "seulement les gènes qu'elles expriment", "des gènes différents selon l'organe"], r: 0, e: "Toutes les cellules sont issues de la cellule-œuf par mitoses, après une réplication conforme : elles ont les mêmes gènes, mais n'en expriment qu'une partie."},
+    {n: 1, q: "Un gène est exprimé lorsque :", o: ["il est transcrit, puis son ARNm est traduit", "il est copié lors de la réplication", "il est présent dans le noyau de la cellule", "il est modifié par une mutation"], r: 0, e: "L'expression d'un gène correspond à la fabrication de ses produits : un ARN, puis une protéine s'il s'agit d'un ARNm."},
+    {n: 1, q: "Dans l'organisme, l'insuline est fabriquée par :", o: ["les cellules β du pancréas", "toutes les cellules du corps", "toutes les cellules du pancréas", "les cellules du foie"], r: 0, e: "Seules les cellules β des îlots de Langerhans transcrivent le gène de l'insuline, présent pourtant dans toutes les cellules."},
+    {n: 2, q: "Le gène de l'insuline a la même séquence dans un neurone et dans une cellule β. Pourtant, seule la cellule β fabrique l'insuline, car :", o: ["le gène n'est transcrit que dans la cellule β", "le gène est muté dans le neurone", "le neurone a perdu ce gène", "l'insuline est fabriquée dans le sang"], r: 0, e: "Le gène est présent partout, mais il n'est exprimé que dans certaines cellules : l'expression des gènes dépend du type de cellule."},
+    {n: 2, q: "L'expression des gènes peut être modifiée par :", o: ["des facteurs internes et des facteurs externes", "des facteurs internes seulement", "des facteurs externes seulement", "aucun facteur : elle est fixée à la naissance"], r: 0, e: "Facteurs internes (type de cellule, développement) et externes (conditions de l'environnement) : l'expression peut varier au cours du temps."},
+    {n: 2, q: "Une forte concentration de glucose augmente la quantité d'ARNm de l'insuline dans les cellules β. Le glucose est ici :", o: ["un facteur externe qui régule l'expression d'un gène", "un agent mutagène qui modifie la séquence du gène", "une enzyme qui fabrique l'insuline", "un facteur qui fait apparaître le gène"], r: 0, e: "La séquence du gène ne change pas : c'est la quantité d'ARNm produite qui varie. Le glucose régule l'expression du gène."},
+    {n: 2, q: "La spécialisation des cellules s'explique par :", o: ["l'expression de gènes différents", "la perte de certains gènes", "des mutations propres à chaque type de cellule", "un code génétique propre à chaque cellule"], r: 0, e: "Les cellules gardent tous leurs gènes, mais en expriment des ensembles différents : elles produisent des ARN et des protéines différents."},
+    {n: 3, q: "Une cellule du foie et une cellule β contiennent des protéines différentes. La meilleure explication :", o: ["elles n'expriment pas le même ensemble de gènes", "elles n'ont pas le même génotype", "elles ne lisent pas le même code génétique", "l'une a perdu des chromosomes"], r: 0, e: "Même génotype, même code : c'est l'expression des gènes qui diffère d'un type de cellule à l'autre."},
+    {n: 3, q: "L'étape de l'ARNm permet de réguler l'expression d'un gène, car :", o: ["une cellule peut produire beaucoup, peu ou pas d'ARNm", "l'ARNm modifie la séquence du gène", "l'ARNm reste toujours dans le noyau", "chaque gène produit toujours la même quantité d'ARNm"], r: 0, e: "À partir d'un même gène, la quantité d'ARNm produite peut varier, et donc la quantité de protéine fabriquée."},
+   ]
+  },
+  /* ================================================================ 1f */
+  {
+   id: "1f",
+   titre: "Les enzymes, des biomolécules aux propriétés catalytiques",
+   problematique: "Comment les enzymes permettent-elles les transformations chimiques du vivant ?",
+
+   activites: [
+    {
+     type: "Activité", titre: "Les enzymes, des catalyseurs biologiques",
+     resume: "En cours dialogué, on a étudié l'action de la salive sur l'amidon (test à l'eau iodée et à la liqueur de Fehling), comparé la durée de réactions du métabolisme avec et sans enzyme, puis observé en trois dimensions l'amylase associée à des fragments d'amidon.",
+     correction: [
+      ["Que devient l'amidon en présence de salive ?", "Dans le tube avec salive, l'eau iodée ne bleuit plus (elle reste jaune-orangé) : il n'y a plus d'amidon ; la liqueur de Fehling devient rouge brique : il y a des sucres. Dans le tube témoin, sans salive, l'amidon est toujours là et aucun sucre n'apparaît. L'amylase de la salive a donc transformé l'amidon (substrat) en sucres (produit : le maltose). Une très petite quantité suffit : l'enzyme n'est pas consommée."],
+      ["Quel est le rôle de l'enzyme ?", "Sans enzyme, la moitié des molécules met environ 2,3 milliards d'années à réagir (la moitié de l'âge de la Terre) ; avec l'enzyme, quelques millisecondes. L'enzyme accélère énormément la réaction : c'est un catalyseur. Sans enzymes, les réactions du métabolisme seraient beaucoup trop lentes pour la vie."],
+      ["L'amylase en trois dimensions", "L'amylase est une grosse protéine repliée dans l'espace. Les fragments d'amidon sont logés dans un creux de sa surface : c'est le site actif, la région de l'enzyme où le substrat se fixe et se transforme."]
+     ],
+     lien: {texte: "Ouvrir le modèle de l'amylase dans Libmol", url: "https://libmol.org/?libmol=341"}
+    }
+   ],
+
+   essentiel: {
+    intro: {texte: [
+     "Au chapitre 1e, nous avons vu que l'expression d'un gène permet la fabrication d'une protéine, et que la séquence des acides aminés détermine la structure de la protéine et contribue à sa fonction. Dans chaque cellule se déroulent en permanence des milliers de transformations chimiques : un morceau de pain gardé dans la bouche devient sucré, la chair d'une pomme coupée brunit à l'air. Ces transformations reposent sur des protéines particulières, les enzymes."
+    ]},
+    sections: [
+     {titre: "Les enzymes, des catalyseurs biologiques", blocs: [
+      "L'ensemble des réactions chimiques qui se déroulent dans une cellule ou un organisme forme le **[[métabolisme]]**. Sans aide, la plupart de ces réactions seraient extrêmement lentes : certaines demanderaient des millions, voire des milliards d'années. **Les [[enzymes|enzyme]] les accélèrent considérablement : ce sont des catalyseurs biologiques.** La réaction se fait alors en quelques millisecondes.",
+      "**Une enzyme transforme un [[substrat]] en un ou plusieurs [[produits|produit]].** Par exemple, l'amylase de la salive transforme l'amidon (substrat) en maltose (produit), un sucre. Un **[[catalyseur]]** agit en très petite quantité et se retrouve intact à la fin de la réaction : l'enzyme peut donc être réutilisée.",
+      "**Les enzymes sont des protéines issues de l'expression des gènes.** Chaque enzyme est fabriquée par transcription puis traduction d'un gène, comme toute protéine.",
+      {aside: "Repère historique", texte: "En 1833, Anselme Payen et Jean-François Persoz isolent, à partir d'orge germée (le malt), une substance capable de transformer l'amidon en sucres : la diastase. C'est la première enzyme découverte. La salive contient une enzyme de même type, l'amylase."}
+     ]},
+     {titre: "Des enzymes différentes selon les cellules", blocs: [
+      "**Les cellules spécialisées n'expriment pas les mêmes gènes avec la même intensité : leur équipement enzymatique peut donc être différent.** Une cellule ne possède que les enzymes correspondant aux gènes qu'elle exprime.",
+      "**Cet équipement permet des réactions chimiques liées à leurs fonctions. Les enzymes constituent ainsi des marqueurs de la spécialisation cellulaire.** Par exemple, seules certaines cellules du pancréas fabriquent l'amylase pancréatique, qui participe à la digestion de l'amidon.",
+      "Comme toute protéine, une enzyme est une chaîne d'acides aminés repliée dans l'espace. Le substrat se fixe dans une petite région de l'enzyme, en forme de creux : le **[[site actif]]**. C'est là qu'il est transformé."
+     ]}
+    ],
+    recap: [
+     {titre: "Bilan I", texte: "Les enzymes sont des protéines issues de l'expression des gènes."},
+     {texte: "Elles accélèrent des réactions chimiques du métabolisme : ce sont des catalyseurs biologiques."},
+     {texte: "Une enzyme transforme un substrat en un ou plusieurs produits."},
+     {titre: "Bilan II", texte: "Les cellules spécialisées n'expriment pas les mêmes gènes avec la même intensité : leur équipement enzymatique peut donc être différent."},
+     {texte: "Cet équipement permet des réactions chimiques liées à leurs fonctions. Les enzymes constituent ainsi des marqueurs de la spécialisation cellulaire."}
+    ]
+   },
+
+   flashcards: [
+    ["Métabolisme", "Ensemble des réactions chimiques d'une cellule ou d'un organisme."],
+    ["Enzyme", "Protéine, issue de l'expression d'un gène, qui accélère une réaction chimique du métabolisme."],
+    ["Catalyseur", "Molécule qui accélère une réaction chimique, en petite quantité et sans être consommée."],
+    ["Substrat", "Molécule transformée par une enzyme."],
+    ["Produit", "Molécule obtenue à la fin de la réaction catalysée par une enzyme."],
+    ["Site actif", "Région de l'enzyme où le substrat se fixe et est transformé."]
+   ],
+
+   qcm: [
+    {n: 1, q: "Une enzyme est :", o: ["une protéine qui accélère une réaction chimique", "un sucre qui fournit de l'énergie à la cellule", "un acide nucléique qui porte l'information", "une molécule consommée pendant la réaction"], r: 0, e: "Les enzymes sont des protéines, issues de l'expression des gènes, qui catalysent les réactions du métabolisme sans être consommées."},
+    {n: 1, q: "Le substrat d'une enzyme est :", o: ["la molécule transformée par l'enzyme", "la molécule obtenue à la fin de la réaction", "la région de l'enzyme où se fixe la molécule", "le gène qui gouverne la fabrication de l'enzyme"], r: 0, e: "Le substrat est transformé en produits. La région où il se fixe est le site actif."},
+    {n: 1, q: "L'amylase de la salive transforme :", o: ["l'amidon en sucres", "les sucres en amidon", "les protéines en acides aminés", "le glucose en amidon"], r: 0, e: "Substrat : l'amidon ; produit : le maltose, un sucre."},
+    {n: 1, q: "Le métabolisme est :", o: ["l'ensemble des réactions chimiques d'un organisme", "l'ensemble des gènes d'un organisme", "la fabrication des protéines par les ribosomes", "la copie de l'ADN avant la division"], r: 0, e: "Des milliers de réactions chimiques se déroulent en permanence dans chaque cellule : elles sont catalysées par des enzymes."},
+    {n: 1, q: "Le site actif est :", o: ["la région de l'enzyme où le substrat se fixe", "le gène qui gouverne la fabrication de l'enzyme", "la molécule produite par l'enzyme", "l'organe où l'enzyme est fabriquée"], r: 0, e: "C'est un creux de l'enzyme : le substrat s'y fixe et y est transformé."},
+    {n: 2, q: "Tube A : amidon + salive ; tube B : amidon + eau. Dans le tube A, l'eau iodée ne bleuit plus et la liqueur de Fehling devient rouge brique. On en déduit que :", o: ["la salive a transformé l'amidon en sucres", "la salive a transformé les sucres en amidon", "l'eau a transformé l'amidon en sucres", "la salive contient de l'amidon et des sucres"], r: 0, e: "L'eau iodée montre que l'amidon a disparu, la liqueur de Fehling que des sucres sont apparus. Dans le tube B, sans salive, rien ne change."},
+    {n: 2, q: "À quoi sert le tube B (amidon + eau, sans salive) ?", o: ["à montrer que, sans salive, l'amidon reste intact", "à apporter de l'amidon au tube A", "à vérifier que l'eau iodée colore toujours l'eau", "à montrer que l'eau contient déjà des sucres"], r: 0, e: "C'est un témoin : il montre que c'est bien la salive qui transforme l'amidon."},
+    {n: 2, q: "Sans enzyme, une réaction met 2,3 milliards d'années à transformer la moitié des molécules ; avec l'enzyme, quelques millisecondes. L'enzyme est donc :", o: ["un catalyseur", "un substrat", "un produit", "un gène"], r: 0, e: "Elle accélère énormément la réaction sans être consommée : c'est un catalyseur biologique."},
+    {n: 2, q: "À la fin de la réaction, l'enzyme :", o: ["est intacte et peut être réutilisée", "est transformée en produits de la réaction", "est détruite par le substrat", "est intégrée à l'amidon"], r: 0, e: "Un catalyseur n'est pas consommé : c'est pourquoi une très petite quantité d'enzyme suffit."},
+    {n: 2, q: "Une petite quantité d'amylase transforme une grande quantité d'amidon, car :", o: ["l'enzyme n'est pas consommée par la réaction", "l'amylase est un sucre très concentré", "l'amidon se transforme seul en sucres", "l'enzyme se multiplie au contact de l'amidon"], r: 0, e: "La même molécule d'enzyme agit sur de très nombreuses molécules de substrat, les unes après les autres."},
+    {n: 2, q: "Les enzymes sont fabriquées :", o: ["par expression d'un gène, comme toute protéine", "à partir de l'amidon de l'alimentation", "par la réplication de l'ADN", "directement par le noyau, sans ARNm"], r: 0, e: "Transcription du gène en ARNm, puis traduction par les ribosomes : une enzyme est une protéine."},
+    {n: 3, q: "Deux cellules d'un même individu ne possèdent pas les mêmes enzymes. La meilleure explication :", o: ["elles n'expriment pas les mêmes gènes", "elles n'ont pas les mêmes gènes", "leurs enzymes ont muté différemment", "elles ne lisent pas le même code"], r: 0, e: "Elles ont les mêmes gènes, mais n'expriment pas les mêmes, ni avec la même intensité : leur équipement enzymatique diffère."},
+    {n: 3, q: "Seules certaines cellules du pancréas fabriquent l'amylase pancréatique. Cette enzyme est donc :", o: ["un marqueur de leur spécialisation", "présente dans toutes les cellules du corps", "fabriquée dans le sang puis captée", "un gène propre au pancréas"], r: 0, e: "L'équipement enzymatique d'une cellule reflète les gènes qu'elle exprime, donc sa fonction."},
+    {n: 3, q: "Sur le modèle 3D de l'amylase, les fragments d'amidon sont logés dans un creux de l'enzyme. Ce creux est :", o: ["le site actif", "le produit", "le substrat", "le codon"], r: 0, e: "Le site actif est la région de l'enzyme où le substrat se fixe et se transforme. Les fragments d'amidon, eux, sont le substrat."}
    ]
   }
   ]
@@ -1196,7 +1298,13 @@ function norm(s){
   return s;
 }
 /* Éléments masqués (cache: true, ou "cache" en fin de flashcard) */
-function visible(x){ return !(x && (x.cache === true || (Array.isArray(x) && x[2] === 'cache'))); }
+/* des: "2026-11-05T18:00:00+01:00" (ou "des:..." en 3e élément d'une flashcard) : élément affiché seulement à partir de cette date */
+function pasEncore(d){ try { return !!d && new Date() < new Date(d); } catch(err){ return false; } }
+function visible(x){
+  if (!x) return true;
+  if (Array.isArray(x)) return !(x[2] === 'cache' || (typeof x[2] === 'string' && x[2].indexOf('des:') === 0 && pasEncore(x[2].slice(4))));
+  return !(x.cache === true || pasEncore(x.des));
+}
 function recapText(r){ return Array.isArray(r) ? r.filter(visible).map(function(b){ return b.texte; }).join(' ') : (r || ''); }
 
 var GLOSS = {};
