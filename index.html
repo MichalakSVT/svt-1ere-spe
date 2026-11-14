@@ -2114,7 +2114,7 @@ function renderQcm(tab, bank, key){
    citrouille sur l'accueil (un clic l'allume et fait tomber des citrouilles).
    Pour l'enlever : mettre HALLOWEEN = false ci-dessous (ou supprimer ce bloc
    et le bloc CSS du même nom). Il s'arrête aussi tout seul après HALLOWEEN_FIN. */
-var HALLOWEEN = true;
+var HALLOWEEN = false;
 var HALLOWEEN_FIN = "";   /* date de fin facultative (année-mois-jour), vide = pas de fin */
 if (HALLOWEEN && (!HALLOWEEN_FIN || new Date() < new Date(HALLOWEEN_FIN + 'T00:00:00'))) (function(){
   document.documentElement.classList.add('hw');
