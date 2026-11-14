@@ -1189,6 +1189,18 @@ var NIVEAUX = [
       ["L'amylase en trois dimensions", "L'amylase est une grosse protéine repliée dans l'espace. Les fragments d'amidon sont logés dans un creux de sa surface : c'est le site actif, la région de l'enzyme où le substrat se fixe et se transforme."]
      ],
      lien: {texte: "Ouvrir le modèle de l'amylase dans Libmol", url: "https://libmol.org/?libmol=341"}
+    },
+    {
+     type: "TP", titre: "La tyrosinase, l'enzyme qui fabrique la mélanine",
+     resume: "La mélanine, pigment de la peau, des poils et des yeux, est fabriquée par les mélanocytes à partir d'un acide aminé, la tyrosine. Le champignon de Paris possède la même enzyme, la tyrosinase, qui le fait brunir quand on le coupe. Avec quatre tubes (tyrosine ou eau, extrait de champignon normal ou chauffé, 37 °C ou glace), on a cherché à comprendre comment la tyrosinase permet la fabrication de la mélanine et ce qui peut l'empêcher d'agir, puis on a expliqué l'albinisme et le pelage du chat siamois.",
+     correction: [
+      ["Tube 1 / tube 3 : seule la tyrosine change", "Le tube 1 (tyrosine + extrait) devient rose-orangé puis brun ; le tube 3 (eau + extrait) reste incolore ou presque. La coloration n'apparaît qu'en présence de tyrosine : la tyrosine est transformée en pigments. La tyrosine est le substrat, les pigments sont le produit. Un léger brunissement du tube 3 est possible : l'extrait contient d'autres composés que la tyrosinase peut aussi transformer."],
+      ["Tube 1 / tube 2 : seul le chauffage de l'extrait change", "Le tube 2 (extrait chauffé à 100 °C) ne change pas de couleur. Ce qui agit dans l'extrait est détruit par la chaleur, comme une protéine dont la structure tridimensionnelle est détruite : c'est la dénaturation. La réaction est donc catalysée par une enzyme, la tyrosinase, qui n'est active que si sa structure est intacte."],
+      ["Tube 1 / tube 4 : seule la température change", "Le tube 4, placé dans la glace, reste presque incolore ; il se colore une fois transféré à 37 °C. Le froid ralentit fortement la réaction sans détruire l'enzyme : son effet est réversible. L'activité de l'enzyme dépend de la température."],
+      ["Conclusion", "La tyrosinase est une enzyme qui catalyse la transformation de la tyrosine (substrat) en pigments (produits) qui donnent la mélanine. Sans tyrosinase active, pas de mélanine. Son action est empêchée si sa structure est détruite (chaleur) et ralentie par le froid."],
+      ["Document 3 : l'albinisme", "Les personnes atteintes d'albinisme ont des mélanocytes, mais une mutation du gène TYR a modifié la séquence d'acides aminés de la tyrosinase, donc sa forme : elle n'a plus aucune activité. Comme dans le tube 2, la tyrosine n'est pas transformée : aucune mélanine n'est fabriquée, d'où des cheveux blancs, une peau très claire et des yeux clairs."],
+      ["Document 4 : le chat siamois", "Chez le siamois, un seul nucléotide est modifié, ce qui remplace un seul acide aminé de la tyrosinase. Cette enzyme mutée est fragile à la chaleur : elle perd son activité à la température du corps, comme l'extrait chauffé du tube 2, mais à une température bien plus basse. Elle reste active dans les extrémités, plus froides (oreilles, museau, pattes, queue) : la mélanine n'y est fabriquée que là, ce qui donne les zones sombres du pelage."]
+     ]
     }
    ],
 
@@ -1207,6 +1219,12 @@ var NIVEAUX = [
       "Les cellules spécialisées n'expriment pas les mêmes gènes avec la même intensité : leur équipement enzymatique peut donc être différent. Une cellule ne possède que les enzymes correspondant aux gènes qu'elle exprime.",
       "Cet équipement permet des réactions chimiques liées à leurs fonctions. Les enzymes constituent ainsi des marqueurs de la spécialisation cellulaire. Par exemple, seules certaines cellules du pancréas fabriquent l'amylase pancréatique, qui participe à la digestion de l'amidon.",
       "Comme toute protéine, une enzyme est une chaîne d'acides aminés repliée dans l'espace. Le substrat se fixe dans une petite région de l'enzyme, en forme de creux : le **[[site actif]]**. C'est là qu'il est transformé."
+     ]},
+     {titre: "Une activité qui dépend de la structure de l'enzyme", blocs: [
+      "**L'activité d'une enzyme dépend de sa structure tridimensionnelle.** Le repliement de la chaîne d'acides aminés dans l'espace donne au site actif sa forme : si cette forme est conservée, le substrat peut s'y fixer et être transformé.",
+      "Une température élevée modifie de façon irréversible le repliement de la chaîne : l'enzyme est alors [[dénaturée|dénaturation]], son site actif ne peut plus accueillir le substrat et elle devient inactive. À basse température, la réaction est seulement ralentie : l'enzyme retrouve son activité lorsque la température remonte. Le froid ralentit donc la réaction de façon réversible, alors que la chaleur dénature l'enzyme de façon irréversible.",
+      "Une enzyme étant une protéine issue de l'expression d'un gène, une mutation de ce gène peut modifier la séquence des acides aminés, donc la structure de l'enzyme et son activité. Ainsi, la [[tyrosinase]], exprimée dans les [[mélanocytes|mélanocyte]], catalyse la transformation de la tyrosine en [[mélanine]], pigment de la peau, des poils et des yeux. Une mutation du gène de la tyrosinase peut la rendre inactive : aucune mélanine n'est fabriquée, ce qui modifie le phénotype ([[albinisme]]).",
+      "**Le phénotype dépend donc de l'activité des enzymes codées par les gènes.**"
      ]}
     ],
     recap: [
@@ -1214,7 +1232,10 @@ var NIVEAUX = [
      {texte: "Elles accélèrent des réactions chimiques du métabolisme : ce sont des catalyseurs biologiques."},
      {texte: "Une enzyme transforme un substrat en un ou plusieurs produits."},
      {titre: "Bilan II", texte: "Les cellules spécialisées n'expriment pas les mêmes gènes avec la même intensité : leur équipement enzymatique peut donc être différent."},
-     {texte: "Cet équipement permet des réactions chimiques liées à leurs fonctions. Les enzymes constituent ainsi des marqueurs de la spécialisation cellulaire."}
+     {texte: "Cet équipement permet des réactions chimiques liées à leurs fonctions. Les enzymes constituent ainsi des marqueurs de la spécialisation cellulaire."},
+     {titre: "Bilan III", texte: "L'activité d'une enzyme dépend de sa structure tridimensionnelle : le froid ralentit la réaction de façon réversible, la chaleur dénature l'enzyme de façon irréversible."},
+     {texte: "La tyrosinase, exprimée dans les mélanocytes, catalyse la transformation de la tyrosine en mélanine."},
+     {texte: "Une mutation du gène de la tyrosinase peut la rendre inactive : aucune mélanine n'est fabriquée, ce qui modifie le phénotype (albinisme)."}
     ]
    },
 
@@ -1224,7 +1245,12 @@ var NIVEAUX = [
     ["Catalyseur", "Molécule qui accélère une réaction chimique, en petite quantité et sans être consommée."],
     ["Substrat", "Molécule transformée par une enzyme."],
     ["Produit", "Molécule obtenue à la fin de la réaction catalysée par une enzyme."],
-    ["Site actif", "Région de l'enzyme où le substrat se fixe et est transformé."]
+    ["Site actif", "Région de l'enzyme où le substrat se fixe et est transformé."],
+    ["Dénaturation", "Perte de la structure 3D d'une protéine (par la chaleur, par exemple) : l'enzyme devient inactive."],
+    ["Tyrosinase", "Enzyme des mélanocytes qui transforme la tyrosine en mélanine."],
+    ["Mélanine", "Pigment brun de la peau, des poils et des yeux."],
+    ["Mélanocyte", "Cellule de la peau qui fabrique la mélanine."],
+    ["Albinisme", "Absence de mélanine, due à une tyrosinase inactive par mutation du gène."]
    ],
 
    qcm: [
@@ -1241,7 +1267,16 @@ var NIVEAUX = [
     {n: 2, q: "Les enzymes sont fabriquées :", o: ["par expression d'un gène, comme toute protéine", "à partir de l'amidon de l'alimentation", "par la réplication de l'ADN", "directement par le noyau, sans ARNm"], r: 0, e: "Transcription du gène en ARNm, puis traduction par les ribosomes : une enzyme est une protéine."},
     {n: 3, q: "Deux cellules d'un même individu ne possèdent pas les mêmes enzymes. La meilleure explication :", o: ["elles n'expriment pas les mêmes gènes", "elles n'ont pas les mêmes gènes", "leurs enzymes ont muté différemment", "elles ne lisent pas le même code"], r: 0, e: "Elles ont les mêmes gènes, mais n'expriment pas les mêmes, ni avec la même intensité : leur équipement enzymatique diffère."},
     {n: 3, q: "Seules certaines cellules du pancréas fabriquent l'amylase pancréatique. Cette enzyme est donc :", o: ["un marqueur de leur spécialisation", "présente dans toutes les cellules du corps", "fabriquée dans le sang puis captée", "un gène propre au pancréas"], r: 0, e: "L'équipement enzymatique d'une cellule reflète les gènes qu'elle exprime, donc sa fonction."},
-    {n: 3, q: "Sur le modèle 3D de l'amylase, les fragments d'amidon sont logés dans un creux de l'enzyme. Ce creux est :", o: ["le site actif", "le produit", "le substrat", "le codon"], r: 0, e: "Le site actif est la région de l'enzyme où le substrat se fixe et se transforme. Les fragments d'amidon, eux, sont le substrat."}
+    {n: 3, q: "Sur le modèle 3D de l'amylase, les fragments d'amidon sont logés dans un creux de l'enzyme. Ce creux est :", o: ["le site actif", "le produit", "le substrat", "le codon"], r: 0, e: "Le site actif est la région de l'enzyme où le substrat se fixe et se transforme. Les fragments d'amidon, eux, sont le substrat."},
+    {n: 1, q: "La dénaturation d'une enzyme est :", o: ["la perte de sa structure tridimensionnelle", "la fixation du substrat sur son site actif", "la fabrication de l'enzyme à partir d'un gène", "la transformation du substrat en produit"], r: 0, e: "Sous l'effet d'une température élevée, la chaîne d'acides aminés se replie autrement : le site actif perd sa forme et l'enzyme devient inactive."},
+    {n: 1, q: "La tyrosinase catalyse la transformation :", o: ["de la tyrosine en pigments qui forment la mélanine", "de la mélanine en tyrosine", "de l'amidon en sucres", "des pigments en acides aminés"], r: 0, e: "Substrat : la tyrosine ; produits : des pigments, qui donnent la mélanine."},
+    {n: 2, q: "Un extrait de champignon chauffé à 100 °C ne transforme plus la tyrosine. On en déduit que :", o: ["ce qui agit dans l'extrait est détruit par la chaleur", "la tyrosine est détruite par la chaleur", "le champignon ne contient pas de tyrosinase", "la chaleur transforme le substrat en produit"], r: 0, e: "Une enzyme est une protéine : chauffée, sa structure 3D est détruite et elle ne catalyse plus la réaction."},
+    {n: 2, q: "Un tube placé dans la glace reste incolore, puis se colore à 37 °C. Le froid a donc :", o: ["ralenti l'enzyme sans la détruire", "détruit l'enzyme de façon irréversible", "transformé le substrat en produit", "supprimé le gène de l'enzyme"], r: 0, e: "L'effet du froid est réversible : l'enzyme retrouve son activité quand la température remonte, contrairement à la chaleur qui la dénature."},
+    {n: 2, q: "Dans un tube témoin sans tyrosine, l'extrait de champignon ne se colore presque pas. Cela montre que :", o: ["la coloration vient de la transformation de la tyrosine", "l'extrait de champignon est sans effet sur la couleur", "la tyrosine est une enzyme qui colore l'extrait", "la coloration est due au froid"], r: 0, e: "Une seule différence entre les tubes : la présence de tyrosine. La coloration n'apparaît que si le substrat est présent."},
+    {n: 2, q: "Toutes nos cellules possèdent le gène de la tyrosinase, mais seuls les mélanocytes fabriquent cette enzyme. C'est parce que :", o: ["seuls les mélanocytes expriment ce gène", "seuls les mélanocytes possèdent ce gène", "la tyrosinase est fabriquée hors des cellules", "les autres cellules ont perdu ce gène"], r: 0, e: "Toutes les cellules ont les mêmes gènes, mais n'expriment pas les mêmes : la tyrosinase est un marqueur du mélanocyte."},
+    {n: 3, q: "Dans l'albinisme de type 1A, les mélanocytes sont présents mais aucune mélanine n'est fabriquée. L'explication la plus juste :", o: ["la tyrosinase, modifiée par une mutation, est inactive", "les mélanocytes n'ont pas de gène de la tyrosinase", "la tyrosine n'existe pas dans ces cellules", "la mélanine est détruite par la lumière"], r: 0, e: "Une mutation du gène modifie la séquence d'acides aminés, donc la structure de l'enzyme : sans tyrosinase active, la tyrosine n'est pas transformée."},
+    {n: 3, q: "Chez le chat siamois, une seule substitution d'acide aminé rend la tyrosinase inactive à la température du corps, mais active aux extrémités plus froides. On en déduit que :", o: ["la structure de l'enzyme mutée est fragile à la chaleur", "l'enzyme mutée est plus active à chaud qu'à froid", "le gène de la tyrosinase n'est exprimé qu'aux extrémités", "le froid supprime la mutation du gène"], r: 0, e: "Un seul acide aminé modifié suffit à rendre la structure sensible à la chaleur : l'enzyme est dénaturée dans les zones chaudes, d'où une mélanine fabriquée seulement aux extrémités."},
+    {n: 3, q: "Une mutation d'un gène peut modifier le phénotype, car elle peut :", o: ["changer la structure et l'activité de l'enzyme codée", "supprimer la totalité de l'ADN de la cellule", "empêcher la transcription de tous les autres gènes", "transformer directement le substrat en produit"], r: 0, e: "Mutation, puis séquence d'acides aminés modifiée, puis structure de la protéine modifiée, puis activité modifiée, puis caractère modifié."}
    ]
   }
   ]
