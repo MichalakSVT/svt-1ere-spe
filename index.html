@@ -375,7 +375,7 @@ html.th-sombre .lesson b{background:rgba(255,205,70,.2)}
 
 /* ---------- Réglages de lecture ---------- */
 /* Thèmes : bleu (par défaut), papier, clair, sombre */
-html.th-bleu{--paper:#b9dcf2;--surface:#f1f9fd;--ink:#10202b;--ink-2:#243b49;--muted:#456273;--line:#9cc8e0;--line-2:#7fb3d0}
+html.th-bleu{--paper:#d9ccf1;--surface:#f6f1fd;--ink:#1b1531;--ink-2:#352c52;--muted:#5c5080;--line:#c2b0e5;--line-2:#a590d6}
 html.th-clair{--paper:#ffffff;--surface:#ffffff;--ink:#000000;--ink-2:#1a1a1a;--muted:#4d4d4d;--line:#e3e3e3;--line-2:#cdcdcd}
 html.th-sombre{color-scheme:dark;--paper:#16191c;--surface:#1f2327;--ink:#ebe8e2;--ink-2:#d3cfc7;--muted:#9ba1a7;--line:#2e3439;--line-2:#3d444b;--ok:#62c78f;--ok-soft:rgba(98,199,143,.14);--ko:#ef8472;--ko-soft:rgba(239,132,114,.15)}
 html.th-sombre .face.back,html.th-sombre .btn.solid,html.th-sombre .chips button.on{background:var(--c-deep,var(--c));border-color:var(--c-deep,var(--c))}
@@ -440,7 +440,12 @@ html.th-sombre .meth-card{background:rgba(250,214,40,.13);border-color:rgba(224,
 .meth-card:focus-visible{outline:2px solid #e0b400;outline-offset:2px}
 .m-steps{counter-reset:st;list-style:none;padding:0;margin:0 0 26px;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
 .m-steps li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px 16px 56px}
-.m-steps li::before{counter-increment:st;content:counter(st);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:8px;background:var(--c);color:#fff;font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center}
+.m-steps li::before{counter-increment:st;content:counter(st);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:0;background:#fff;color:#000;border:2px solid #000;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+.fr-bar.fr-gris,.fr-gris{background:#E7E6E6}
+.m-verbe{margin:0 0 30px}
+.m-verbe .fr-bar{margin:0 0 12px;font-size:clamp(1rem,.5vw + .92rem,1.2rem)}
+h1.m-h1{margin:0 0 14px;font-size:clamp(1.3rem,1.6vw + 1rem,1.8rem);line-height:1.25;font-family:Arial,Helvetica,sans-serif;letter-spacing:0}
+.m-bref{margin-bottom:6px}
 .m-steps h3{margin:2px 0 10px;font-size:1.08rem}
 .m-steps p{margin:0 0 10px;line-height:1.55;font-size:.95rem}
 .m-steps p:last-child{margin:0}
@@ -453,6 +458,174 @@ html.th-sombre .meth-card{background:rgba(250,214,40,.13);border-color:rgba(224,
 .m-rep p{font-family:var(--serif);margin:0 0 8px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 .m-err{margin:0;padding-left:20px}
 .m-err li{margin:8px 0;line-height:1.55}
+
+/* ---------- Fiches méthode ---------- */
+/* Entrée sur l'accueil */
+.mf-entry{display:inline-flex;align-items:center;gap:10px;margin:0 0 30px;padding:9px 12px 9px 16px;background:var(--surface);border:1px solid var(--line-2);border-radius:999px;cursor:pointer;transition:border-color .2s,transform .2s var(--ease),box-shadow .2s}
+.mf-entry-t{font-weight:700;font-size:1rem;color:var(--ink)}
+.badge-new.mf-new{margin-left:0;background:#6a4bb0}
+html.th-sombre .badge-new.mf-new{background:#b8a2ee;color:#16191c}
+.mf-entry-go{font-size:.86rem;font-weight:600;color:#6a4bb0;padding:4px 10px;border-radius:999px;background:rgba(106,75,176,.1)}
+html.th-sombre .mf-entry-go{color:#d3c6f7;background:rgba(184,162,238,.14)}
+@media (hover:hover){.mf-entry:hover{border-color:#6a4bb0;transform:translateY(-1px);box-shadow:0 8px 18px -12px rgba(60,30,120,.4)}}
+.mf-entry:focus-visible{outline:2px solid #6a4bb0;outline-offset:2px}
+/* Pages larges (liste et fiches) : on utilise la largeur de l'écran */
+.ml,.mf{width:min(1160px,calc(100vw - 32px));margin-left:calc(50% - min(580px,calc(50vw - 16px)))}
+/* Liste */
+.ml-head h1{font-size:clamp(2rem,3vw + 1rem,2.8rem);line-height:1.1;margin:0 0 26px}
+.ml-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.mc{display:flex;flex-direction:column;align-items:flex-start;gap:12px;text-align:left;padding:20px 22px;background:var(--surface);border:1px solid var(--line);border-radius:18px;min-height:160px;transition:border-color .2s,transform .2s var(--ease),box-shadow .2s}
+.mc .fr-tag{font-size:1.1rem}
+.mc-t{font-weight:700;font-size:1.22rem;line-height:1.3;color:var(--ink)}
+.mc-go{margin-top:auto;font-size:.95rem;font-weight:600;color:var(--c-ink)}
+@media (hover:hover){.mc:hover{border-color:var(--c);transform:translateY(-2px);box-shadow:0 10px 24px -14px rgba(40,20,90,.45)}}
+.mc.feat{grid-column:1/-1;min-height:0;background:#e2761b;border-color:#c9620f;padding:24px 26px}
+.mc.feat .mc-t{font-size:1.5rem;color:#fff}
+.mc.feat .mc-go{color:#fff;opacity:.95}
+@media (hover:hover){.mc.feat:hover{border-color:#a94f08;box-shadow:0 12px 26px -14px rgba(160,70,0,.6)}}
+/* Fiche */
+.mf{font-size:1.04rem}
+.mf-head{margin:0 0 24px}
+.mf-head .fr-tag{font-size:1.2rem}
+.mf-head h1{font-size:clamp(1.9rem,2.8vw + 1rem,2.8rem);line-height:1.1;margin:12px 0 10px}
+.mf-lead{font-family:var(--serif);font-size:clamp(1.05rem,.5vw + .98rem,1.2rem);color:var(--ink-2);margin:0;line-height:1.6;max-width:70ch}
+.mf-row{display:grid;gap:18px;margin:0 0 18px}
+@media (min-width:900px){.mf-row.two{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}.mf-row.half{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.mf-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(16px,2.4vw,28px);min-width:0}
+.mf-card h2{font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--c-ink);margin:0 0 16px}
+.mf-card .q{margin:0 0 14px;font-weight:600;line-height:1.5}
+.mf-ex .rep p,.try-c p,.mf-ret p{font-family:var(--serif);margin:0 0 10px;line-height:1.7}
+.mf-ex .rep p:last-child,.try-c p:last-child,.mf-ret p:last-child{margin-bottom:0}
+.try-doc{margin:0 0 10px;padding:12px 14px;border-radius:12px;background:var(--paper);line-height:1.55}
+.try-f .btn{margin-top:2px}
+.try-c{margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--c-soft)}
+.try-f.open .fold{grid-template-rows:1fr}
+.mf-ret p{font-size:1.05rem}
+/* Visuels */
+.mv{display:block;width:100%;height:auto;max-width:760px;margin:0 auto}
+.mv text{font-family:Arial,Helvetica,sans-serif;fill:var(--ink)}
+.mv .sm{font-size:13px}
+.mv .lb{font-size:15px}
+.mv .b{font-weight:700}
+.mv .tt{font-size:15px;font-weight:700}
+.mv .mut{fill:var(--muted)}
+.mv .accent{fill:var(--c-ink);font-weight:700}
+.mv .ax{stroke:var(--ink);stroke-width:1.5;fill:none}
+.mv .gd{stroke:var(--line);stroke-width:1}
+.mv .ds{stroke:var(--muted);stroke-width:1.3;stroke-dasharray:4 4;fill:none}
+.mv .ds.acd{stroke:var(--c)}
+.mv .ac{stroke:var(--c);stroke-width:3.5;fill:none;stroke-linejoin:round}
+.mv .acd,.mv .acf{fill:var(--c)}
+.mv .ac2{stroke:#c9822b;stroke-width:3.5;fill:none;stroke-linejoin:round}
+.mv .ac2d{fill:#c9822b}
+.mv .br{stroke:var(--c-ink);stroke-width:2;fill:none}
+.mv .band-d{fill:rgba(60,60,90,.1)}
+.mv .band-l{fill:rgba(255,196,40,.2)}
+.mv .cq{stroke:var(--ink);stroke-width:1.6;fill:none}
+.mv .rg{stroke:var(--ink);stroke-width:1.2}
+.mv .n circle{fill:var(--c)}
+.mv .n text{fill:#fff;font-size:13px;font-weight:700;text-anchor:middle}
+html.th-sombre .mv .n text{fill:#16191c}
+.mv-leg{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px 22px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.mv-leg li{display:flex;gap:10px;align-items:flex-start;font-size:1rem;line-height:1.45}
+.mnum{flex:none;display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--c);color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:.8rem;font-weight:700;line-height:1}
+html.th-sombre .mnum{color:#16191c}
+.mnum.c1{background:#d9731f}.mnum.c2{background:#2a9d8f}.mnum.c3{background:#3d6fd1}.mnum.c4{background:#c0507a}
+html.th-sombre .mnum.c1,html.th-sombre .mnum.c2,html.th-sombre .mnum.c3,html.th-sombre .mnum.c4{color:#fff}
+.mnum.in{width:19px;height:19px;font-size:.68rem;vertical-align:3px;margin:0 2px 0 3px}
+/* Consigne et réponse argumentée : segments soulignés et numérotés */
+.cd-box{background:#fff;border:2px solid #000;padding:16px 18px 10px;color:#000}
+.cd-lab{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:1.15rem;border:2px solid #000;padding:0 .3em;margin:0 0 8px}
+.cd-q{margin:0;font-family:Arial,Helvetica,sans-serif;font-size:clamp(1.08rem,.8vw + .95rem,1.35rem);line-height:2.2}
+.u{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:7px;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none}
+.u1{text-decoration-color:#d9731f}.u2{text-decoration-color:#2a9d8f}.u3{text-decoration-color:#3d6fd1}.u4{text-decoration-color:#c0507a}
+.cd-q .u1{font-weight:700}
+.arg{font-family:var(--serif);font-size:clamp(1.05rem,.5vw + .98rem,1.2rem);line-height:2.15;padding:14px 16px;border-radius:12px;background:var(--paper)}
+.pose-q{margin:0 0 14px;font-weight:600;line-height:1.5}
+.pose-q span{display:block;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--c-ink);margin-bottom:4px}
+/* Calcul posé */
+.pose{display:grid;grid-template-columns:auto 1fr;gap:14px 20px;margin:0;align-items:center}
+.pose dt{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pose dd{margin:0;font-family:var(--serif);font-size:1.12rem;line-height:1.55;padding:10px 14px;border-radius:10px;background:var(--paper)}
+.pose dd.res{font-weight:700;color:var(--c-ink)}
+@media (max-width:560px){.pose{grid-template-columns:1fr;gap:6px}.pose dd{margin-bottom:8px}}
+/* Compte rendu */
+.cr{display:grid;gap:10px}
+.cr-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start;padding:14px 16px;border-radius:12px;background:var(--paper)}
+.cr-row.cr-head{background:none;padding:0 16px;font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.cr-row b{display:flex;gap:8px;align-items:center;font-size:1.05rem}
+.cr-row div p{margin:6px 0 0;font-size:.96rem;color:var(--ink-2);line-height:1.45}
+.cr-row .ex{margin:0;font-family:var(--serif);font-size:.98rem;line-height:1.5}
+.cr-row .ex i{display:none}
+@media (max-width:760px){.cr-row{grid-template-columns:1fr;gap:8px}.cr-row.cr-head{display:none}.cr-row .ex i{display:block;font-style:normal;font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}}
+/* Étapes */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{position:relative;display:grid;grid-template-columns:38px 1fr;gap:14px;padding:0 0 20px}
+.tl li::after{content:"";position:absolute;left:18px;top:38px;bottom:4px;width:2px;background:var(--line-2)}
+.tl li:last-child{padding-bottom:0}
+.tl li:last-child::after{display:none}
+.tl-n{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:#fff;color:#000;border:2px solid #000;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:1.1rem}
+.tl h3{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:6px 0 4px;font-family:var(--sans);font-size:1.12rem;font-weight:700;letter-spacing:0}
+.tl-ref{display:inline-flex;gap:3px;margin-left:2px}
+.tl-ref .mnum{width:21px;height:21px;font-size:.72rem}
+.tl p{margin:0;line-height:1.6;color:var(--ink-2)}
+.m-e{color:var(--c-ink);font-weight:700}
+/* Je vérifie */
+.chk{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.chk-b{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;padding:10px 12px;border-radius:12px;background:var(--paper);line-height:1.45;font-size:1rem;color:var(--ink)}
+.chk-b .box{flex:none;width:22px;height:22px;margin-top:1px;border:2px solid var(--ink-2);border-radius:5px;background:var(--surface);position:relative}
+.chk-b[aria-pressed="true"] .box{background:var(--c);border-color:var(--c)}
+.chk-b[aria-pressed="true"] .box::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.chk-b[aria-pressed="true"] > span:last-child{color:var(--muted)}
+/* Repères en cartes */
+.rp{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.rp div{display:flex;flex-direction:column;gap:8px;align-items:flex-start;padding:12px 14px;background:var(--paper);border-radius:12px}
+.rp .fr-tag{font-size:1.05rem}
+.rp .d{font-size:1rem;line-height:1.45;color:var(--ink-2)}
+/* Étapes de l'ECE */
+.ece{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.ece-s{background:var(--paper);border-radius:14px;padding:16px 18px}
+.ece-h{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.ece-k{font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--c-ink)}
+.ece-s h3{font-family:var(--sans);font-size:1.12rem;line-height:1.3;margin:0 0 8px;letter-spacing:0}
+.ece-s p{margin:0;line-height:1.6;color:var(--ink-2)}
+/* Fiche centrale : les quatre étapes */
+.crs{display:grid;gap:14px}
+.crs-s{background:var(--paper);border-radius:14px;padding:16px 18px}
+.crs-h{display:flex;align-items:center;gap:12px;margin:0 0 10px}
+.crs-h h3{margin:0;font-family:var(--sans);font-size:1.18rem;letter-spacing:0}
+.crs-s > p{margin:0 0 8px;line-height:1.6}
+.crs-s ul,.pres-c ul{margin:4px 0 8px;padding-left:20px;line-height:1.55}
+.crs-s .tbl{margin:10px 0}
+.crs-2{display:grid;gap:12px}
+@media (min-width:760px){.crs-2{grid-template-columns:1.4fr 1fr}}
+.crs-case{background:var(--surface);border-radius:12px;padding:12px 14px}
+.crs-case > b{display:block;margin-bottom:4px}
+.crs-case p{margin:0;line-height:1.55}
+.crs-note{margin:8px 0 0;font-size:.92rem;color:var(--muted);font-style:italic}
+.crs-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.crs-go{font-size:.9rem;font-weight:600;color:var(--c-ink);background:var(--c-soft);border:1px solid var(--c-mid);border-radius:999px;padding:6px 14px;min-height:36px}
+@media (hover:hover){.crs-go:hover{border-color:var(--c)}}
+/* Stratégie */
+.strat{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.strat-b{background:var(--paper);border-radius:14px;padding:14px 16px}
+.strat-b b{display:flex;align-items:center;gap:8px;font-size:1.05rem;margin-bottom:6px}
+.strat-b p{margin:0;line-height:1.55}
+/* Présenter ses résultats */
+.pres{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.pres-c{background:var(--paper);border-radius:14px;padding:14px 16px}
+.pres-c h3{margin:0;font-family:var(--sans);font-size:1.12rem;letter-spacing:0}
+.pres-w{margin:2px 0 10px !important;font-size:.92rem;color:var(--c-ink);font-weight:600;text-align:left !important}
+.pres-l{display:block;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+/* Fiche centrale dans la liste */
+.mc.feat2{grid-column:1/-1;min-height:0;background:var(--c);border-color:var(--c);padding:22px 24px}
+.mc.feat2 .mc-t{font-size:1.4rem;color:#fff}
+.mc.feat2 .mc-go{color:#fff}
+html.th-sombre .mc.feat2 .mc-t,html.th-sombre .mc.feat2 .mc-go{color:#16191c}
+/* Texte justifié dans les fiches */
+.mf p,.mf .mv-leg li > span,.mf .chk-b > span:last-child,.mf .rp .d{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+.mf-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:28px;padding-top:18px;border-top:1px solid var(--line)}
+.mf-nav .btn:last-child:not(:first-child){margin-left:auto}
 /* Barre du haut sur petits écrans : rien ne doit dépasser la largeur */
 .topbar .wrap{flex-wrap:nowrap;min-width:0}
 .crumbs{flex:1 1 0}
@@ -491,6 +664,8 @@ html.th-sombre .hw-web{opacity:.4}
 .hw-p svg{display:block;width:100%;height:100%;overflow:visible}
 .hw-p .pf{fill:#3a2208;transition:fill .3s}
 .copy .hw-p{margin:0 .45em 0 0}
+.copy{text-align:center}
+.copy .wrap{text-align:center}
 html.hw .home-head{position:relative}
 .hw-big{position:absolute;right:0;top:2px;width:clamp(46px,9vw,68px);height:clamp(44px,8.5vw,64px);padding:0;margin:0;cursor:pointer;transition:transform .2s var(--ease)}
 .hw-big .hw-p{width:100%;height:100%;margin:0;vertical-align:0}
@@ -1531,17 +1706,17 @@ var NIVEAUX = [
      {titre: "Deux niveaux d'altitude à la surface de la Terre", blocs: [
       {prob: "On cherche à savoir quelles sont les altitudes les plus fréquentes à la surface de la Terre."},
       {act: 0},
-      "Pour décrire le relief de la surface solide de la Terre, on mesure l'altitude de chaque point, positive sur les continents et négative sous le niveau de la mer. Un [[profil topographique]] représente le relief le long d'une ligne tracée sur une carte.",
-      "La répartition de ces altitudes n'est pas uniforme : la **[[distribution bimodale des altitudes]]** montre que deux altitudes dominent. La première, entre 0 et 1 000 m, correspond aux continents, c'est-à-dire aux plaines et aux plateaux. La seconde, vers −4 000 à −5 000 m, correspond aux fonds océaniques, c'est-à-dire aux [[plaines abyssales|plaine abyssale]].",
-      "Les autres reliefs occupent peu de surface : sur les continents, les chaînes de montagnes ; sous les océans, les [[marges continentales|marge continentale]], les [[dorsales|dorsale]] et les [[fosses océaniques|fosse océanique]]. Ils ne forment donc pas de valeur dominante dans la répartition des altitudes.",
+      "Pour décrire le relief de la surface solide de la Terre, on mesure l'altitude de chaque point, positive sur les continents et négative sous le niveau de la mer. Un profil topographique représente le relief le long d'une ligne tracée sur une carte.",
+      "La répartition de ces altitudes n'est pas uniforme : la **[[distribution bimodale des altitudes]]** montre que deux altitudes dominent. La première, entre 0 et 1 000 m, correspond aux continents, c'est-à-dire aux plaines et aux plateaux. La seconde, vers −4 000 à −5 000 m, correspond aux fonds océaniques, c'est-à-dire aux plaines abyssales.",
+      "Les autres reliefs occupent peu de surface : sur les continents, les chaînes de montagnes ; sous les océans, les marges continentales, les dorsales et les fosses océaniques. Ils ne forment donc pas de valeur dominante dans la répartition des altitudes.",
       "Ces deux niveaux suggèrent que continents et océans ne sont pas formés des mêmes matériaux. Si c'est le cas, on doit pouvoir le constater en observant directement leurs roches."
      ]},
      {titre: "Des croûtes de natures différentes", blocs: [
       {prob: "On cherche à identifier les roches qui forment la croûte sous les océans et sous les continents."},
       {act: 1},
-      "La **[[croûte]]** est l'enveloppe rocheuse la plus externe de la Terre : elle repose sur le [[manteau]]. Pour connaître les roches qui la constituent, les géologues s'appuient sur des [[observations directes|observation directe]] : les affleurements représentés sur les cartes géologiques, les parois de grandes failles, comme la faille Vema dans l'océan Atlantique, et les forages.",
+      "La **[[croûte]]** est l'enveloppe rocheuse la plus externe de la Terre : elle repose sur le manteau. Pour connaître les roches qui la constituent, les géologues s'appuient sur des [[observations directes|observation directe]] : les affleurements représentés sur les cartes géologiques, les parois de grandes failles, comme la faille Vema dans l'océan Atlantique, et les forages.",
       "Une roche est un assemblage de [[minéraux|minéral]]. On distingue trois grandes familles. Les [[roches sédimentaires|roche sédimentaire]] se forment par accumulation de particules ou de restes d'êtres vivants (calcaire, argile, grès). Les [[roches magmatiques|roche magmatique]] se forment par refroidissement d'un magma (basalte, gabbro, granite). Les [[roches métamorphiques|roche métamorphique]] résultent de la transformation à l'état solide d'autres roches, sous l'effet de la chaleur et de la pression (gneiss).",
-      "Ces observations directes montrent que les deux croûtes sont de natures différentes. La **[[croûte océanique]]**, épaisse d'environ 7 km, est formée de [[basaltes|basalte]] en surface et de [[gabbros|gabbro]] en profondeur ; elle repose sur les [[péridotites|péridotite]] du manteau. La **[[croûte continentale]]**, épaisse de 30 km en moyenne, présente en surface des roches variées (sédimentaires, magmatiques, métamorphiques), mais en profondeur les [[granites|granite]] en sont les roches les plus représentatives.",
+      "Ces observations directes montrent que les deux croûtes sont de natures différentes. La **[[croûte océanique]]**, épaisse d'environ 7 km, est formée de basaltes en surface et de gabbros en profondeur ; elle repose sur les péridotites du manteau. La **[[croûte continentale]]**, épaisse de 30 km en moyenne, présente en surface des roches variées (sédimentaires, magmatiques, métamorphiques), mais en profondeur les granites en sont les roches les plus représentatives.",
       {table: {
         legende: "Les deux croûtes terrestres",
         entetes: ["", "Croûte océanique", "Croûte continentale"],
@@ -1555,7 +1730,7 @@ var NIVEAUX = [
      ]},
      {titre: "Les roches qui affleurent en France", blocs: [
       {prob: "On cherche à connaître les roches que l'on trouve à la surface de la France."},
-      "Un [[affleurement]] est un endroit où la roche est visible en surface, sans être recouverte par le sol ou la végétation. La carte géologique de la France au millionième représente les roches qui affleurent.",
+      "Un affleurement est un endroit où la roche est visible en surface, sans être recouverte par le sol ou la végétation. La carte géologique de la France au millionième représente les roches qui affleurent.",
       "Sur cette carte, les roches sédimentaires occupent la plus grande surface : elles forment les [[bassins sédimentaires|bassin sédimentaire]] (Bassin parisien, Bassin aquitain). Les granites et les roches métamorphiques affleurent dans les [[massifs anciens|massif ancien]] (Massif armoricain, Massif central, Vosges, Corse, Maures) et dans les chaînes de montagnes (Alpes, Pyrénées).",
       {fig: {src: IMG.france, alt: "Carte simplifiée de la France métropolitaine. Les roches sédimentaires occupent la plus grande surface : Bassin parisien, Bassin aquitain, Bassin du Sud-Est. Les granites et les roches métamorphiques affleurent dans les massifs anciens (Massif armoricain, Massif central, Vosges, Ardennes, Maures, Corse) et dans les chaînes de montagnes (Alpes, Pyrénées).", legende: "Les roches qui affleurent en France (carte simplifiée)"}},
       "Les roches sédimentaires ne forment cependant qu'une couverture peu épaisse : sous elles, on retrouve un socle de granites et de roches métamorphiques. La croûte continentale est donc hétérogène en surface, mais formée surtout de granites en profondeur."
@@ -1563,7 +1738,7 @@ var NIVEAUX = [
      {titre: "Les roches des deux croûtes terrestres", blocs: [
       {prob: "On cherche à comparer les roches de la croûte continentale et de la croûte océanique : leur densité, leurs minéraux et leur organisation."},
       {act: 2},
-      "Pour comparer ces roches, on s'appuie sur leur [[densité]], sur leur composition en minéraux et sur leur organisation. Une roche à [[structure grenue]] est entièrement formée de cristaux jointifs, visibles à l'œil nu. Une roche à [[structure microlitique]] est formée de quelques gros cristaux et de très petits cristaux, les [[microlites|microlite]], dans du verre.",
+      "Pour comparer ces roches, on s'appuie sur leur [[densité]], sur leur composition en minéraux et sur leur organisation. Une roche à [[structure grenue]] est entièrement formée de cristaux jointifs, visibles à l'œil nu. Une roche à [[structure microlitique]] est formée de quelques gros cristaux et de très petits cristaux, les microlites, dans du verre.",
       "Le **granite**, roche la plus représentative de la croûte continentale, est une roche claire à structure grenue : elle est entièrement formée de cristaux jointifs, visibles à l'œil nu, de quartz, de feldspaths et de micas. Sa densité est d'environ 2,7.",
       "La croûte océanique est formée de basalte et de gabbro. Ces roches sombres contiennent les mêmes minéraux, des feldspaths plagioclases et des pyroxènes, parfois de l'olivine, mais pas de quartz. Le gabbro a une structure grenue ; le basalte a une structure microlitique. Leur densité est d'environ 2,9 à 3.",
       {table: {
@@ -1584,17 +1759,10 @@ var NIVEAUX = [
 
    flashcards: [
     ["Distribution bimodale des altitudes", "Répartition des altitudes autour de deux valeurs dominantes : celle des continents et celle des fonds océaniques."],
-    ["Profil topographique", "Représentation du relief le long d'une ligne tracée sur une carte."],
-    ["Plaine abyssale", "Vaste fond plat de l'océan, vers 4 000 à 5 000 m de profondeur."],
-    ["Dorsale", "Longue chaîne de montagnes sous-marine, au milieu des océans."],
-    ["Fosse océanique", "Longue dépression étroite et très profonde du fond de l'océan."],
-    ["Marge continentale", "Bordure d'un continent recouverte par la mer, qui descend vers les grands fonds."],
     ["Croûte", "Enveloppe rocheuse la plus externe de la Terre, au-dessus du manteau."],
-    ["Manteau", "Couche de la Terre située sous la croûte, formée de péridotites."],
     ["Croûte océanique", "Croûte sous les océans, épaisse d'environ 7 km : basaltes en surface, gabbros en profondeur."],
     ["Croûte continentale", "Croûte des continents, épaisse de 30 km en moyenne : roches variées en surface, surtout des granites en profondeur."],
     ["Observation directe", "Observation des roches elles-mêmes : affleurements, parois de failles, forages."],
-    ["Affleurement", "Endroit où la roche est visible en surface, sans sol ni végétation."],
     ["Roche sédimentaire", "Roche formée par accumulation de particules ou de restes d'êtres vivants (calcaire, argile, grès)."],
     ["Roche magmatique", "Roche formée par le refroidissement d'un magma (basalte, gabbro, granite)."],
     ["Roche métamorphique", "Roche transformée à l'état solide par la chaleur et la pression (gneiss)."],
@@ -1604,42 +1772,36 @@ var NIVEAUX = [
     ["Densité", "Rapport entre la masse volumique d'une roche et celle de l'eau. Elle n'a pas d'unité."],
     ["Structure grenue", "Roche entièrement formée de cristaux jointifs, visibles à l'œil nu (granite, gabbro)."],
     ["Structure microlitique", "Roche formée de quelques gros cristaux et de très petits cristaux dans du verre (basalte)."],
-    ["Microlite", "Très petit cristal en baguette, noyé dans le verre d'une roche microlitique."],
-    ["Granite", "Roche magmatique claire à structure grenue (quartz, feldspaths, micas), représentative de la croûte continentale."],
-    ["Basalte", "Roche magmatique sombre à structure microlitique, de la croûte océanique."],
-    ["Gabbro", "Roche magmatique sombre à structure grenue, de la croûte océanique."],
-    ["Péridotite", "Roche du manteau, qui se trouve sous les croûtes."]
    ],
 
    qcm: [
     {n: 1, q: "La distribution des altitudes à la surface de la Terre est dite bimodale parce que :", o: ["deux altitudes dominent : celle des continents, vers 0 à 1 000 m, et celle des fonds océaniques", "l'altitude moyenne du globe correspond exactement au niveau de la mer, soit 0 m", "toutes les altitudes, des fonds océaniques aux sommets, sont également fréquentes sur le globe", "les altitudes ne varient que sur les continents, les océans ayant partout la même profondeur"], r: 0, e: "Le graphique présente deux pics : l'un pour les continents (0 à 1 000 m), l'autre pour les fonds océaniques (−4 000 à −5 000 m)."},
     {n: 1, q: "Les continents correspondent surtout à des altitudes comprises entre :", o: ["0 et 1 000 m", "1 000 et 3 000 m", "−1 000 et −3 000 m", "−4 000 et −5 000 m"], r: 0, e: "Les plaines et les plateaux, très étendus, forment le premier pic du graphique. Les chaînes de montagnes occupent peu de surface."},
     {n: 1, q: "Les fonds océaniques se situent surtout vers :", o: ["−4 000 à −5 000 m", "−1 000 à −2 000 m", "−8 000 à −9 000 m", "0 à −500 m"], r: 0, e: "Ce sont les plaines abyssales, vastes fonds plats de l'océan. Les fosses, plus profondes, occupent peu de surface."},
-    {n: 1, q: "Une plaine abyssale est :", o: ["un vaste fond plat de l'océan, vers 4 000 à 5 000 m de profondeur", "une longue chaîne de montagnes sous-marine, au milieu d'un océan", "la bordure d'un continent recouverte par la mer, en pente vers le large", "un volcan isolé qui s'élève au-dessus du fond de l'océan"], r: 0, e: "La dorsale est la chaîne sous-marine, la marge continentale la bordure du continent, le mont sous-marin le volcan isolé."},
-    {n: 1, q: "Un profil topographique représente :", o: ["le relief le long d'une ligne tracée sur une carte", "les roches rencontrées en profondeur sous un forage", "l'altitude moyenne de chacun des continents du globe", "la répartition des roches à la surface d'un pays"], r: 0, e: "Il se lit de part en part d'une ligne : on y repère plateaux, marges, plaines abyssales et dorsales."},
-    {n: 1, q: "La croûte terrestre est :", o: ["l'enveloppe rocheuse la plus externe de la Terre, qui repose sur le manteau", "la couche liquide qui se trouve sous les océans et au contact du manteau", "la couche profonde qui entoure le noyau terrestre et le sépare du manteau", "l'ensemble des roches visibles à la surface du sol, quelle que soit leur nature"], r: 0, e: "Elle repose sur le manteau. Les roches visibles en surface sont les affleurements : elles ne forment qu'une partie de la croûte."},
+    {n: 1, q: "Les deux altitudes les plus fréquentes sur Terre correspondent :", o: ["aux plaines et plateaux des continents, et aux plaines abyssales des océans", "aux grandes chaînes de montagnes continentales, et aux dorsales océaniques", "aux marges continentales recouvertes par la mer, et aux fosses océaniques", "aux sommets des continents, et aux volcans isolés des fonds océaniques"], r: 0, e: "Montagnes, dorsales, marges et fosses existent, mais elles occupent peu de surface : elles ne forment pas de pic."},
     {n: 1, q: "L'épaisseur de la croûte océanique est d'environ :", o: ["7 km", "30 km", "70 km", "3 km"], r: 0, e: "La croûte continentale est plus épaisse : 30 km en moyenne."},
+    {n: 1, q: "L'épaisseur moyenne de la croûte continentale est d'environ :", o: ["30 km", "7 km", "100 km", "12 km"], r: 0, e: "La croûte océanique est beaucoup plus mince : environ 7 km."},
     {n: 1, q: "Les roches de la croûte océanique sont surtout :", o: ["des basaltes et des gabbros", "des granites et des gneiss", "des calcaires et des argiles", "des péridotites et des granites"], r: 0, e: "Basaltes en surface, gabbros en profondeur. Les péridotites sont les roches du manteau, sur lequel repose la croûte."},
-    {n: 1, q: "Un affleurement est :", o: ["un endroit où la roche est visible en surface, sans être recouverte par le sol ni par la végétation", "une roche formée par le refroidissement lent d'un magma à l'intérieur de la croûte", "un forage profond qui traverse toute l'épaisseur de la croûte continentale", "une grande région où s'accumulent des couches de roches sédimentaires"], r: 0, e: "La roche n'y est recouverte ni par le sol ni par la végétation. Une région d'accumulation de couches sédimentaires est un bassin sédimentaire."},
-    {n: 2, q: "Le graphique des altitudes de la planète Miller n'aurait qu'un seul pic. Cela signifie que, sur Miller :", o: ["presque toute la surface solide est à peu près au même niveau, juste sous l'eau", "la surface solide est en moyenne plus haute que sur Terre, ce qui explique l'absence d'océans", "les continents sont nombreux mais très peu étendus et très peu élevés", "la surface solide est formée de deux couches de roches de natures différentes"], r: 0, e: "Le sol de Miller est partout presque au même niveau, juste sous l'eau : un seul pic, étroit. La Terre, elle, a deux niveaux dominants."},
-    {n: 2, q: "Les chaînes de montagnes, les dorsales et les fosses ne forment pas de pic sur le graphique, parce que :", o: ["elles occupent une faible part de la surface du globe, comparée à celle des plaines", "elles n'existent pas à la surface de la Terre, mais seulement sous les océans", "leur altitude est exactement la même que celle des plaines continentales", "elles sont partout recouvertes de sédiments qui masquent leur relief"], r: 0, e: "Un pic correspond à une altitude très fréquente, donc à de grandes surfaces : plaines et plateaux d'un côté, plaines abyssales de l'autre."},
-    {n: 2, q: "La paroi de la faille Vema, explorée en sous-marin, a permis :", o: ["d'observer la succession des roches de la croûte océanique, comme dans une coupe naturelle", "de mesurer la densité des roches de la croûte continentale à plusieurs kilomètres de profondeur", "d'atteindre directement le noyau de la Terre, situé à plus de 6 000 km de profondeur", "de prélever uniquement des roches sédimentaires accumulées sur le fond de l'océan"], r: 0, e: "Du pied au sommet de la paroi, les géologues ont observé des péridotites, des gabbros, des filons de dolérite puis des basaltes."},
-    {n: 2, q: "Le forage de Kola, sous un continent, a atteint 12 km de profondeur. Il a traversé :", o: ["des roches transformées, puis des gneiss et des granites en profondeur", "des basaltes et des gabbros, comme sous les océans, jusqu'à la limite du manteau", "uniquement des roches sédimentaires, sur toute la profondeur du forage", "des péridotites, roches du manteau, après avoir traversé toute la croûte continentale"], r: 0, e: "Les granites sont les roches les plus représentatives de la croûte continentale en profondeur. Le forage n'a pas traversé toute la croûte."},
-    {n: 2, q: "La croûte continentale est dite hétérogène en surface car :", o: ["on y trouve des roches sédimentaires, magmatiques et métamorphiques variées", "elle est formée d'un seul type de roche, le granite, depuis la surface jusqu'au manteau", "elle est recouverte d'eau sur de grandes surfaces, ce qui modifie son aspect", "elle ne contient que des roches transformées à l'état solide par la chaleur"], r: 0, e: "En profondeur, en revanche, les granites sont les roches les plus représentatives."},
-    {n: 2, q: "Sur la carte géologique de la France au millionième, les roches sédimentaires :", o: ["occupent la plus grande surface et forment les bassins sédimentaires", "sont limitées aux massifs anciens et aux chaînes de montagnes, comme les Alpes", "forment le socle ancien sur lequel reposent les bassins de granites et de gneiss", "n'affleurent que dans le Massif central et en Corse, où elles sont très épaisses"], r: 0, e: "Bassin parisien et Bassin aquitain en sont deux exemples. Granites et roches métamorphiques affleurent dans les massifs anciens et les chaînes de montagnes."},
+    {n: 1, q: "En profondeur, la roche la plus représentative de la croûte continentale est :", o: ["le granite, roche claire à structure grenue", "le basalte, roche sombre à structure microlitique", "le gabbro, roche sombre à structure grenue", "la péridotite, roche du manteau"], r: 0, e: "En surface, la croûte continentale présente des roches variées ; en profondeur, les granites en sont les roches les plus représentatives."},
+    {n: 1, q: "Une roche est :", o: ["un assemblage de minéraux", "un cristal unique de composition chimique précise", "un mélange liquide de minéraux fondus", "un fragment de la croûte sans minéral défini"], r: 0, e: "Un minéral est un solide naturel de composition chimique précise, souvent sous forme de cristaux ; une roche en associe plusieurs."},
+    {n: 2, q: "Une roche formée par le refroidissement d'un magma est dite :", o: ["magmatique, comme le basalte, le gabbro ou le granite", "sédimentaire, comme le calcaire, l'argile ou le grès", "métamorphique, comme le gneiss formé à l'état solide", "détritique, comme le sable ou le grès formés en surface"], r: 0, e: "Les roches sédimentaires se forment par accumulation de particules ou de restes d'êtres vivants ; les roches métamorphiques par transformation à l'état solide, sous l'effet de la chaleur et de la pression."},
+    {n: 2, q: "Dans un histogramme, 22 % de la surface terrestre se trouvent entre 0 et 1 000 m, 23 % entre −4 000 et −5 000 m, et moins de 10 % dans chacune des autres classes. On peut en conclure que :", o: ["la distribution est bimodale : deux classes d'altitude dominent", "la distribution est unimodale : une seule classe dépasse 20 %", "toutes les classes d'altitude sont également représentées", "les océans occupent une surface plus petite que les continents"], r: 0, e: "Deux classes se détachent nettement des autres : c'est la distribution bimodale des altitudes."},
+    {n: 2, q: "Une roche de 81 g fait monter l'eau d'une éprouvette de 300 à 330 mL. Sa densité est d'environ :", o: ["2,7", "0,37", "11", "27"], r: 0, e: "Le volume de la roche est 330 − 300 = 30 cm³. La masse volumique est 81 / 30 = 2,7 g/cm³ ; la densité, rapport à la masse volumique de l'eau (1 g/cm³), vaut donc 2,7."},
+    {n: 2, q: "Un échantillon de 120 g occupe un volume de 40 cm³ : sa densité est de 3,0. C'est plus probablement :", o: ["un gabbro ou un basalte, roches de la croûte océanique", "un granite, roche représentative de la croûte continentale", "une roche sédimentaire, comme un calcaire ou un grès", "une roche moins dense que l'eau, comme une pierre ponce"], r: 0, e: "Une densité de 2,9 à 3 est celle des roches de la croûte océanique ; le granite a une densité d'environ 2,7."},
+    {n: 2, q: "Une roche sombre, formée de cristaux jointifs visibles à l'œil nu, avec des feldspaths plagioclases et des pyroxènes mais sans quartz, est :", o: ["un gabbro, de la croûte océanique", "un granite, de la croûte continentale", "un basalte, de la croûte océanique", "un gneiss, de la croûte continentale"], r: 0, e: "Sombre, grenue, sans quartz : c'est un gabbro. Le basalte a les mêmes minéraux mais une structure microlitique ; le granite est clair et contient du quartz."},
+    {n: 2, q: "Une roche noire dont la pâte ne montre, à l'œil nu, que quelques cristaux isolés a probablement une structure :", o: ["microlitique, comme le basalte", "grenue, comme le granite", "grenue, comme le gabbro", "microlitique, comme le granite"], r: 0, e: "La structure microlitique associe quelques gros cristaux et de très petits cristaux, les microlites, dans du verre."},
+    {n: 2, q: "Sur la carte géologique de la France, les roches sédimentaires :", o: ["occupent la plus grande surface et forment les bassins sédimentaires", "sont limitées aux massifs anciens et aux chaînes de montagnes, comme les Alpes", "forment le socle ancien sur lequel reposent les bassins de granites et de gneiss", "n'affleurent que dans le Massif central et en Corse, où elles sont très épaisses"], r: 0, e: "Bassin parisien et Bassin aquitain en sont deux exemples. Granites et roches métamorphiques affleurent dans les massifs anciens et les chaînes de montagnes."},
     {n: 2, q: "Le Massif armoricain et le Massif central sont :", o: ["des massifs anciens, formés de granites et de roches métamorphiques usées", "des bassins sédimentaires, avec de grandes couches de calcaire et d'argile", "des chaînes de montagnes récentes, comme les Alpes et les Pyrénées", "des régions où affleure une ancienne croûte océanique de basaltes"], r: 0, e: "Ce sont de vieilles roches granitiques et métamorphiques, usées par l'érosion."},
     {n: 2, q: "Sous les roches sédimentaires du Bassin parisien, on trouve :", o: ["un socle de granites et de roches métamorphiques", "directement le manteau, formé de péridotites, sous quelques centaines de mètres de sédiments", "de la croûte océanique, formée de basaltes et de gabbros, recouverte de sédiments", "d'autres roches sédimentaires, qui occupent toute l'épaisseur de la croûte continentale"], r: 0, e: "Les roches sédimentaires ne forment qu'une couverture peu épaisse sur la croûte continentale."},
-    {n: 2, q: "Le granite est une roche :", o: ["magmatique, formée par le refroidissement d'un magma sous la surface", "sédimentaire, formée par l'accumulation de particules ou de restes d'êtres vivants", "métamorphique, transformée à l'état solide par la chaleur et la pression", "du manteau, qui se trouve sous la croûte continentale et sous la croûte océanique"], r: 0, e: "Basalte, gabbro et granite sont des roches magmatiques. Le gneiss est une roche métamorphique."},
-    {n: 2, q: "Pour déterminer la densité d'une roche, on mesure :", o: ["sa masse et son volume, pour comparer sa masse volumique à celle de l'eau", "sa couleur et la taille de ses cristaux, observées à l'œil nu puis au microscope polarisant", "sa masse seulement, en utilisant des échantillons de même taille et de même forme", "son volume seulement, par déplacement de l'eau dans une éprouvette graduée"], r: 0, e: "La masse volumique est ρ = m / V ; la densité est le rapport de ρ à la masse volumique de l'eau."},
-    {n: 2, q: "La densité d'une roche est :", o: ["le rapport de sa masse volumique à celle de l'eau, sans unité", "sa masse volumique exprimée en grammes par centimètre cube de roche", "le rapport de sa masse à son volume, exprimé en g/cm³ ou en kg/m³", "la masse d'un litre de cette roche, exprimée en kilogrammes"], r: 0, e: "Les trois autres propositions décrivent la masse volumique, qui a une unité. La densité n'en a pas."},
-    {n: 2, q: "Une roche à structure grenue est :", o: ["entièrement formée de cristaux jointifs, visibles à l'œil nu et sans pâte", "formée de quelques gros cristaux isolés, noyés dans une pâte de verre", "formée de très petits cristaux, invisibles à l'œil nu même à la loupe", "formée de débris de roches et de fossiles cimentés entre eux"], r: 0, e: "C'est le cas du granite et du gabbro. La structure microlitique, celle du basalte, associe quelques gros cristaux et des microlites dans du verre."},
+    {n: 2, q: "La croûte continentale est dite hétérogène en surface car :", o: ["on y trouve des roches sédimentaires, magmatiques et métamorphiques variées", "elle est formée d'un seul type de roche, le granite, depuis la surface jusqu'au manteau", "elle est recouverte d'eau sur de grandes surfaces, ce qui modifie son aspect", "elle ne contient que des roches transformées à l'état solide par la chaleur"], r: 0, e: "En profondeur, en revanche, les granites sont les roches les plus représentatives."},
+    {n: 2, q: "Pour comparer rigoureusement des roches de deux croûtes, il faut :", o: ["utiliser les mêmes critères de mesure et d'observation pour chaque roche", "ne mesurer que la densité, qui suffit à caractériser une roche", "choisir pour chaque roche le critère qui la distingue le mieux des autres", "observer plus longtemps les roches continentales que les roches océaniques"], r: 0, e: "Avec des critères identiques, les différences observées viennent des roches elles-mêmes et pas de la méthode."},
+    {n: 2, q: "Pour tester l'hypothèse « continents et fonds océaniques sont formés de roches différentes », on peut :", o: ["comparer des roches prélevées sous les continents et sous les océans", "mesurer l'altitude moyenne de chacun des continents du globe", "comparer la superficie des océans à celle des continents", "calculer la part de la surface du globe couverte par l'eau"], r: 0, e: "Une hypothèse se teste par une observation ou une mesure qui peut la confirmer ou l'infirmer : ici, l'observation directe des roches."},
     {n: 3, q: "Le gabbro et le basalte ont des minéraux similaires, mais ils diffèrent par :", o: ["leur structure : grenue pour le gabbro, microlitique pour le basalte", "leur densité : celle du basalte est nettement plus faible que celle du gabbro", "leurs minéraux : seul le basalte contient du quartz, absent du gabbro", "leur croûte d'origine : le gabbro appartient à la croûte continentale"], r: 0, e: "Tous deux appartiennent à la croûte océanique, ont une densité d'environ 2,9 à 3 et pas de quartz. Seule la structure les distingue."},
-    {n: 3, q: "Au microscope polarisant, une lame mince montre quelques gros cristaux, des microlites et du verre noir en lumière polarisée analysée. C'est :", o: ["un basalte, roche sombre à structure microlitique", "un granite, roche claire à structure grenue", "un gabbro, roche sombre à structure grenue", "un gneiss, roche métamorphique transformée à l'état solide"], r: 0, e: "Le verre et les microlites caractérisent la structure microlitique, celle du basalte."},
-    {n: 3, q: "Un échantillon clair, grenu, à quartz, feldspaths et micas, de densité voisine de 2,7, est :", o: ["un granite, roche claire représentative de la croûte continentale", "un gabbro, roche profonde et sombre de la croûte océanique", "un basalte, roche de surface de la croûte océanique, riche en microlites", "une péridotite, roche du manteau qui se trouve sous les croûtes"], r: 0, e: "Couleur claire, présence de quartz et densité plus faible que celle des roches de la croûte océanique : c'est le granite."},
+    {n: 3, q: "Deux roches ont les mêmes minéraux et la même densité ; l'une n'a que des cristaux jointifs, l'autre des microlites dans du verre. On en déduit que :", o: ["ce sont un gabbro et un basalte, qui ne diffèrent que par leur structure", "ce sont un granite et un basalte, car leurs structures sont différentes", "elles sont de nature différente, car leurs structures sont différentes", "elles appartiennent toutes deux à la croûte continentale, car leur densité est identique"], r: 0, e: "Même composition minéralogique et même densité : seule la structure, grenue ou microlitique, les distingue."},
+    {n: 3, q: "Si l'on ne tenait compte que de la densité, pourrait-on distinguer le gabbro du basalte ?", o: ["non : leurs densités sont voisines, d'environ 2,9 à 3", "oui : le gabbro est nettement plus dense que le basalte", "oui : le basalte est nettement plus dense que le gabbro", "non : la densité d'une roche ne peut pas être mesurée"], r: 0, e: "Il faut d'autres critères : la structure, observée à l'œil nu ou au microscope."},
     {n: 3, q: "La croûte continentale est moins dense que la croûte océanique. Ce résultat :", o: ["contribue à expliquer le contraste d'altitude entre continents et océans", "prouve que les continents flottent comme des bouchons sur l'eau des océans", "montre que les deux croûtes ont la même composition en roches et en minéraux", "explique pourquoi les forages sont toujours plus profonds sur les continents que sous les océans"], r: 0, e: "Le contraste géologique entre roches continentales et océaniques se retrouve dans la distribution bimodale des altitudes."},
-    {n: 3, q: "Le forage de Kola atteint 12 km sans traverser toute la croûte continentale. Cela montre que :", o: ["les observations directes ne suffisent pas à connaître toute la croûte", "la croûte continentale est formée uniquement de granites, de la surface au manteau", "la croûte continentale est plus épaisse que le manteau qui se trouve en dessous", "le forage a atteint la limite avec le manteau, constitué de péridotites"], r: 0, e: "La croûte continentale atteint 30 km en moyenne, et plus par endroits : d'autres méthodes d'investigation sont nécessaires pour connaître la structure profonde de la Terre."},
-    {n: 3, q: "On suppose que continents et fonds océaniques sont formés de roches différentes. Le moyen le plus direct de le vérifier est :", o: ["d'observer les roches elles-mêmes : affleurements, parois de failles, forages", "de comparer la superficie des océans à celle des continents sur l'ensemble du globe", "de mesurer l'altitude moyenne de chacun des continents et de chacun des océans", "de calculer la part de la surface du globe couverte par l'eau des océans"], r: 0, e: "C'est le principe des observations directes, qui ont permis de comparer les roches des deux croûtes."},
-    {n: 3, q: "Un graphique d'altitudes présente un pic entre 0 et 1 000 m. Il correspond :", o: ["à des plaines et des plateaux continentaux, de très grande étendue", "à des chaînes de montagnes continentales, qui couvrent de grandes surfaces", "à des marges continentales recouvertes par la mer, sur toute leur largeur", "à des dorsales océaniques, situées vers 2 500 m de profondeur"], r: 0, e: "Les chaînes de montagnes, les marges et les dorsales occupent peu de surface : elles ne forment pas de pic."}
+    {n: 3, q: "Un échantillon clair, grenu, à quartz, feldspaths et micas, de densité voisine de 2,7, est :", o: ["un granite, roche claire représentative de la croûte continentale", "un gabbro, roche profonde et sombre de la croûte océanique", "un basalte, roche de surface de la croûte océanique, riche en microlites", "une péridotite, roche du manteau qui se trouve sous les croûtes"], r: 0, e: "Couleur claire, présence de quartz et densité plus faible que celle des roches de la croûte océanique : c'est le granite."},
+    {n: 3, q: "L'étude des roches ne suffit pas à connaître la structure profonde de la Terre, parce que :", o: ["les affleurements et les forages ne donnent accès qu'aux premiers kilomètres de la croûte", "les roches profondes ne sont pas formées de minéraux", "toutes les roches de surface sont identiques d'un continent à l'autre", "la densité d'une roche ne peut pas être mesurée au laboratoire"], r: 0, e: "La croûte continentale atteint 30 km en moyenne et le manteau se trouve en dessous : d'autres méthodes d'investigation sont nécessaires."}
    ]
   }
   ]
@@ -1847,7 +2009,7 @@ function go(view, opts){
 function render(){
   setKeys(null); hideTip(); closeLb(); closeViewer();
   if (!S.niveau && NIVEAUX.length === 1) S.niveau = NIVEAUX[0];
-  document.body.style.cssText = S.view === 'partie' ? colorVars(chapColor(S.chap)) : (S.view === 'home' ? '' : colorVars(neutre()));
+  document.body.style.cssText = S.view === 'partie' ? colorVars(chapColor(S.chap)) : (S.view === 'home' ? '' : colorVars(S.view === 'methodes' || S.view === 'methode' ? METH_COUL : neutre()));
   renderCrumbs();
   if (S.view === 'partie') renderPartie();
   else if (S.view === 'revision') renderRevision();
@@ -1870,7 +2032,7 @@ function renderNiveaux(){
 function renderNiveau(){
   var n = S.niveau;
   var h = '<div class="view"><header class="home-head"><p class="kicker" style="color:var(--muted)">Sciences de la vie et de la Terre</p><h1>' + esc(n.nom) + '</h1><p class="lead">' + esc(n.intro || '') + '</p></header>'
-    + '<div class="revise meth-card" id="methCard" role="button" tabindex="0" aria-label="Ouvrir les méthodes"><div><h3><mark class="hl-v">Méthodes</mark></h3><p>Apprendre à rédiger ses réponses, étape par étape.</p></div><span class="btn" aria-hidden="true">Ouvrir</span></div>';
+    + '<div><div class="mf-entry" id="methCard" role="button" tabindex="0" aria-label="Ouvrir les fiches méthode"><span class="mf-entry-t">Fiches méthode</span><span class="badge-new mf-new">Nouveau</span><span class="mf-entry-go">Ouvrir →</span></div></div>';
   /* Chapitres repliables : par défaut, seul le dernier chapitre est déplié ; le choix de l'élève est mémorisé */
   var chaps = n.chapitres.filter(function(ch){ return (ch.parties || []).filter(visible).length; });
   var dernierCh = chaps[chaps.length - 1];
@@ -1885,11 +2047,8 @@ function renderNiveau(){
     h += '</div></section>';
   });
   h += '<div class="revise" style="' + colorVars(neutre()) + '"><div><h3>Tout réviser</h3><p>Flashcards et QCM de toutes les parties, mélangés.</p></div><div class="row"><button class="btn" id="rvF">Flashcards</button><button class="btn solid" id="rvQ">QCM</button></div></div>'
-    + '<div class="extras" style="' + colorVars(neutre()) + '"><div class="revise"><div><h3>Comment utiliser le site ?</h3><p>Le tuto : organisation du site et fonctionnalités.</p></div><button class="btn" id="goT">Voir le tuto</button></div>'
-    + '<div class="revise"><div><h3>Glossaire</h3><p>Tous les mots du cours, avec une recherche.</p></div><button class="btn" id="goG">Ouvrir</button></div></div></div>';
+    + '</div>';
   app.innerHTML = h;
-  $('goG').onclick = function(){ go('glossaire'); };
-  $('goT').onclick = function(){ go('tuto'); };
   app.querySelectorAll('[data-chtog]').forEach(function(b){
     b.onclick = function(){
       var sec = b.closest('.chapter'), ouvre = sec.classList.contains('closed');
@@ -1954,11 +2113,6 @@ var ROMAIN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
 function renderEssentiel(tab, p){
   var ess = p.essentiel, h = '';
   var secs = ess.sections.filter(visible);
-  if (secs.length > 1){
-    h += '<nav class="toc">';
-    secs.forEach(function(s, i){ h += '<button data-sec="' + i + '"><span>' + ROMAIN[i] + '.</span>' + esc(s.titre) + '</button>'; });
-    h += '</nav>';
-  }
   h += '<p class="hint-line">Les mots <span class="term">soulignés en pointillés</span> ont une définition : ' + (FINE ? 'passe la souris dessus.' : 'touche-les pour l\'afficher.') + ' Tu les retrouves tous dans le glossaire.</p><article class="lesson">';
   /* Introduction (chiffres + texte), avant les parties numérotées */
   if (ess.intro){
@@ -2298,100 +2452,294 @@ function renderTuto(){
 }
 $('tutoBtn').onclick = function(){ toggleSettings(false); go('tuto'); };
 
-/* ---------- Méthodes ----------
-   Pour ajouter une méthode : copier un bloc de METHODES.
-   {{v:…}} = ce que je fais (surligné jaune), {{e:…}} = ce que j'écris (surligné vert).
-   cache: true masque une méthode. */
+/* ---------- Fiches méthode ----------
+   Organisées autour de la fiche centrale « Structurer un compte rendu de TP » (structure de l'épreuve
+   pratique de terminale) : chaque fiche porte l'étape du compte rendu à laquelle elle sert.
+   Principes (recherches sur l'apprentissage) : peu de texte, pas de surlignage, repères numérotés sur
+   le visuel (Mayer), exemple rédigé (Sweller), exercice corrigé et liste à cocher (Dunlosky ; Dehaene).
+   Dans les textes : {{e:…}} = mot de liaison ou élément important (couleur d'accent), {{v:…}} = gras.
+   e.n = numéros du visuel auxquels renvoie l'étape. cache: true masque une fiche. */
+var METH_COUL = '#6a4bb0';
 var METHODES = [
- {id: "comprendre", titre: "Comprendre une consigne",
-  enBref: "Avant de répondre, je prends une minute pour savoir exactement ce qu'on me demande.",
+ {id: "decrypter", etape: "Avant de commencer", titre: "Décrypter une consigne", couleur: "#d9731f", visuel: "consigne", large: true,
+  bref: "Avant d'écrire, je décompose la consigne pour savoir exactement ce qu'on attend de moi.",
   etapes: [
-   {titre: "Je lis tout", texte: "Je lis la consigne {{e:en entier}}, jusqu'au bout, avant de commencer."},
-   {titre: "J'encadre le verbe", texte: "Le {{v:verbe d'action}} me dit quoi faire : décrire, comparer, expliquer…"},
-   {titre: "Je surligne les mots clés", texte: "Je repère {{e:de quoi on parle}} et {{e:les contraintes}} : quel document, combien de lignes, schéma ou texte."},
-   {titre: "Je reformule", texte: "Je me dis la consigne {{e:avec mes mots}} : « Je dois… »."},
-   {titre: "Je vérifie", texte: "À la fin, je relis la consigne : ai-je fait {{e:tout}} ce qui était demandé ?"}
+   {t: "Je lis toute la consigne", x: "Jusqu'au bout, avant de regarder les documents."},
+   {t: "Je repère le verbe", n: [1], x: "Il dit ce que je dois faire (voir les verbes plus bas)."},
+   {t: "Je repère l'objet, l'appui et la contrainte", n: [2, 3, 4], x: "De quoi je parle, où je trouve les informations, sous quelle forme je réponds."},
+   {t: "Je reformule", x: "Je me dis la consigne avec mes mots : « Je dois… »."}
   ],
-  exemple: {
-   titre: "Exemple",
-   lignes: [
-    ["Consigne", "{{v:Comparer}} {{e:les caryotypes}} d'une cellule somatique et d'un gamète, {{e:en 5 lignes maximum}}."],
-    ["Je reformule", "Je dois donner les points communs et les différences entre les deux caryotypes, en 5 lignes au plus."]
-   ]
-  },
-  reperes: {titre: "Les verbes les plus fréquents", lignes: [
-   ["Décrire", "dire ce que je vois, avec des valeurs."],
-   ["Comparer", "donner les points communs et les différences."],
-   ["Expliquer", "donner la cause : « parce que… »."],
-   ["Justifier", "donner la preuve, tirée du document."],
-   ["En déduire", "conclure à partir de ce qui précède : « donc… »."]
+  exemple: {titre: "Exemple de reformulation", consigne: "À partir du document 1, décrire l'évolution de la concentration en dioxygène au cours de l'expérience, en citant des valeurs.",
+   reponse: ["Je dois dire comment la quantité de dioxygène change pendant l'expérience, sans l'expliquer, avec des valeurs lues sur le document 1."]},
+  atoi: {consigne: "En vous appuyant sur le document 2 et sur vos connaissances, expliquer pourquoi la fréquence cardiaque augmente pendant un effort.",
+   question: "Repère le verbe, l'objet, l'appui et la contrainte.",
+   correction: ["**Verbe** : expliquer, donc donner la cause.", "**Objet** : l'augmentation de la fréquence cardiaque pendant l'effort.", "**Appui** : le document 2 et mes connaissances.", "**Contrainte** : aucune contrainte de forme ou de longueur."]},
+  verif: ["J'ai lu la consigne jusqu'au bout.", "Je sais ce que le verbe me demande.", "J'ai repéré tous les documents à utiliser.", "Je respecte la forme et la longueur demandées."],
+  retenir: {titre: "Les verbes de consigne", cartes: [
+   ["Décrire", "dire ce que j'observe, précisément, sans expliquer"],
+   ["Comparer", "donner les points communs et les différences"],
+   ["Calculer", "formule, valeurs avec unités, résultat"],
+   ["Interpréter", "donner un sens à ce que j'observe, avec mes connaissances"],
+   ["Expliquer", "relier une cause et une conséquence"],
+   ["Justifier", "appuyer ma réponse sur des données ou des connaissances"],
+   ["Montrer que", "prouver l'affirmation donnée, avec des arguments"],
+   ["En déduire", "tirer une conclusion de ce qui précède"]
   ]}
  },
- {id: "consigne", titre: "Répondre à une consigne à partir de documents",
-  enBref: "Une réponse construite en trois temps : ce que je vois dans les documents, ce que je sais, ce que j'en conclus.",
+
+ {id: "compte-rendu", etape: "Fiche centrale", titre: "Structurer un compte rendu de TP", visuel: "cr", large: true,
+  bref: "Quatre étapes, toujours dans le même ordre, en biologie comme en géologie. Chaque étape a sa fiche détaillée.",
+  etapes: [],
+  atoi: {consigne: "TP : la salive transforme-t-elle l'amidon ? Voici trois éléments d'un compte rendu : « Je prépare aussi un tube sans salive. » ; « Tableau : couleur de l'eau iodée dans chaque tube. » ; « Il faudrait refaire l'expérience pour être sûr du résultat. »",
+   question: "À quelle étape correspond chacun ?",
+   correction: ["« Je prépare aussi un tube sans salive » : **étape 1**, ma stratégie (c'est le témoin).", "« Tableau : couleur de l'eau iodée dans chaque tube » : **étape 3**, je présente mes résultats.", "« Il faudrait refaire l'expérience pour être sûr du résultat » : **étape 4**, je conclus en disant si mes résultats sont fiables."]},
+  verif: ["Étape 1 : je dis ce que je fais, ce que je mesure, et mon témoin s'il y en a un.", "Étape 3 : mes résultats ne sont pas présentés par un texte seul.", "Étape 3 : ma présentation a un titre, des légendes et des unités.", "Étape 4 : j'utilise mes résultats et les documents.", "Étape 4 : je dis si mes résultats sont fiables."],
+  retenir: {titre: "À retenir", lignes: ["**Étape 1** : je prévois. **Étape 2** : je réalise.", "**Étape 3** : je montre mes résultats. **Étape 4** : je réponds au problème."]}
+ },
+
+ {id: "strategie", etape: "Étape 1", titre: "Construire une stratégie", visuel: "strategie", large: true,
+  bref: "Avant de manipuler, je prévois ce que je vais faire, ce que je vais mesurer, et ce que j'attends.",
   etapes: [
-   {titre: "J'identifie", fais: "J'{{v:identifie}} dans les documents les informations utiles pour répondre, en citant des valeurs précises.", ecris: "{{e:Je constate que}}… / {{e:Le document 1 montre que}}…"},
-   {titre: "Je confronte", facultatif: true, fais: "Je {{v:confronte}} ces informations à celles d'un autre document ou à mes connaissances.", ecris: "{{e:Or}} on sait que… / {{e:Or}} le document 2 montre que…"},
-   {titre: "Je réponds", fais: "Je {{v:réponds}} à la question posée, en m'appuyant sur ce qui précède.", ecris: "{{e:Donc}}…"}
+   {t: "Je repère le problème", x: "La question à laquelle le TP doit répondre."},
+   {t: "Je dis ce que je fais et ce que je mesure", n: [1, 2], x: "La manipulation, et ce que je vais mesurer ou observer."},
+   {t: "Je prévois un témoin, si c'est possible", n: [3], x: "Le même montage, avec une seule différence : ce que je teste."},
+   {t: "Je dis ce que j'attends", n: [4], x: "Les résultats que je devrais obtenir si mon idée est juste."}
   ],
-  exemple: {
-   partie: "1b",
-   consigne: "À partir des résultats de Meselson et Stahl, montrer que le modèle de réplication conservatif peut être écarté.",
-   document: "Des bactéries cultivées dans un milieu à azote lourd (¹⁵N) sont placées dans un milieu à azote léger (¹⁴N). Après une génération, leur ADN, centrifugé, forme une seule bande, de densité intermédiaire.",
+  atoi: {consigne: "Problème : la levure consomme-t-elle du glucose ? On place de la levure dans une solution de glucose et on mesure la concentration en glucose pendant 30 min.",
+   question: "Quel témoin proposes-tu ?",
+   correction: ["La même solution de glucose, dans les mêmes conditions, mais **sans levure**.", "Si le glucose diminue seulement dans le tube avec levure, c'est bien la levure qui le consomme."]},
+  verif: ["J'ai rappelé le problème.", "Je dis ce que je fais et ce que je mesure ou observe.", "Mon témoin ne diffère que par ce que je teste (s'il y en a un).", "Je dis ce que j'attends si mon idée est juste."],
+  retenir: {titre: "À retenir", lignes: ["Un **témoin** est identique à l'essai, sauf sur ce que l'on teste.", "Certains TP n'ont pas de témoin : une observation au microscope, une mesure sur une roche…"]}
+ },
+
+ {id: "presenter", etape: "Étape 3", titre: "Présenter ses résultats", visuel: "presenter", large: true,
+  bref: "Jamais un texte seul : je choisis la forme la plus claire, je soigne le tracé et j'écris dessus ce qu'il faut.",
+  etapes: [
+   {t: "Je choisis la forme", x: "Une observation : dessin ou photo. Des valeurs à comparer : tableau. Une évolution : graphique."},
+   {t: "Je soigne le tracé", x: "À la règle, net, assez grand."},
+   {t: "J'écris dessus ce qu'il faut", x: "Titre, légendes, unités, conditions de l'expérience."},
+   {t: "Je vérifie qu'on comprend tout de suite", x: "Ce que montrent mes résultats doit sauter aux yeux. Je peux ajouter une courte phrase."}
+  ],
+  exemple: {titre: "Exemple : un tableau", consigne: "TP : la salive transforme-t-elle l'amidon ? Présenter les résultats.",
+   tableau: {legende: "Couleur de l'eau iodée après 10 min à 37 °C", entetes: ["Tube", "Contenu", "Couleur de l'eau iodée", "Amidon"], lignes: [
+    ["1 (témoin)", "amidon + eau", "bleu-noir", "présent"],
+    ["2", "amidon + salive", "orangée", "absent"]
+   ]},
+   reponse: ["L'amidon a disparu seulement dans le tube avec salive."]},
+  atoi: {consigne: "Un élève a mesuré la masse et le volume de trois roches, puis calculé leur densité.",
+   question: "Quelle forme choisir pour présenter ces résultats ? Comment l'organiser ?",
+   correction: ["Un **tableau** : des valeurs à comparer.", "Une ligne par roche ; des colonnes masse (g), volume (cm³) et densité (sans unité) ; un titre."]},
+  verif: ["Mes résultats ne sont pas présentés par un texte seul.", "Mon tracé est net, à la règle, assez grand.", "J'ai mis un titre, des légendes et des unités.", "On voit tout de suite ce que montrent mes résultats."],
+  retenir: {titre: "À retenir", lignes: ["Grossissement du microscope = oculaire × objectif (par exemple 10 × 40 = 400).", "Un graphique : une grandeur et une unité sur chaque axe."]}
+ },
+
+ {id: "calculer", etape: "Étape 3", titre: "Calculer", visuel: "calcul",
+  bref: "Une formule, des valeurs avec leurs unités, un résultat et une phrase : un calcul que l'on peut suivre.",
+  etapes: [
+   {t: "J'écris la formule", n: [1], x: "En mots ou en lettres, avant de remplacer."},
+   {t: "Je remplace par les valeurs", n: [2], x: "Chacune avec son unité."},
+   {t: "Je calcule et j'arrondis", n: [3], x: "J'arrondis seulement le résultat final."},
+   {t: "Je réponds par une phrase", n: [4], x: "Le résultat, son unité, et ce qu'il signifie."}
+  ],
+  atoi: {consigne: "La masse d'une plante passe de 20 g à 26 g en une semaine.",
+   question: "Calcule l'augmentation de masse en pourcentage.",
+   correction: ["Variation = 26 − 20 = 6 g.", "Pourcentage = 6 ÷ 20 × 100 = 30 %.", "La masse de la plante a augmenté de 30 % en une semaine."]},
+  verif: ["J'ai écrit la formule avant de calculer.", "Chaque valeur a son unité.", "Mon résultat est arrondi raisonnablement.", "J'ai répondu par une phrase."],
+  retenir: {titre: "Les calculs les plus fréquents", cartes: [
+   ["Variation", "valeur finale − valeur initiale"],
+   ["Pourcentage", "variation ÷ valeur initiale × 100"],
+   ["Moyenne", "somme des valeurs ÷ nombre de valeurs"],
+   ["Grossissement", "oculaire × objectif (par exemple 10 × 40 = 400)"]
+  ]}
+ },
+
+ {id: "exploiter", etape: "Étape 4", titre: "Exploiter ses résultats", visuel: "exploiter",
+  bref: "Je lis mes résultats, je les compare au témoin au même moment, puis je dis ce qu'ils montrent.",
+  etapes: [
+   {t: "Je lis le graphique", n: [1, 2], x: "Le titre, ce que représente chaque axe, et les unités."},
+   {t: "Je décris avec des valeurs", x: "Pour chaque courbe : début, fin, sens de variation."},
+   {t: "Je compare au témoin", n: [3], x: "Au même moment, avec l'écart chiffré."},
+   {t: "Je dis ce que cela montre", x: "Avec mes connaissances : la différence vient de ce qui change entre l'essai et le témoin."}
+  ],
+  exemple: {consigne: "Exploiter les résultats du TP : la levure consomme-t-elle du glucose ?",
    reponse: [
-    "{{e:Je constate que}}, après une génération dans le milieu à ¹⁴N, l'ADN forme **une seule bande, de densité intermédiaire** entre celle de l'ADN lourd et celle de l'ADN léger.",
-    "{{e:Or}}, si la réplication était conservative, la molécule d'ADN d'origine resterait entière et lourde, et la nouvelle molécule serait entièrement légère : on obtiendrait **deux bandes**, l'une lourde et l'autre légère.",
-    "{{e:Donc}} la réplication n'est pas conservative : **le modèle conservatif est écarté**."
-   ]
-  },
-  erreurs: [
-   "**Recopier tout le document** : je ne garde que les informations utiles pour répondre à la question.",
-   "**Oublier les valeurs** : je cite des données précises, avec leurs unités.",
-   "**Conclure sans preuve** : chaque conclusion s'appuie sur ce que j'ai constaté.",
-   "**Oublier de conclure** : le « Donc » répond exactement à la question posée."
-  ]
+    "Dans le témoin, sans levure, la concentration en glucose reste à 10 g/L. Avec la levure, elle diminue de 10 à 4 g/L en 30 min, soit 6 g/L de moins que le témoin.",
+    "La seule différence entre les deux tubes est la levure : {{e:donc}} la levure consomme du glucose."
+   ]},
+  atoi: {consigne: "Hauteur de deux lots de plants de haricot après 10 jours : avec engrais, 14 cm ; sans engrais, 9 cm. Toutes les autres conditions sont identiques.",
+   question: "Compare les deux lots en une phrase chiffrée, puis indique le témoin.",
+   correction: ["Le lot avec engrais mesure 14 cm, soit 5 cm de plus que le lot sans engrais (9 cm).", "Le lot sans engrais est le témoin : c'est la référence, sans la condition testée."]},
+  verif: ["J'ai lu le titre, les axes et les unités.", "J'ai décrit chaque courbe avec des valeurs.", "J'ai comparé au témoin au même moment, avec l'écart chiffré.", "J'ai dit ce que montrent les résultats."],
+  retenir: {titre: "À retenir", lignes: ["D'abord je **décris** (des valeurs), ensuite je **compare** au témoin, enfin je dis ce que cela **montre**."]}
+ },
+
+ {id: "conclure", etape: "Étape 4", titre: "Conclure", visuel: "conclure", large: true,
+  bref: "Je réponds au problème, parfois seulement en partie : j'utilise tout, je relie mes idées, je dis si mes résultats sont fiables.",
+  etapes: [
+   {t: "Je rappelle le problème", x: "Pour savoir à quoi je réponds."},
+   {t: "J'utilise tout", n: [1], x: "Mes résultats et les informations des documents."},
+   {t: "Je relie mes idées au problème", n: [2], x: "Avec des mots de liaison : car, or, alors que, donc…"},
+   {t: "Je dis si mes résultats sont fiables", n: [3], x: "Témoin, précision des mesures, nombre d'essais, limites."}
+  ],
+  atoi: {consigne: "TP levure : avec levure, le glucose passe de 10 à 4 g/L en 30 min ; sans levure, il reste à 10 g/L. Un seul essai a été réalisé, et les mesures sont lues à 0,5 g/L près.",
+   question: "Écris la phrase de conclusion qui dit si ces résultats sont fiables.",
+   correction: ["La différence entre les deux tubes (6 g/L) est bien plus grande que la précision des mesures (0,5 g/L), mais un seul essai a été réalisé : il faudrait le refaire pour confirmer le résultat."]},
+  verif: ["J'ai répondu au problème posé.", "J'ai utilisé mes résultats et les documents.", "Mes idées sont reliées entre elles et au problème.", "J'ai dit si mes résultats sont fiables."],
+  retenir: {titre: "À retenir", lignes: ["Une conclusion : **j'utilise tout**, **je relie** au problème, **je dis si c'est fiable**.", "L'ordre est libre : l'important, c'est que chaque idée soit justifiée."]}
  }
 ];
+
 function mfmt(s){
-  return rich(esc(s).replace(/\{\{v:(.+?)\}\}/g, '<mark class="hl-v">$1</mark>').replace(/\{\{e:(.+?)\}\}/g, '<mark class="hl-e">$1</mark>'));
+  s = String(s).replace(/(\d) (\d{3})/g, '$1 $2').replace(/(\d) (km|m|g|mL|cm|cm³|µm|min|h|%|°C|g\/L|mg\/L)(?![a-zà-ÿ])/g, '$1 $2').replace(/− (\d)/g, '− $1');
+  return rich(esc(s).replace(/\{\{v:(.+?)\}\}/g, '<b>$1</b>').replace(/\{\{e:(.+?)\}\}/g, '<span class="m-e">$1</span>'));
 }
+function mnum(k, c){ return '<span class="mnum' + (c ? ' ' + c : '') + '">' + k + '</span>'; }
+function mvLeg(items){ return '<ol class="mv-leg">' + items.map(function(t){ return '<li>' + mnum(t[0]) + '<span>' + mfmt(t[1]) + '</span></li>'; }).join('') + '</ol>'; }
+function svN(x, y, k){ return '<g class="n"><circle cx="' + x + '" cy="' + y + '" r="12"/><text x="' + x + '" y="' + y + '" dy="5">' + k + '</text></g>'; }
+function svT(x, y, txt, cls, anchor){ return '<text' + (cls ? ' class="' + cls + '"' : '') + ' x="' + x + '" y="' + y + '"' + (anchor ? ' text-anchor="' + anchor + '"' : '') + '>' + txt + '</text>'; }
+function svL(x1, y1, x2, y2, cls){ return '<line class="' + cls + '" x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '"/>'; }
+function seg(txt, k){ return '<span class="u u' + k + '">' + txt + '</span>' + mnum(k, 'c' + k + ' in'); }
+function goFiche(id, label){ return '<button type="button" class="crs-go" data-goto="' + id + '">' + esc(label) + ' →</button>'; }
+function ul(arr){ return '<ul>' + arr.map(function(x){ return '<li>' + mfmt(x) + '</li>'; }).join('') + '</ul>'; }
+
+/* ---------- Visuels des fiches ---------- */
+var MV = {
+ consigne: function(){
+  return '<div class="cd-box"><span class="cd-lab">Consigne</span><p class="cd-q">'
+   + seg('À partir du document 1', 3) + ', ' + seg('décrire', 1) + ' ' + seg('l\'évolution de la concentration en dioxygène au cours de l\'expérience', 2) + ', ' + seg('en citant des valeurs', 4) + '.</p></div>'
+   + '<ol class="mv-leg cd">'
+   + '<li>' + mnum(1, 'c1') + '<span><b>Le verbe</b> : ce que je dois faire. Ici, décrire.</span></li>'
+   + '<li>' + mnum(2, 'c2') + '<span><b>L\'objet</b> : de quoi je parle. Ici, le dioxygène au cours du temps.</span></li>'
+   + '<li>' + mnum(3, 'c3') + '<span><b>L\'appui</b> : où je trouve les informations. Ici, le document 1.</span></li>'
+   + '<li>' + mnum(4, 'c4') + '<span><b>La contrainte</b> : la forme attendue. Ici, des valeurs.</span></li>'
+   + '</ol>';
+ },
+ /* Fiche centrale : les quatre étapes */
+ cr: function(){
+  function step(n, titre, inner, links){ return '<section class="crs-s"><div class="crs-h"><span class="tl-n">' + n + '</span><h3>' + esc(titre) + '</h3></div>' + inner + (links ? '<div class="crs-links">' + links + '</div>' : '') + '</section>'; }
+  return '<div class="crs">'
+   + step(1, 'Ma stratégie',
+      '<div class="crs-2"><div class="crs-case"><b>Si on me demande de la construire</b>' + ul(["ce que je vais faire ;", "ce que je vais mesurer ou observer ;", "mon **témoin**, si le TP en permet un ;", "ce que j'attends si mon idée est juste."]) + '<p class="crs-note">Certains TP n\'ont pas de témoin : une observation au microscope, une mesure sur une roche…</p></div>'
+      + '<div class="crs-case"><b>Si elle est fournie</b><p>Je la lis et je comprends à quoi sert chaque étape du protocole.</p></div></div>',
+      goFiche('strategie', 'Construire une stratégie'))
+   + step(2, 'Je réalise le protocole', '<p>Avec soin, en portant les protections demandées, pour obtenir des résultats utilisables.</p>')
+   + step(3, 'Je présente mes résultats',
+      '<p><b>Jamais un texte seul</b> : je choisis la forme la plus claire.</p>'
+      + tableHtml({entetes: ["Forme", "Je soigne le tracé", "J'écris dessus"], lignes: [
+         ["Dessin ou schéma", "traits nets, assez grand, la bonne zone", "titre, légendes, grossissement ou échelle, comment j'ai observé"],
+         ["Photo ou capture", "nette, bien cadrée", "titre, légendes, comment j'ai observé"],
+         ["Tableau", "cadre à la règle, assez de lignes et de colonnes", "titre, nom des lignes et des colonnes, valeurs avec unités"],
+         ["Graphique", "axes gradués à la règle, grandeur et unité sur chaque axe, points bien placés", "titre, nom de chaque courbe, conditions de l'expérience"]
+        ]})
+      + '<p><b>Ma présentation doit faire voir tout de suite ce que montrent mes résultats.</b> Je peux ajouter une courte phrase dessus.</p>',
+      goFiche('presenter', 'Présenter ses résultats') + goFiche('calculer', 'Calculer'))
+   + step(4, 'Je conclus',
+      '<p>Je réponds au problème, parfois seulement en partie :</p>' + ul(["**j'utilise tout** : mes résultats et les documents ;", "**je relie mes idées au problème** (car, or, donc) ;", "**je dis si mes résultats sont fiables** : témoin, précision des mesures, nombre d'essais, limites."]),
+      goFiche('exploiter', 'Exploiter ses résultats') + goFiche('conclure', 'Conclure'))
+   + '</div>';
+ },
+ /* Étape 1 : les quatre éléments d'une stratégie */
+ strategie: function(){
+  var b = [
+   [1, "Je fais", "Je mets de l'amidon et de la salive dans un tube, à 37 °C."],
+   [2, "Je mesure ou j'observe", "La présence d'amidon, avec de l'eau iodée, au début et après 10 min."],
+   [3, "Mon témoin (si possible)", "Le même tube, avec de l'eau à la place de la salive."],
+   [4, "J'attends", "Si la salive transforme l'amidon, l'eau iodée ne bleuit plus dans le tube avec salive, mais bleuit encore dans le témoin."]
+  ];
+  return '<p class="pose-q"><span>Problème</span>La salive transforme-t-elle l\'amidon ?</p><div class="strat">'
+   + b.map(function(x){ return '<div class="strat-b"><b>' + mnum(x[0]) + esc(x[1]) + '</b><p>' + mfmt(x[2]) + '</p></div>'; }).join('')
+   + '</div><p class="crs-note">Sans témoin possible, par exemple pour observer des cellules au microscope, je dis seulement ce que je fais, ce que j\'observe et ce que j\'attends.</p>';
+ },
+ /* Étape 3 : choisir la forme et ce qu'il faut écrire dessus */
+ presenter: function(){
+  var f = [
+   ["Dessin ou schéma", "pour une observation", ["traits nets, au crayon", "assez grand, la bonne zone"], ["titre", "légendes", "grossissement ou échelle", "comment j'ai observé"]],
+   ["Photo ou capture", "pour une observation numérique", ["nette", "bien cadrée"], ["titre", "légendes", "comment j'ai observé"]],
+   ["Tableau", "pour des valeurs à comparer", ["cadre à la règle", "assez de lignes et de colonnes"], ["titre", "nom des lignes et des colonnes", "valeurs avec unités"]],
+   ["Graphique", "pour une évolution", ["axes gradués à la règle", "grandeur et unité sur chaque axe", "points bien placés"], ["titre", "nom de chaque courbe", "conditions de l'expérience"]]
+  ];
+  return '<div class="pres">' + f.map(function(x){
+   return '<div class="pres-c"><h3>' + esc(x[0]) + '</h3><p class="pres-w">' + esc(x[1]) + '</p><span class="pres-l">Je soigne le tracé</span>' + ul(x[2]) + '<span class="pres-l">J\'écris dessus</span>' + ul(x[3]) + '</div>';
+  }).join('') + '</div>';
+ },
+ calcul: function(){
+  return '<p class="pose-q"><span>Consigne</span>Pendant un effort, la fréquence cardiaque passe de 70 à 154 battements/min. Calculer l\'augmentation en pourcentage.</p>'
+   + '<dl class="pose">'
+   + '<dt>' + mnum(1) + 'Formule</dt><dd>Pourcentage = (valeur finale − valeur initiale) ÷ valeur initiale × 100</dd>'
+   + '<dt>' + mnum(2) + 'Valeurs</dt><dd>(154 − 70) ÷ 70 × 100 = 84 ÷ 70 × 100</dd>'
+   + '<dt>' + mnum(3) + 'Résultat</dt><dd class="res">= 120 %</dd>'
+   + '<dt>' + mnum(4) + 'Phrase</dt><dd>Pendant l\'effort, la fréquence cardiaque augmente de 120 % : elle fait plus que doubler.</dd>'
+   + '</dl>';
+ },
+ /* Étape 4 : un essai et son témoin */
+ exploiter: function(){
+  function px(t){ return 62 + t * 13.27; } function py(c){ return 270 - c * 18.33; }
+  var s = '<svg class="mv" viewBox="0 0 480 330" role="img" aria-label="Graphique : concentration en glucose en fonction du temps. Dans le témoin sans levure, elle reste à 10 g/L. Avec la levure, elle diminue de 10 à 4 g/L en 30 minutes.">';
+  [2, 4, 6, 8, 10, 12].forEach(function(c){ s += svL(62, py(c), 462, py(c), 'gd') + svT(54, py(c) + 4, String(c), 'sm', 'end'); });
+  s += svT(54, py(0) + 4, '0', 'sm', 'end') + '<path class="ax" d="M62 44V270H464"/>';
+  [0, 10, 20, 30].forEach(function(t){ s += svL(px(t), 270, px(t), 275, 'ax') + svT(px(t), 290, String(t), 'sm', 'middle'); });
+  var tem = [[0, 10], [10, 10], [20, 10], [30, 10]], ess = [[0, 10], [10, 8], [20, 6], [30, 4]];
+  function line(p, cls){ return '<polyline class="' + cls + '" points="' + p.map(function(q){ return px(q[0]).toFixed(1) + ',' + py(q[1]).toFixed(1); }).join(' ') + '"/>' + p.map(function(q){ return '<circle class="' + cls + 'd" cx="' + px(q[0]).toFixed(1) + '" cy="' + py(q[1]).toFixed(1) + '" r="4"/>'; }).join(''); }
+  s += line(tem, 'ac2') + line(ess, 'ac');
+  s += '<path class="br" d="M' + (px(30) + 6) + ' ' + py(10) + 'h6V' + py(4) + 'h-6"/>' + svT(px(30) - 8, 140, 'écart : 6 g/L', 'sm accent', 'end');
+  s += svL(76, 232, 98, 232, 'ac2') + svT(104, 236, 'Témoin : glucose, sans levure', 'sm') + svL(76, 252, 98, 252, 'ac') + svT(104, 256, 'Essai : glucose + levure', 'sm');
+  s += svT(262, 316, 'Temps (min)', 'lb', 'middle') + '<text class="lb" transform="translate(18 157) rotate(-90)" text-anchor="middle">Glucose (g/L)</text>'
+    + svT(262, 24, 'Concentration en glucose avec et sans levure', 'tt', 'middle');
+  s += svN(64, 20, 1) + svN(196, 312, 2) + svN(410, 112, 3) + '</svg>';
+  return s + mvLeg([[1, "Le titre : ce que montre le graphique."], [2, "Les axes : la grandeur et son unité."], [3, "La comparaison au témoin, au même moment, chiffrée."]]);
+ },
+ /* Étape 4 : une conclusion annotée */
+ conclure: function(){
+  return '<p class="pose-q"><span>Problème</span>La salive transforme-t-elle l\'amidon ?</p>'
+   + '<div class="arg">' + seg('Dans le tube avec salive, l\'eau iodée ne bleuit plus après 10 min, alors qu\'elle bleuit encore dans le témoin sans salive', 1) + '. '
+   + seg('Or', 2) + ' ' + seg('le document indique que la salive contient une enzyme, l\'amylase, qui transforme l\'amidon', 1) + '. '
+   + seg('Donc la salive transforme l\'amidon, grâce à l\'amylase', 2) + '. '
+   + seg('Ce résultat ne repose que sur un essai : il faudrait le refaire pour en être sûr', 3) + '.</div>'
+   + '<ol class="mv-leg cd">'
+   + '<li>' + mnum(1, 'c1') + '<span><b>J\'utilise tout</b> : mes résultats et les documents.</span></li>'
+   + '<li>' + mnum(2, 'c2') + '<span><b>Je relie mes idées au problème</b>, avec des mots de liaison.</span></li>'
+   + '<li>' + mnum(3, 'c3') + '<span><b>Je dis si mes résultats sont fiables.</b></span></li>'
+   + '</ol>';
+ }
+};
+
 function renderMethodes(){
-  var h = '<div class="view"><header class="hero"><p class="kicker">Savoir-faire</p><h1>Méthodes</h1><p class="probl"><span>En bref</span>Des fiches pour apprendre à rédiger tes réponses en SVT, étape par étape.</p></header><div class="parts">';
+  var h = '<div class="view ml"><header class="ml-head"><p class="kicker">Savoir-faire</p><h1>Fiches méthode</h1></header><div class="ml-grid">';
   METHODES.filter(visible).forEach(function(m, i){
-    h += '<button class="part nonum" data-m="' + m.id + '"><h3>' + esc(m.titre) + '</h3><p class="pq">' + esc(m.enBref) + '</p><span class="go">Ouvrir la fiche →</span></button>';
+    h += '<button class="mc' + (i === 0 ? ' feat' : (m.id === 'compte-rendu' ? ' feat2' : '')) + '" data-m="' + m.id + '"><span class="fr-tag">' + esc(m.etape) + '</span><span class="mc-t">' + esc(m.titre) + '</span><span class="mc-go">Ouvrir la fiche →</span></button>';
   });
   app.innerHTML = h + '</div></div>';
   app.querySelectorAll('[data-m]').forEach(function(b){ b.onclick = function(){ go('methode', {methode: b.dataset.m}); }; });
 }
 function renderMethode(){
-  var m = METHODES.filter(function(x){ return x.id === S.methode; })[0];
+  var list = METHODES.filter(visible), m = null, idx = -1;
+  list.forEach(function(x, i){ if (x.id === S.methode){ m = x; idx = i; } });
   if (!m){ renderMethodes(); return; }
-  var h = '<div class="view"><header class="hero"><p class="kicker">Méthode</p><h1>' + esc(m.titre) + '</h1><p class="probl"><span>En bref</span>' + esc(m.enBref) + '</p></header>'
-    + '<p class="kicker" style="margin-top:6px">Les étapes</p><ol class="m-steps">';
-  m.etapes.forEach(function(e){
-    h += '<li><h3>' + esc(e.titre) + (e.facultatif ? ' <span class="m-opt">facultatif</span>' : '') + '</h3>';
-    if (e.texte){ h += '<p>' + mfmt(e.texte) + '</p></li>'; return; }
-    h += '<p><span class="m-lab">Ce que je fais</span>' + mfmt(e.fais) + '</p>'
-      + '<p><span class="m-lab">Ce que j\'écris</span>' + mfmt(e.ecris) + '</p></li>';
-  });
-  h += '</ol>';
-  if (m.exemple){
-    var x = m.exemple;
-    h += '<p class="kicker">' + esc(x.titre || 'Exemple rédigé') + (x.partie ? ' (partie ' + esc(x.partie) + ')' : '') + '</p><div class="m-ex">';
-    if (x.lignes) h += x.lignes.map(function(l){ return '<p><span class="m-lab">' + esc(l[0]) + '</span>' + mfmt(l[1]) + '</p>'; }).join('') + '</div>';
-    else h += '<p><span class="m-lab">Consigne</span>' + mfmt(x.consigne) + '</p>'
-      + '<p><span class="m-lab">Document</span>' + mfmt(x.document) + '</p>'
-      + '<div class="m-rep"><span class="m-lab">Réponse</span>' + x.reponse.map(function(r){ return '<p>' + mfmt(r) + '</p>'; }).join('') + '</div></div>';
-  }
-  if (m.reperes){
-    h += '<p class="kicker">' + esc(m.reperes.titre) + '</p><ul class="m-err">' + m.reperes.lignes.map(function(l){ return '<li><mark class="hl-v">' + esc(l[0]) + '</mark> : ' + mfmt(l[1]) + '</li>'; }).join('') + '</ul>';
-  }
-  if (m.erreurs && m.erreurs.length){
-    h += '<p class="kicker">Erreurs fréquentes</p><ul class="m-err">' + m.erreurs.map(function(r){ return '<li>' + mfmt(r) + '</li>'; }).join('') + '</ul>';
-  }
-  h += '<div class="row" style="margin-top:22px"><button class="btn" id="mList">Toutes les méthodes</button></div></div>';
+  document.body.style.cssText = colorVars(m.couleur || METH_COUL);
+  function card(cls, titre, inner){ return '<section class="mf-card' + (cls ? ' ' + cls : '') + '">' + (titre ? '<h2>' + esc(titre) + '</h2>' : '') + inner + '</section>'; }
+  var vis = card('mf-vis', '', MV[m.visuel] ? MV[m.visuel](m) : '');
+  var steps = m.etapes.length ? card('', 'Les étapes', '<ol class="tl">' + m.etapes.map(function(e, i){
+    return '<li><span class="tl-n">' + (i + 1) + '</span><div><h3>' + esc(e.t) + (e.n ? '<span class="tl-ref">' + e.n.map(function(k){ return mnum(k); }).join('') + '</span>' : '') + '</h3>' + (e.x ? '<p>' + mfmt(e.x) + '</p>' : '') + '</div></li>';
+  }).join('') + '</ol>') : '';
+  var x = m.exemple, ex = x ? card('mf-ex', x.titre || 'Exemple rédigé', '<p class="q">' + mfmt(x.consigne) + '</p>' + (x.tableau ? tableHtml(x.tableau) : '') + '<div class="rep">' + x.reponse.map(function(r){ return '<p>' + mfmt(r) + '</p>'; }).join('') + '</div>') : '';
+  var a = m.atoi, toi = a ? card('mf-try', 'À toi', '<p class="try-doc">' + mfmt(a.consigne) + '</p><p class="q">' + mfmt(a.question) + '</p><div class="try-f"><button type="button" class="btn" data-try>Voir la correction</button><div class="fold"><div><div class="try-c">' + a.correction.map(function(c){ return '<p>' + mfmt(c) + '</p>'; }).join('') + '</div></div></div></div>') : '';
+  var ver = m.verif ? card('', 'Je vérifie', '<ul class="chk">' + m.verif.map(function(v){ return '<li><button type="button" class="chk-b" aria-pressed="false"><span class="box" aria-hidden="true"></span><span>' + mfmt(v) + '</span></button></li>'; }).join('') + '</ul>') : '';
+  var r = m.retenir, ret = r ? card('mf-ret', r.titre, r.cartes ? '<div class="rp">' + r.cartes.map(function(l){ return '<div><span class="fr-tag">' + esc(l[0]) + '</span><span class="d">' + mfmt(l[1]) + '</span></div>'; }).join('') + '</div>' : r.lignes.map(function(l){ return '<p>' + mfmt(l) + '</p>'; }).join('')) : '';
+  var h = '<div class="view mf"><header class="mf-head"><span class="fr-tag">' + esc(m.etape) + '</span><h1>' + esc(m.titre) + '</h1><p class="mf-lead">' + mfmt(m.bref) + '</p></header>';
+  /* Mise en page : le visuel (seul, ou à côté des étapes), puis les autres cartes deux par deux */
+  var rest;
+  if (m.large || !steps){ h += '<div class="mf-row">' + vis + '</div>'; rest = [steps, ex, toi, ver, ret]; }
+  else { h += '<div class="mf-row two">' + vis + steps + '</div>'; rest = [ex, toi, ver, ret]; }
+  rest = rest.filter(function(y){ return y; });
+  for (var ri = 0; ri < rest.length; ri += 2) h += '<div class="mf-row' + (rest[ri + 1] ? ' half' : '') + '">' + rest[ri] + (rest[ri + 1] || '') + '</div>';
+  var nx = list[idx + 1];
+  h += '<nav class="mf-nav"><button class="btn" id="mList">← Toutes les fiches</button>' + (nx ? '<button class="btn" id="mNext">' + esc(nx.titre) + ' →</button>' : '') + '</nav></div>';
   app.innerHTML = h;
+  app.querySelectorAll('[data-try]').forEach(function(b){ b.onclick = function(){ var o = b.parentNode.classList.toggle('open'); b.textContent = o ? 'Masquer la correction' : 'Voir la correction'; }; });
+  app.querySelectorAll('.chk-b').forEach(function(b){ b.onclick = function(){ var on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on ? 'true' : 'false'); }; });
+  app.querySelectorAll('[data-goto]').forEach(function(b){ b.onclick = function(){ go('methode', {methode: b.dataset.goto}); }; });
   $('mList').onclick = function(){ go('methodes'); };
+  if (nx) $('mNext').onclick = function(){ go('methode', {methode: nx.id}); };
 }
 
 /* ---------- Réglages de lecture ---------- */
@@ -2416,7 +2764,7 @@ function pillRow(label, key, opts){
 }
 function drawSettings(){
   var s = $('settings');
-  s.innerHTML = pillRow('Thème', 'theme', [['bleu', 'Bleu'], ['papier', 'Papier'], ['clair', 'Clair'], ['sombre', 'Sombre']])
+  s.innerHTML = pillRow('Thème', 'theme', [['bleu', 'Violet'], ['papier', 'Papier'], ['clair', 'Clair'], ['sombre', 'Sombre']])
     + pillRow('Taille du texte', 'taille', [[0, 'A−', 'font-size:.78rem'], [1, 'A', 'font-size:.86rem'], [2, 'A+', 'font-size:.96rem'], [3, 'A++', 'font-size:1.06rem']])
     + pillRow('Police', 'police', [['lex', 'Lexend'], ['std', 'Classique']])
     + pillRow('Espacement', 'espace', [['n', 'Normal'], ['w', 'Élargi']])
