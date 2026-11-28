@@ -797,37 +797,52 @@ html.hw .home-head{position:relative}
 .hw-rain .hw-p{position:absolute;top:0;margin:0;animation:hwFall linear forwards;will-change:transform}
 @keyframes hwFall{from{transform:translateY(-80px) rotate(0)}to{transform:translateY(calc(100vh + 80px)) rotate(var(--rot))}}
 @media (max-width:480px){html.hw .home-head h1,html.hw .home-head .kicker{padding-right:56px}}
-/* ===== HALLOWEEN (fin) ===== */;font-size:.78rem;color:var(--muted);padding:6px 0 22px}
-/* Fiche méthode « Le graphique » */
-.gf-head{text-align:center;margin-bottom:18px}
-.gf-head .fr-tag{display:inline-block;margin-bottom:10px}
-.mf.gf .gf-head h1{text-align:center;margin:0 0 14px;font-size:clamp(1.5rem,2.4vw + 1rem,2.1rem);line-height:1.2}
-.gf-niv{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:16px}
-.gf-niv span{border:3px solid var(--n);border-radius:6px;padding:3px 12px;font-weight:700;font-size:1.05rem;color:#1a1a1a;background:#fff}
-.gf-lead{font-style:italic;text-align:justify;-webkit-hyphens:auto;hyphens:auto;line-height:1.6;margin:0;font-size:1.05rem;color:var(--ink)}
-.gf-crit{list-style:none;margin:0 0 20px;padding:12px 16px 12px 14px;border:2px solid #1a1a1a;border-radius:6px;background:#fff}
-.gf-crit li{position:relative;padding:3px 0 3px 22px;color:var(--n);font-weight:700;line-height:1.45}
-.gf-crit li::before{content:"";position:absolute;left:3px;top:0;bottom:0;width:6px;background:linear-gradient(var(--n) 0 calc(3px + .73em),var(--nx) calc(3px + .73em))}
-.gf-crit li::after{content:"";position:absolute;left:0;top:calc(3px + .73em);width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--n)}
-.gf-crit li:last-child::before{bottom:auto;height:calc(3px + .73em)}
-.gf-crit li span{font-variant-numeric:tabular-nums}
-.gf-duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
-.gf-box{border:2px solid var(--n);border-radius:12px;padding:14px 16px;background:#dff2e6;color:#1a1a1a}
-.gf-box.gf-4{background:#fde3d6}
-.gf-box h2{display:flex;align-items:center;gap:10px;margin:0 0 8px;font-size:1.05rem;color:var(--n)}
-.gf-box p{margin:0 0 4px;line-height:1.55;text-align:justify;color:#1a1a1a}
-.gf-box h3{color:#1a1a1a}
-.gf-n{flex:none;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;color:#fff;font-weight:700;font-size:.95rem;box-shadow:0 0 0 2px #fff}
-.gf-fig{margin:0 0 16px}
-.gf-fig img{display:block;width:100%;height:auto;border-radius:14px;cursor:zoom-in;box-shadow:0 1px 3px rgba(0,0,0,.15)}
-.gf-fig figcaption{font-size:.82rem;color:var(--muted);margin-top:6px;text-align:center}
-.gf-types{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.gf-types > div{display:flex;gap:14px;align-items:flex-start}
-.gf-types svg{flex:none;width:96px;height:auto;color:#1a1a1a}
-.gf-types h3{margin:0 0 4px;font-size:1.05rem}
-.gf-types p{margin:0}
-.gf .mf-nav{margin-top:22px}
-@media (max-width:640px){.gf-duo,.gf-types{grid-template-columns:1fr}.gf-types svg{width:72px}.gf-types p{text-align:left}}
+/* ===== HALLOWEEN (fin) ===== */
+/* Fiches méthode au format « maquette » : Arial, fond bleu clair, niveaux Seconde / Première / Terminale */
+.fm-sheet{background:#dce9f6;color:#111;font-family:Arial,Helvetica,sans-serif;padding:clamp(14px,3vw,30px)}
+.fm-sheet,.fm-sheet *{font-family:Arial,Helvetica,sans-serif !important}
+.fm-t{display:table;margin:0 auto 12px;padding:2px 14px;border:3px solid #111;background:#fff;color:#111;font-size:clamp(1.3rem,2.4vw + .6rem,2.2rem);font-weight:700;line-height:1.25;text-align:center}
+.fm-niv{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.fm-sheet .fm-choix{margin:0 0 6px;text-align:center;font-size:.9rem;font-weight:700;color:#333}
+.fm-niv button{padding:0 6px;border:3px solid;background:#fff;font:700 clamp(1.05rem,1.5vw + .7rem,1.6rem)/1.35 Arial,Helvetica,sans-serif;cursor:pointer;opacity:.38;transition:opacity .15s}
+.fm-niv button.on{opacity:1;box-shadow:0 3px 0 currentColor}
+@media (hover:hover){.fm-niv button:hover{opacity:.8}.fm-niv button.on:hover{opacity:1}}
+.fm-niv button:focus-visible{outline:3px solid #111;outline-offset:2px}
+.fm-crw{margin:0 0 22px}
+.fm-niv .s,.fm-cr.s > ol li{color:#0aa24a;border-color:#0aa24a}
+.fm-niv .p,.fm-cr.p > ol li{color:#d36fd2;border-color:#d36fd2}
+.fm-niv .t,.fm-cr.t > ol li{color:#ee7a33;border-color:#ee7a33}
+.fm-lead{margin:0 0 16px;font-style:italic;font-size:1.06rem;line-height:1.5;text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+.fm-h{display:table;margin:0 auto 10px;padding:2px 10px;border:2px solid #111;background:#fff;color:#111;font-size:1.15rem;font-weight:700}
+.fm-cr{border:3px solid;background:#fff}
+.fm-cr.t{border-color:#ee7a33;width:fit-content;max-width:100%;margin:0 auto 22px;padding:10px clamp(8px,2.5vw,22px)}
+.fm-cr.p{border-color:#d36fd2;width:fit-content;max-width:100%;margin:0 auto;padding:6px clamp(6px,2vw,16px)}
+.fm-cr.s{border-color:#0aa24a;width:fit-content;max-width:100%;margin:0 auto;padding:6px clamp(6px,2vw,14px)}
+.fm-cr ol{list-style:none;margin:0;padding:4px 6px}
+.fm-cr li{font-weight:700;font-size:clamp(1.02rem,.5vw + .95rem,1.2rem);line-height:1.4;padding:4px 0}
+.fm-duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 20px}
+.fm-box{border:3px solid;padding:10px 14px}
+.fm-box.s{border-color:#0aa24a}.fm-box.s h3,.fm-box.s .fm-n{--k:#0aa24a}
+.fm-box.t{border-color:#ee7a33}.fm-box.t h3,.fm-box.t .fm-n{--k:#ee7a33}
+.fm-box h3{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:1.06rem;font-weight:700;color:var(--k)}
+.fm-n{flex:none;display:inline-grid;place-items:center;width:26px;height:26px;background:var(--k);color:#111;border:1px solid #111;font-size:1.05rem;font-weight:700}
+.fm-box p{margin:0 0 4px;line-height:1.5}
+.fm-fig{margin:0 0 20px}
+.fm-fig img{display:block;width:100%;height:auto;cursor:zoom-in}
+.fm-fig figcaption{margin-top:4px;font-size:.82rem;color:#444;text-align:center}
+.fm-types{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fm-types > div{display:flex;gap:14px;align-items:flex-start}
+.fm-types svg{flex:none;width:100px;height:auto}
+.fm-types h4{margin:0 0 4px;font-size:1.05rem}
+.fm-types p{margin:0}
+.fm .mf-nav{margin-top:22px}
+.fm-lien{display:inline-block;margin:6px 6px 0 0;padding:3px 10px;border:2px solid #0aa24a;background:#fff;color:#0a7a3a;font:700 .88rem/1.4 Arial,Helvetica,sans-serif;cursor:pointer}
+@media (hover:hover){.fm-lien:hover{background:#0aa24a;color:#fff}}
+.fm-etapes{margin:0;padding:0;list-style:none}
+.fm-etapes li{margin:0 0 10px;line-height:1.45}
+@media (max-width:640px){.fm-duo{grid-template-columns:1fr}.fm-types svg{width:76px}}
+@media (max-width:900px){.fm-types{grid-template-columns:1fr}}
+@media (max-width:640px){.gf-duo,.gf-types{grid-template-columns:1fr}.gf-types svg{width:72px}}
 /* Noël, pages de contenu : bandeau du haut dans l'ambiance de l'accueil, page blanche dessous, quelques sapins */
 html.noel:not(.nl-home) .topbar{--paper:#3a2c5a;--surface:#47386c;--ink:#f6f0ff;--ink-2:#e1d6f5;--muted:#b9abd6;--line:#5b4a85;--line-2:#71609c;background:linear-gradient(180deg,#46366f,#3a2c5a);border-bottom-color:#2b2147;color:var(--ink)}
 html.noel:not(.nl-home) .hero,html.noel:not(.nl-home) .mf-head,html.noel:not(.nl-home) .ml-head{position:relative;padding-right:104px}
@@ -987,6 +1002,52 @@ html.th-sombre .act2,html.th-sombre .vw-in{--frs:color-mix(in srgb,var(--fr) 12%
 .ct-code{margin:0 0 12px;padding:10px 12px;border-radius:10px;background:var(--surface);border:1.5px solid #6a4bb0;font:700 1rem ui-monospace,Consolas,monospace;letter-spacing:.08em;word-break:break-all;user-select:all}
 @media (max-width:560px){.ct-boost{gap:14px;padding:14px}.ct-pk{width:64px}.ct-grid{grid-template-columns:repeat(auto-fill,minmax(98px,1fr));gap:10px}.ct-mine{margin-left:0}}
 @media (prefers-reduced-motion:reduce){.bp .bp-shine{animation:none}}
+/* Liste des fiches méthode, organisée selon le compte rendu de TP */
+.ml-lead{margin:-14px 0 22px;font-size:1.05rem;color:var(--ink-2)}
+.ml-top{display:grid;grid-template-columns:1fr 1.6fr;gap:14px;margin:0 0 30px}
+.ml-h2{margin:0 0 14px;font-size:1.25rem}
+.mc2{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:4px;width:100%;padding:14px 16px;text-align:left;background:var(--surface);border:2px solid color-mix(in srgb,#6a4bb0 35%,var(--line));border-radius:14px;cursor:pointer;transition:border-color .2s,transform .2s var(--ease),box-shadow .2s}
+.mc2-t{font-weight:700;font-size:1.1rem;line-height:1.3;color:var(--ink)}
+.mc2-d{font-size:.92rem;line-height:1.4;color:var(--ink-2)}
+.mc2-go{position:absolute;right:14px;top:12px;font-size:1.2rem;font-weight:700;color:#6a4bb0}
+.mc2-t{padding-right:26px}
+@media (hover:hover){.mc2:hover{border-color:#6a4bb0;transform:translateY(-2px);box-shadow:0 10px 22px -14px rgba(40,20,90,.45)}}
+.mc2:focus-visible,.mc2-p:focus-visible{outline:3px solid #6a4bb0;outline-offset:2px}
+.mc2.avant{border-color:#e2761b}
+.mc2.avant .mc2-go{color:#e2761b}
+.mc2.centrale{background:#6a4bb0;border-color:#6a4bb0;padding:18px 20px}
+.mc2.centrale .mc2-t{color:#fff;font-size:1.3rem}
+.mc2.centrale .mc2-d,.mc2.centrale .mc2-go{color:#fff}
+.ml-steps{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:12px}
+.ml-step{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:16px;border:2px solid color-mix(in srgb,#6a4bb0 22%,var(--line));border-radius:16px;background:color-mix(in srgb,#6a4bb0 5%,var(--surface))}
+.ml-sn{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:#6a4bb0;color:#fff;font-weight:800;font-size:1.25rem}
+.ml-sb h3{margin:6px 0 12px;font-size:1.12rem}
+.ml-step.mute{opacity:.75}
+.ml-step.mute .ml-sn{background:#9a8fb8}
+.ml-note{margin:0;color:var(--muted);font-style:italic}
+.ml-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:10px}
+.ml-sub{margin:14px 0 8px;font-weight:700;font-size:.92rem;color:var(--ink-2)}
+.ml-puces{display:flex;flex-wrap:wrap;gap:8px}
+.mc2-p{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;background:var(--surface);border:2px solid color-mix(in srgb,#0aa24a 45%,var(--line));border-radius:12px;font-weight:700;font-size:.92rem;color:var(--ink);cursor:pointer}
+.mc2-p svg{width:40px;height:27px;flex:none;background:#fff;border-radius:4px}
+@media (hover:hover){.mc2-p:hover{border-color:#0aa24a;transform:translateY(-1px)}}
+@media (max-width:640px){.ml-top{grid-template-columns:1fr}.ml-step{grid-template-columns:1fr;gap:8px;padding:14px}.ml-sb h3{margin-top:0}}
+.ml-cr{margin:0 0 30px;border:2px solid #6a4bb0;border-radius:16px;overflow:hidden;background:var(--surface)}
+.ml-crh{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:4px;width:100%;padding:18px 20px;background:#6a4bb0;border:0;text-align:left;cursor:pointer}
+.ml-crt{font-weight:700;font-size:1.3rem;color:#fff;padding-right:34px}
+.ml-crd{font-size:.95rem;color:#fff;opacity:.92}
+.ml-chev{position:absolute;right:22px;top:26px;width:12px;height:12px;border-right:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(45deg);transition:transform .25s}
+.ml-cr.open .ml-chev{transform:rotate(225deg);top:32px}
+.ml-crb{display:none;padding:16px}
+.ml-cr.open .ml-crb{display:block}
+.ml-full{display:inline-block;margin:0 0 14px;padding:8px 14px;border:2px solid #6a4bb0;border-radius:10px;background:var(--surface);color:#6a4bb0;font-weight:700;cursor:pointer}
+@media (hover:hover){.ml-full:hover{background:#6a4bb0;color:#fff}}
+.ml-note2{margin:0 0 12px;color:var(--ink-2);line-height:1.5}
+.ml-apart{max-width:560px;margin-bottom:28px;grid-template-columns:1fr}
+/* Texte justifié jusqu'au bout des cadres (fiches méthode, liste, activités) */
+.fm-box p,.fm-types p,.fm-etapes li,.mc2-d,.ml-crd,.ml-note2,.ml-lead,.ab-2 li,.ab-b li,.vw-poste li,.st-b p,.ab-row p,.ab-suite p,.ab-cherche,.mf-lead,.ct-save p{text-align:justify;-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+.mc2-d,.ml-crd{display:block;width:100%}
+html.sp-wide .fm-box p,html.sp-wide .fm-types p,html.sp-wide .fm-etapes li,html.sp-wide .mc2-d,html.sp-wide .ml-crd,html.sp-wide .ml-note2,html.sp-wide .ml-lead,html.sp-wide .ab-2 li,html.sp-wide .ab-b li,html.sp-wide .ab-b p,html.sp-wide .vw-poste li,html.sp-wide .st-b p,html.sp-wide .ab-row p,html.sp-wide .ab-suite p,html.sp-wide .ab-cherche,html.sp-wide .fm-lead{text-align:left;-webkit-hyphens:manual;hyphens:manual}
 </style>
 </head>
 <body>
@@ -3787,108 +3848,24 @@ var METHODES = [
   ]}
  },
 
- {id: "compte-rendu", etape: "Fiche centrale", titre: "Structurer un compte rendu de TP", visuel: "cr", large: true,
-  bref: "Quatre étapes, toujours dans le même ordre, en biologie comme en géologie. Chaque étape a sa fiche détaillée.",
-  etapes: [],
-  atoi: {consigne: "TP : la salive transforme-t-elle l'amidon ? Voici trois éléments d'un compte rendu : « Je prépare aussi un tube sans salive. » ; « Tableau : couleur de l'eau iodée dans chaque tube. » ; « Il faudrait refaire l'expérience pour être sûr du résultat. »",
-   question: "À quelle étape correspond chacun ?",
-   correction: ["« Je prépare aussi un tube sans salive » : **étape 1**, ma stratégie (c'est le témoin).", "« Tableau : couleur de l'eau iodée dans chaque tube » : **étape 3**, je présente mes résultats.", "« Il faudrait refaire l'expérience pour être sûr du résultat » : **étape 4**, je conclus en disant si mes résultats sont fiables."]},
-  verif: ["Étape 1 : je dis ce que je fais, ce que je mesure, et mon témoin s'il y en a un.", "Étape 3 : mes résultats ne sont pas présentés par un texte seul.", "Étape 3 : ma présentation a un titre, des légendes et des unités.", "Étape 4 : j'utilise mes résultats et les documents.", "Étape 4 : je dis si mes résultats sont fiables."],
-  retenir: {titre: "À retenir", lignes: ["**Étape 1** : je prévois. **Étape 2** : je réalise.", "**Étape 3** : je montre mes résultats. **Étape 4** : je réponds au problème."]}
- },
+ {id: "compte-rendu", etape: "Fiche centrale", titre: "Structurer un compte rendu de TP", special: "fm", bref: "", etapes: []},
 
- {id: "strategie", etape: "Étape 1", titre: "Construire une stratégie", visuel: "strategie", large: true,
-  bref: "Avant de manipuler, je prévois ce que je vais faire, ce que je vais mesurer, et ce que j'attends.",
-  etapes: [
-   {t: "Je repère le problème", x: "La question à laquelle le TP doit répondre."},
-   {t: "Je dis ce que je fais et ce que je mesure", n: [1, 2], x: "La manipulation, et ce que je vais mesurer ou observer."},
-   {t: "Je prévois un témoin, si c'est possible", n: [3], x: "Le même montage, avec une seule différence : ce que je teste."},
-   {t: "Je dis ce que j'attends", n: [4], x: "Les résultats que je devrais obtenir si mon idée est juste."}
-  ],
-  atoi: {consigne: "Problème : la levure consomme-t-elle du glucose ? On place de la levure dans une solution de glucose et on mesure la concentration en glucose pendant 30 min.",
-   question: "Quel témoin proposes-tu ?",
-   correction: ["La même solution de glucose, dans les mêmes conditions, mais **sans levure**.", "Si le glucose diminue seulement dans le tube avec levure, c'est bien la levure qui le consomme."]},
-  verif: ["J'ai rappelé le problème.", "Je dis ce que je fais et ce que je mesure ou observe.", "Mon témoin ne diffère que par ce que je teste (s'il y en a un).", "Je dis ce que j'attends si mon idée est juste."],
-  retenir: {titre: "À retenir", lignes: ["Un **témoin** est identique à l'essai, sauf sur ce que l'on teste.", "Certains TP n'ont pas de témoin : une observation au microscope, une mesure sur une roche…"]}
- },
+ {id: "strategie", etape: "Étape 1", titre: "Construire une stratégie", special: "fm", bref: "", etapes: []},
 
- {id: "presenter", etape: "Étape 3", titre: "Présenter ses résultats", visuel: "presenter", large: true,
-  bref: "Jamais un texte seul : je choisis la forme la plus claire, je soigne le tracé et j'écris dessus ce qu'il faut.",
-  etapes: [
-   {t: "Je choisis la forme", x: "Une observation : dessin ou photo. Des valeurs à comparer : tableau. Une évolution : graphique."},
-   {t: "Je soigne le tracé", x: "À la règle, net, assez grand."},
-   {t: "J'écris dessus ce qu'il faut", x: "Titre, légendes, unités, conditions de l'expérience."},
-   {t: "Je vérifie qu'on comprend tout de suite", x: "Ce que montrent mes résultats doit sauter aux yeux. Je peux ajouter une courte phrase."}
-  ],
-  exemple: {titre: "Exemple : un tableau", consigne: "TP : la salive transforme-t-elle l'amidon ? Présenter les résultats.",
-   tableau: {legende: "Couleur de l'eau iodée après 10 min à 37 °C", entetes: ["Tube", "Contenu", "Couleur de l'eau iodée", "Amidon"], lignes: [
-    ["1 (témoin)", "amidon + eau", "bleu-noir", "présent"],
-    ["2", "amidon + salive", "orangée", "absent"]
-   ]},
-   reponse: ["L'amidon a disparu seulement dans le tube avec salive."]},
-  atoi: {consigne: "Un élève a mesuré la masse et le volume de trois roches, puis calculé leur densité.",
-   question: "Quelle forme choisir pour présenter ces résultats ? Comment l'organiser ?",
-   correction: ["Un **tableau** : des valeurs à comparer.", "Une ligne par roche ; des colonnes masse (g), volume (cm³) et densité (sans unité) ; un titre."]},
-  verif: ["Mes résultats ne sont pas présentés par un texte seul.", "Mon tracé est net, à la règle, assez grand.", "J'ai mis un titre, des légendes et des unités.", "On voit tout de suite ce que montrent mes résultats."],
-  retenir: {titre: "À retenir", lignes: ["Grossissement du microscope = oculaire × objectif (par exemple 10 × 40 = 400).", "Un graphique : une grandeur et une unité sur chaque axe."]}
- },
+ {id: "presenter", etape: "Étape 3", titre: "Présenter ses résultats", special: "fm", bref: "", etapes: []},
 
- {id: "graphique", etape: "Étape 3", titre: "Le graphique", special: "graphique", bref: "", etapes: []},
+ {id: "graphique", etape: "Étape 3", titre: "Le graphique", special: "fm", bref: "", etapes: []},
+ {id: "histogramme", etape: "Étape 3", titre: "L'histogramme", special: "fm", bref: "", etapes: []},
+ {id: "tableau", etape: "Étape 3", titre: "Le tableau", special: "fm", bref: "", etapes: []},
+ {id: "dessin", etape: "Étape 3", titre: "Le dessin d'observation", special: "fm", bref: "", etapes: []},
+ {id: "schema", etape: "Étape 3", titre: "Le schéma", special: "fm", bref: "", etapes: []},
+ {id: "image", etape: "Étape 3", titre: "L'image numérique", special: "fm", bref: "", etapes: []},
 
- {id: "calculer", etape: "Étape 3", titre: "Calculer", visuel: "calcul",
-  bref: "Une formule, des valeurs avec leurs unités, un résultat et une phrase : un calcul que l'on peut suivre.",
-  etapes: [
-   {t: "J'écris la formule", n: [1], x: "En mots ou en lettres, avant de remplacer."},
-   {t: "Je remplace par les valeurs", n: [2], x: "Chacune avec son unité."},
-   {t: "Je calcule et j'arrondis", n: [3], x: "J'arrondis seulement le résultat final."},
-   {t: "Je réponds par une phrase", n: [4], x: "Le résultat, son unité, et ce qu'il signifie."}
-  ],
-  atoi: {consigne: "La masse d'une plante passe de 20 g à 26 g en une semaine.",
-   question: "Calcule l'augmentation de masse en pourcentage.",
-   correction: ["Variation = 26 − 20 = 6 g.", "Pourcentage = 6 ÷ 20 × 100 = 30 %.", "La masse de la plante a augmenté de 30 % en une semaine."]},
-  verif: ["J'ai écrit la formule avant de calculer.", "Chaque valeur a son unité.", "Mon résultat est arrondi raisonnablement.", "J'ai répondu par une phrase."],
-  retenir: {titre: "Les calculs les plus fréquents", cartes: [
-   ["Variation", "valeur finale − valeur initiale"],
-   ["Pourcentage", "variation ÷ valeur initiale × 100"],
-   ["Moyenne", "somme des valeurs ÷ nombre de valeurs"],
-   ["Grossissement", "oculaire × objectif (par exemple 10 × 40 = 400)"]
-  ]}
- },
+ {id: "calculer", etape: "Étape 3", titre: "Calculer", special: "fm", bref: "", etapes: []},
 
- {id: "exploiter", etape: "Étape 4", titre: "Exploiter ses résultats", visuel: "exploiter",
-  bref: "Je lis mes résultats, je les compare au témoin au même moment, puis je dis ce qu'ils montrent.",
-  etapes: [
-   {t: "Je lis le graphique", n: [1, 2], x: "Le titre, ce que représente chaque axe, et les unités."},
-   {t: "Je décris avec des valeurs", x: "Pour chaque courbe : début, fin, sens de variation."},
-   {t: "Je compare au témoin", n: [3], x: "Au même moment, avec l'écart chiffré."},
-   {t: "Je dis ce que cela montre", x: "Avec mes connaissances : la différence vient de ce qui change entre l'essai et le témoin."}
-  ],
-  exemple: {consigne: "Exploiter les résultats du TP : la levure consomme-t-elle du glucose ?",
-   reponse: [
-    "Dans le témoin, sans levure, la concentration en glucose reste à 10 g/L. Avec la levure, elle diminue de 10 à 4 g/L en 30 min, soit 6 g/L de moins que le témoin.",
-    "La seule différence entre les deux tubes est la levure : {{e:donc}} la levure consomme du glucose."
-   ]},
-  atoi: {consigne: "Hauteur de deux lots de plants de haricot après 10 jours : avec engrais, 14 cm ; sans engrais, 9 cm. Toutes les autres conditions sont identiques.",
-   question: "Compare les deux lots en une phrase chiffrée, puis indique le témoin.",
-   correction: ["Le lot avec engrais mesure 14 cm, soit 5 cm de plus que le lot sans engrais (9 cm).", "Le lot sans engrais est le témoin : c'est la référence, sans la condition testée."]},
-  verif: ["J'ai lu le titre, les axes et les unités.", "J'ai décrit chaque courbe avec des valeurs.", "J'ai comparé au témoin au même moment, avec l'écart chiffré.", "J'ai dit ce que montrent les résultats."],
-  retenir: {titre: "À retenir", lignes: ["D'abord je **décris** (des valeurs), ensuite je **compare** au témoin, enfin je dis ce que cela **montre**."]}
- },
+ {id: "exploiter", etape: "Étape 4", titre: "Exploiter ses résultats", special: "fm", bref: "", etapes: []},
 
- {id: "conclure", etape: "Étape 4", titre: "Conclure", visuel: "conclure", large: true,
-  bref: "Je réponds au problème, parfois seulement en partie : j'utilise tout, je relie mes idées, je dis si mes résultats sont fiables.",
-  etapes: [
-   {t: "Je rappelle le problème", x: "Pour savoir à quoi je réponds."},
-   {t: "J'utilise tout", n: [1], x: "Mes résultats et les informations des documents."},
-   {t: "Je relie mes idées au problème", n: [2], x: "Avec des mots de liaison : car, or, alors que, donc…"},
-   {t: "Je dis si mes résultats sont fiables", n: [3], x: "Témoin, précision des mesures, nombre d'essais, limites."}
-  ],
-  atoi: {consigne: "TP levure : avec levure, le glucose passe de 10 à 4 g/L en 30 min ; sans levure, il reste à 10 g/L. Un seul essai a été réalisé, et les mesures sont lues à 0,5 g/L près.",
-   question: "Écris la phrase de conclusion qui dit si ces résultats sont fiables.",
-   correction: ["La différence entre les deux tubes (6 g/L) est bien plus grande que la précision des mesures (0,5 g/L), mais un seul essai a été réalisé : il faudrait le refaire pour confirmer le résultat."]},
-  verif: ["J'ai répondu au problème posé.", "J'ai utilisé mes résultats et les documents.", "Mes idées sont reliées entre elles et au problème.", "J'ai dit si mes résultats sont fiables."],
-  retenir: {titre: "À retenir", lignes: ["Une conclusion : **j'utilise tout**, **je relie** au problème, **je dis si c'est fiable**.", "L'ordre est libre : l'important, c'est que chaque idée soit justifiée."]}
- }
+ {id: "conclure", etape: "Étape 4", titre: "Conclure", special: "fm", bref: "", etapes: []}
 ];
 
 function mfmt(s){
@@ -4005,99 +3982,454 @@ var MV = {
  }
 };
 
+var CT_ML_OUVERT = false;
 function renderMethodes(){
-  var h = '<div class="view ml"><header class="ml-head"><p class="kicker">Savoir-faire</p><h1>Fiches méthode</h1></header><div class="ml-grid">';
-  METHODES.filter(visible).forEach(function(m, i){
-    h += '<button class="mc' + (i === 0 ? ' feat' : (m.id === 'compte-rendu' ? ' feat2' : '')) + '" data-m="' + m.id + '"><span class="fr-tag">' + esc(m.etape) + '</span><span class="mc-t">' + esc(m.titre) + '</span><span class="mc-go">Ouvrir la fiche →</span></button>';
-  });
-  app.innerHTML = h + '</div></div>';
+  var vis = {}; METHODES.filter(visible).forEach(function(m){ vis[m.id] = m; });
+  var D = {decrypter: 'Comprendre exactement ce que la consigne demande.', 'compte-rendu': 'Les 4 étapes du compte rendu, et la fiche à ouvrir pour chacune.', strategie: 'Question, hypothèse, ce que je fais et ce que je mesure, le témoin.', presenter: 'Choisir la bonne forme pour mes résultats.', calculer: 'La formule, les valeurs, le résultat.', exploiter: 'Décrire, comparer au témoin, interpréter.', conclure: 'Répondre au problème, avec des arguments.'};
+  var carte = function(id, cls){ var m = vis[id]; if (!m) return ''; return '<button type="button" class="mc2' + (cls ? ' ' + cls : '') + '" data-m="' + id + '"><span class="mc2-t">' + esc(m.titre) + '</span><span class="mc2-d">' + esc(D[id] || '') + '</span><span class="mc2-go" aria-hidden="true">→</span></button>'; };
+  var puce = function(id, ic){ var m = vis[id]; if (!m) return ''; return '<button type="button" class="mc2-p" data-m="' + id + '">' + (typeof FM_MINI !== 'undefined' && FM_MINI[ic] ? FM_MINI[ic] : '') + '<span>' + esc((function(x){ return x.charAt(0).toUpperCase() + x.slice(1); })(m.titre.replace(/^(Le |La |L')/, ''))) + '</span></button>'; };
+  var etape = function(n, titre, inner, cls){ return '<li class="ml-step' + (cls ? ' ' + cls : '') + '"><span class="ml-sn">' + n + '</span><div class="ml-sb"><h3>' + titre + '</h3>' + inner + '</div></li>'; };
+  var h = '<div class="view ml"><header class="ml-head"><p class="kicker">Savoir-faire</p><h1>Fiches méthode</h1><p class="ml-lead">Clique sur <b>Structurer un compte rendu de TP</b> : les étapes s\'affichent, avec la fiche à ouvrir pour chacune.</p></header>'
+    + '<div class="ml-cards ml-apart">' + carte('decrypter', 'avant') + '</div>'
+    + '<h2 class="ml-h2">Le compte rendu de TP</h2>'
+    + '<section class="ml-cr' + (CT_ML_OUVERT ? ' open' : '') + '"><button type="button" class="ml-crh" aria-expanded="' + CT_ML_OUVERT + '"><span class="ml-crt">Structurer un compte rendu de TP</span><span class="ml-crd">Les 4 étapes, et la fiche à ouvrir pour chacune.</span><span class="ml-chev" aria-hidden="true"></span></button>'
+    + '<div class="ml-crb">' + '<button type="button" class="ml-full" data-m="compte-rendu">Ouvrir la fiche complète →</button>' + '<ol class="ml-steps">'
+    + etape(1, 'Je propose une stratégie', '<p class="ml-note2">Je formule le <b>problème</b> sous forme de question, une <b>hypothèse</b> et les <b>résultats attendus</b>.</p><div class="ml-cards">' + carte('strategie') + '</div>')
+    + etape(2, 'Je réalise le protocole', '<p class="ml-note">Pas de fiche : cette étape est évaluée pendant la manipulation.</p>', 'mute')
+    + etape(3, 'Je présente mes résultats', '<div class="ml-cards">' + carte('presenter') + carte('calculer') + '</div><p class="ml-sub">Selon mes résultats :</p><div class="ml-puces">' + puce('tableau', 'simple') + puce('histogramme', 'histo') + puce('graphique', 'courbe') + puce('dessin', 'cellules') + puce('schema', 'structure') + puce('image', 'entier') + '</div>')
+    + etape(4, 'J\'exploite mes résultats et je conclus', '<div class="ml-cards">' + carte('exploiter') + carte('conclure') + '</div>')
+    + '</ol></div></section>';
+  app.innerHTML = h + '</div>';
   app.querySelectorAll('[data-m]').forEach(function(b){ b.onclick = function(){ go('methode', {methode: b.dataset.m}); }; });
+  var crh = app.querySelector('.ml-crh');
+  crh.onclick = function(){ CT_ML_OUVERT = !CT_ML_OUVERT; crh.parentNode.classList.toggle('open', CT_ML_OUVERT); crh.setAttribute('aria-expanded', CT_ML_OUVERT); };
 }
-/* ---------- Fiche méthode « Le graphique » (maquette : niveaux, critères colorés, graphique annoté) ---------- */
-var GF_COUL = {s: '#0b8f45', p: '#b23fb3', t: '#e0601a'};
-function gfSvg(){
-  var G = GF_COUL.s, P = GF_COUL.p, O = GF_COUL.t, F = 'Arial,Helvetica,sans-serif';
-  var X = function(t){ return 130 + t * 19.5; }, Y = function(v){ return 470 - (v - 7.5) * 100; };
-  var s = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 860 515" font-family="' + F + '">'
-    + '<defs>' + [['k', '#1a1a1a'], ['g', G], ['p', P], ['o', O]].map(function(m){ return '<marker id="a' + m[0] + '" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="' + m[1] + '"/></marker>'; }).join('') + '</defs>'
-    + '<rect y="30" width="860" height="515" rx="14" fill="#ffffff"/>';
-  function badge(x, y, n, c){ return '<circle cx="' + x + '" cy="' + y + '" r="14" fill="' + c + '" stroke="#fff" stroke-width="2.5"/><text x="' + x + '" y="' + (y + 5.5) + '" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">' + n + '</text>'; }
-  function arrow(x1, y1, x2, y2, c){ return '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="' + c + '" stroke-width="2.5" marker-end="url(#a' + ({'#0b8f45': 'g', '#b23fb3': 'p', '#e0601a': 'o'}[c] || 'k') + ')"/>'; }
-  function pill(x, y, w, txt, c){ return '<rect x="' + x + '" y="' + (y - 13) + '" width="' + w + '" height="26" rx="13" fill="' + c + '"/><text x="' + (x + w / 2) + '" y="' + (y + 5) + '" text-anchor="middle" font-size="13.5" font-weight="700" fill="#fff">' + txt + '</text>'; }
-  /* Titre et problème */
-  s += badge(34, 66, 2, G) + arrow(52, 66, 80, 66, G)
-    + '<text x="90" y="72" font-size="18.5" font-weight="700" fill="#1a1a1a">Évolution de la concentration en dioxygène en fonction du temps</text>'
-    + '<text x="90" y="100" font-size="14.5" fill="#1a1a1a"><tspan font-weight="700">Problème :</tspan> les chlorelles produisent-elles du dioxygène à la lumière ?</text>';
-  /* Phases */
-  s += '<rect x="' + X(0) + '" y="' + Y(10.5) + '" width="' + (X(10) - X(0)) + '" height="300" fill="#fcefd2"/>'
-    + '<rect x="' + X(10) + '" y="' + Y(10.5) + '" width="' + (X(20) - X(10)) + '" height="300" fill="#e2e2e2"/>'
-    + '<text x="' + X(5) + '" y="' + (Y(10.5) + 26) + '" text-anchor="middle" font-size="15" font-weight="700" fill="#7a5a00">Lumière</text>'
-    + '<text x="' + X(15) + '" y="' + (Y(10.5) + 26) + '" text-anchor="middle" font-size="15" font-weight="700" fill="#444">Obscurité</text>';
-  /* Quadrillage et graduations */
-  for (var v = 8; v <= 10.5; v += 0.5) s += '<line x1="' + X(0) + '" x2="' + X(20) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#999" stroke-width="1" stroke-dasharray="1 4"/>';
-  for (var v2 = 7.5; v2 <= 10.5; v2 += 0.5) s += '<line x1="124" x2="130" y1="' + Y(v2) + '" y2="' + Y(v2) + '" stroke="#1a1a1a" stroke-width="1.5"/><text x="119" y="' + (Y(v2) + 5) + '" text-anchor="end" font-size="13.5" fill="#1a1a1a">' + v2.toFixed(1).replace('.', ',') + '</text>';
-  for (var t = 0; t <= 20; t += 2) s += '<line x1="' + X(t) + '" x2="' + X(t) + '" y1="470" y2="476" stroke="#1a1a1a" stroke-width="1.5"/><text x="' + X(t) + '" y="494" text-anchor="middle" font-size="13.5" fill="#1a1a1a">' + t + '</text>';
-  /* Axes (avec coupure) */
-  s += '<line x1="130" y1="470" x2="130" y2="142" stroke="#1a1a1a" stroke-width="2" marker-end="url(#ak)"/>'
-    + '<line x1="130" y1="470" x2="' + (X(20) + 38) + '" y2="470" stroke="#1a1a1a" stroke-width="2" marker-end="url(#ak)"/>'
-    + '<rect x="124" y="446" width="12" height="8" fill="#fff"/><path d="M123 451l14-5M123 457l14-5" stroke="#1a1a1a" stroke-width="1.5"/>'
-    + '<text transform="translate(66 320) rotate(-90)" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">Concentration en dioxygène (mg/L)</text>'
-    + '<text x="' + X(10) + '" y="527" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a1a">Temps (min)</text>';
-  /* Données */
+/* ---------- Fiches méthode au format « maquette » (Seconde / Première / Terminale) ---------- */
+var FM_C = {s: '#0aa24a', p: '#d36fd2', t: '#ee7a33', k: '#1a1a1a'};
+var FM_FOND = '#dce9f6';
+var FM_RANG = {k: 0, s: 1, p: 2, t: 3};
+var FM_NV = 'p'; /* niveau affiché par défaut : Première */
+try { var fmNv0 = localStorage.getItem('svt_fm_niv'); if (fmNv0 === 's' || fmNv0 === 'p' || fmNv0 === 't') FM_NV = fmNv0; } catch(e){}
+function fmOk(k){ return FM_RANG[k] <= FM_RANG[FM_NV]; }
+function fmIf(k, s){ return fmOk(k) ? s : ''; }
+function fmSvg(w, h, inner){
+  var d = ''; for (var k in FM_C) d += '<marker id="fa' + k + '" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto"><path d="M0 0L10 5L0 10z" fill="' + FM_C[k] + '"/></marker>';
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + w + ' ' + h + '" font-family="Arial,Helvetica,sans-serif"><defs>' + d + '</defs><rect width="' + w + '" height="' + h + '" fill="' + FM_FOND + '"/>' + inner + '</svg>';
+}
+function fmTx(x, y, s, o){ o = o || {}; return '<text x="' + x + '" y="' + y + '" font-size="' + (o.size || 14) + '" fill="' + (o.fill || '#1a1a1a') + '"' + (o.bold ? ' font-weight="700"' : '') + (o.it ? ' font-style="italic"' : '') + (o.anchor ? ' text-anchor="' + o.anchor + '"' : '') + (o.extra || '') + '>' + s + '</text>'; }
+function fmLignes(x, y, lignes, o){ o = o || {}; var lh = o.lh || (o.size || 14) * 1.3; return lignes.map(function(l, i){ return fmTx(x, f1(y + i * lh), l, o); }).join(''); }
+function fmNum(x, y, n, k, s){ if (!fmOk(k)) return ''; s = s || 24; return '<rect x="' + x + '" y="' + y + '" width="' + s + '" height="' + s + '" fill="' + FM_C[k] + '" stroke="#1a1a1a" stroke-width="1"/>' + fmTx(f1(x + s / 2), f1(y + s * .77), n, {size: f1(s * .74), bold: 1, anchor: 'middle'}); }
+function fmFl(x1, y1, x2, y2, k){ if (!fmOk(k)) return ''; return '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="' + FM_C[k] + '" stroke-width="3" marker-end="url(#fa' + k + ')"/>'; }
+function fmBulle(x, y, n, lignes, k, size){
+  if (!fmOk(k)) return '';
+  size = size || 13; if (typeof lignes === 'string') lignes = [lignes];
+  var lh = size * 1.3, w = f1(48 + Math.max.apply(0, lignes.map(function(l){ return l.length; })) * size * .56), h = f1(14 + lignes.length * lh);
+  return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="#fff" stroke="' + FM_C[k] + '" stroke-width="2.5"/>' + fmNum(x + 7, f1(y + h / 2 - 12), n, k) + fmLignes(x + 40, f1(y + h / 2 - (lignes.length - 1) * lh / 2 + size * .36), lignes, {size: size, bold: 1, fill: FM_C[k]});
+}
+function fmTitre(titre, prob){
+  var w = f1(24 + titre.length * 17 * .56);
+  return fmNum(22, 18, 2, 's', 26) + fmFl(52, 31, 82, 31, 's') + '<rect x="88" y="12" width="' + w + '" height="38" fill="none" stroke="' + FM_C.s + '" stroke-width="2.5"/>' + fmTx(100, 37, titre, {size: 17, bold: 1, fill: FM_C.s})
+    + fmTx(100, 74, '<tspan font-weight="700">Problème :</tspan> ' + prob, {size: 14});
+}
+
+/* ---------- Les exemples annotés (les bulles sont rangées dans l'ordre de ce qu'elles montrent : pas de flèches croisées) ---------- */
+var FM_EX = {
+graphique: function(){
+  var X = function(t){ return f1(150 + t * 19.5); }, Y = function(v){ return f1(520 - (v - 7.5) * 100); }, s = '';
+  var ti = fmTitre('Évolution de la concentration en dioxygène en fonction du temps', 'les chlorelles produisent-elles du dioxygène à la lumière ?');
+  s += fmIf('p', '<rect x="' + X(0) + '" y="' + Y(10.5) + '" width="195" height="300" fill="#ebe2c6"/><rect x="' + X(10) + '" y="' + Y(10.5) + '" width="195" height="300" fill="#c5ced8"/>');
+  if (fmOk('p')) s += fmTx(X(5), 248, 'Lumière', {size: 15, bold: 1, fill: '#6a5200', anchor: 'middle'}) + fmTx(X(15), 248, 'Obscurité', {size: 15, bold: 1, fill: '#3a3a3a', anchor: 'middle'});
+  for (var v = 8; v <= 10.5; v += .5) s += '<line x1="150" x2="540" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#999" stroke-dasharray="1 4"/>';
+  for (var v2 = 7.5; v2 <= 10.5; v2 += .5) s += '<line x1="144" x2="150" y1="' + Y(v2) + '" y2="' + Y(v2) + '" stroke="#1a1a1a" stroke-width="1.5"/>' + fmTx(139, f1(+Y(v2) + 5), v2.toFixed(1).replace('.', ','), {size: 13.5, anchor: 'end'});
+  for (var t = 0; t <= 20; t += 2) s += '<line x1="' + X(t) + '" x2="' + X(t) + '" y1="520" y2="526" stroke="#1a1a1a" stroke-width="1.5"/>' + fmTx(X(t), 543, t, {size: 13.5, anchor: 'middle'});
+  s += fmFl(150, 520, 150, 182, 'k') + fmFl(150, 520, 582, 520, 'k') + '<rect x="144" y="497" width="12" height="9" fill="' + FM_FOND + '"/><path d="M143 503l14-5M143 509l14-5" stroke="#1a1a1a" stroke-width="1.5"/>';
+  s += fmTx(0, 0, 'Concentration en dioxygène (mg/L)', {size: 15, bold: 1, anchor: 'middle', extra: ' transform="translate(84 370) rotate(-90)"'});
   var av = [8.0, 8.47, 8.9, 9.28, 9.62, 9.9, 9.79, 9.69, 9.6, 9.52, 9.45], te = [8.0, 8.02, 7.99, 8.01, 8.0, 7.98, 8.01, 8.0, 7.99, 8.01, 8.0];
-  var pa = av.map(function(v, i){ return X(i * 2) + ',' + Y(v); }).join(' '), pt = te.map(function(v, i){ return X(i * 2) + ',' + Y(v); }).join(' ');
-  s += '<polyline points="' + pt + '" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="7 5"/>'
-    + te.map(function(v, i){ return '<circle cx="' + X(i * 2) + '" cy="' + Y(v) + '" r="5.5" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>'; }).join('')
-    + '<polyline points="' + pa + '" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>'
-    + av.map(function(v, i){ return '<circle cx="' + X(i * 2) + '" cy="' + Y(v) + '" r="6" fill="#1a1a1a"/>'; }).join('');
-  /* Réponse au problème */
-  s += '<rect x="318" y="298" width="216" height="72" rx="8" fill="#fde3d6" stroke="' + O + '" stroke-width="2"/>'
-    + '<text font-size="13" font-weight="700" fill="' + O + '"><tspan x="330" y="320">Les chlorelles produisent du</tspan><tspan x="330" y="339">dioxygène à la lumière et en</tspan><tspan x="330" y="358">consomment à l\'obscurité.</tspan></text>';
-  /* Annotations */
-  s += arrow(184, 146, 142, 146, G) + badge(202, 146, 1, G) + pill(224, 146, 284, 'Grandeur + unité, graduation régulière', G)
-    + arrow(570, Y(10.5) + 21, 470, Y(10.5) + 21, P) + badge(588, Y(10.5) + 21, 3, P) + pill(610, Y(10.5) + 21, 226, 'Informations ajoutées (phases)', P)
-    + arrow(572, 334, 540, 334, O) + badge(590, 334, 5, O) + pill(612, 334, 160, 'Réponse au problème', O)
-    + arrow(424, 521, 392, 521, G) + badge(442, 521, 1, G);
-  /* Légende et conditions */
-  s += '<rect x="564" y="384" width="236" height="104" rx="8" fill="#fff" stroke="#888" stroke-width="1.5"/>'
-    + '<line x1="578" y1="406" x2="608" y2="406" stroke="#1a1a1a" stroke-width="2.5"/><circle cx="593" cy="406" r="5" fill="#1a1a1a"/><text x="618" y="411" font-size="13.5" fill="#1a1a1a">Avec chlorelles</text>'
-    + '<line x1="578" y1="430" x2="608" y2="430" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="5 4"/><circle cx="593" cy="430" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="2"/><text x="618" y="435" font-size="13.5" fill="#1a1a1a">Témoin sans chlorelles</text>'
-    + '<line x1="576" y1="446" x2="788" y2="446" stroke="#ccc"/>'
-    + '<text font-size="12" font-style="italic" fill="#333"><tspan x="578" y="463">Chlorelles en suspension, 20 °C,</tspan><tspan x="578" y="479">capteur à dioxygène (ExAO)</tspan></text>'
-    + arrow(828, 406, 806, 406, G) + badge(842, 406, 2, G);
-  return s + '</svg>';
+  s += '<polyline points="' + te.map(function(v, i){ return X(i * 2) + ',' + Y(v); }).join(' ') + '" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="7 5"/>' + te.map(function(v, i){ return '<circle cx="' + X(i * 2) + '" cy="' + Y(v) + '" r="5.5" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>'; }).join('');
+  s += '<polyline points="' + av.map(function(v, i){ return X(i * 2) + ',' + Y(v); }).join(' ') + '" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>' + av.map(function(v, i){ return '<circle cx="' + X(i * 2) + '" cy="' + Y(v) + '" r="6" fill="#1a1a1a"/>'; }).join('');
+  s += fmIf('t', '<rect x="352" y="338" width="206" height="74" fill="#fff" stroke="' + FM_C.t + '" stroke-width="2.5"/>' + fmLignes(363, 361, ['Les chlorelles produisent du', 'dioxygène à la lumière et en', 'consomment à l\'obscurité.'], {size: 13, bold: 1, fill: FM_C.t, lh: 19}));
+  s += fmFl(248, 186, 162, 186, 's') + fmBulle(252, 168, 1, 'Grandeur, unité, graduation', 's');
+  s += fmFl(588, 243, 496, 243, 'p') + fmBulle(592, 225, 3, 'Informations ajoutées (phases)', 'p', 12.5);
+  s += fmFl(592, 375, 564, 375, 't') + fmBulle(596, 357, 5, 'Réponse au problème', 't');
+  s += '<rect x="572" y="428" width="236" height="100" fill="#fff" stroke="' + FM_C.s + '" stroke-width="2.5"/><line x1="586" y1="450" x2="616" y2="450" stroke="#1a1a1a" stroke-width="2.5"/><circle cx="601" cy="450" r="5" fill="#1a1a1a"/>' + fmTx(626, 455, 'Avec chlorelles', {size: 13.5})
+    + '<line x1="586" y1="474" x2="616" y2="474" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="5 4"/><circle cx="601" cy="474" r="5" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>' + fmTx(626, 479, 'Témoin sans chlorelles', {size: 13.5})
+    + '<line x1="584" y1="490" x2="796" y2="490" stroke="#ccc"/>' + fmLignes(586, 507, ['Chlorelles en suspension, 20 °C,', 'capteur à dioxygène (ExAO)'], {size: 12, it: 1, fill: '#333', lh: 15});
+  s += fmFl(832, 452, 812, 452, 's') + fmNum(834, 440, 2, 's');
+  s += '<rect x="290" y="552" width="216" height="38" fill="none" stroke="' + FM_C.s + '" stroke-width="2.5"/>' + fmTx(306, 577, 'Temps (min)', {size: 16, bold: 1}) + fmFl(468, 571, 426, 571, 's') + fmNum(472, 559, 1, 's');
+  return fmSvg(860, 550, ti + '<g transform="translate(0 -50)">' + s + '</g>');
+},
+histogramme: function(){
+  var Y = function(v){ return f1(480 - v * 33); }, s = fmTitre('Vitesse des ondes P dans différentes roches', 'la vitesse des ondes P dépend-elle de la roche traversée ?');
+  for (var v = 0; v <= 9; v++) s += '<line x1="124" x2="130" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#1a1a1a" stroke-width="1.5"/>' + fmTx(118, f1(+Y(v) + 5), v, {size: 13.5, anchor: 'end'}) + (v ? '<line x1="130" x2="560" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#9aa" stroke-dasharray="1 4"/>' : '');
+  var b = [['Argile', 2.5, '#b9774a'], ['Granite', 5.6, '#e2b3a2'], ['Basalte', 6.5, '#4a4c52'], ['Péridotite', 8.1, '#7c9a3e']];
+  b.forEach(function(q, i){ var x = 162 + i * 100; s += '<rect x="' + x + '" y="' + Y(q[1]) + '" width="64" height="' + f1(q[1] * 33) + '" fill="' + q[2] + '" stroke="#1a1a1a" stroke-width="1.2"/>' + fmTx(x + 32, 500, q[0], {size: 14, bold: 1, anchor: 'middle'}) + fmIf('p', fmTx(x + 32, f1(+Y(q[1]) - 8), q[1].toFixed(1).replace('.', ','), {size: 14, bold: 1, fill: FM_C.p, anchor: 'middle'})); });
+  s += fmIf('p', '<path d="M262 512v6h164v-6" fill="none" stroke="' + FM_C.p + '" stroke-width="2"/>' + fmTx(344, 534, 'croûte', {size: 13, bold: 1, fill: FM_C.p, anchor: 'middle'}) + '<path d="M462 512v6h64v-6" fill="none" stroke="' + FM_C.p + '" stroke-width="2"/>' + fmTx(494, 534, 'manteau', {size: 13, bold: 1, fill: FM_C.p, anchor: 'middle'}));
+  s += fmIf('p', '<line x1="130" x2="462" y1="' + Y(8.1) + '" y2="' + Y(8.1) + '" stroke="' + FM_C.p + '" stroke-width="1.5" stroke-dasharray="4 3"/>');
+  s += fmFl(130, 480, 130, 150, 'k') + '<line x1="130" y1="480" x2="566" y2="480" stroke="#1a1a1a" stroke-width="2"/>';
+  s += fmTx(0, 0, 'Vitesse des ondes P (km/s)', {size: 15, bold: 1, anchor: 'middle', extra: ' transform="translate(74 320) rotate(-90)"'});
+  s += fmIf('t', '<rect x="130" y="560" width="436" height="50" fill="#fff" stroke="' + FM_C.t + '" stroke-width="2.5"/>' + fmLignes(142, 581, ['Les ondes P vont plus vite dans la péridotite du manteau', 'que dans les roches de la croûte.'], {size: 13, bold: 1, fill: FM_C.t, lh: 19}));
+  /* flèches horizontales : chaque bulle est à la hauteur de ce qu'elle montre */
+  s += fmFl(164, 152, 142, 152, 's') + fmBulle(166, 136, 1, 'Axe gradué, grandeur et unité', 's');
+  s += fmFl(598, 206, 536, 206, 'p') + fmBulle(600, 184, 4, ['Valeurs et regroupements', 'ajoutés'], 'p');
+  s += fmFl(598, 264, 530, 264, 'p') + fmBulle(600, 248, 3, 'Hauteurs exactes', 'p');
+  s += fmFl(598, 496, 540, 496, 's') + fmBulle(600, 472, 2, ['Titre et nom', 'des catégories'], 's');
+  s += fmFl(598, 585, 570, 585, 't') + fmBulle(600, 569, 6, 'Réponse au problème', 't');
+  return fmSvg(860, fmOk('t') ? 630 : 550, s);
+},
+tableau: function(){
+  var P = fmOk('p'), T = fmOk('t');
+  var R = [['Granite', 'croûte continentale', '81', '30', '2,7'], ['Basalte', 'croûte océanique', '58', '20', '2,9'], ['Gabbro', 'croûte océanique', '75', '25', '3,0']];
+  if (P){ R.push(['Péridotite', 'manteau', '99', '30', '3,3']); R.forEach(function(r){ r[2] += ',0'; r[3] += ',0'; }); }
+  var titre = T ? 'Densité de quatre roches de la croûte et du manteau' : P ? 'Masse et volume de quatre roches' : 'Masse et volume de trois roches';
+  var s = fmTitre(titre, 'les roches de la croûte océanique sont-elles plus denses que le granite ?');
+  var x0 = 170, cw0 = 130, cwi = P ? 104 : 125, y0 = 110, hh = 54, rh = 44, nr = T ? 3 : 2, cx = [x0, x0 + cw0], k;
+  R.forEach(function(){ cx.push(cx[cx.length - 1] + cwi); });
+  var xe = cx[cx.length - 1], H = hh + nr * rh, lig = [['Masse (g)', 2], ['Volume (cm³)', 3]];
+  if (T) lig.push(['Densité', 4]);
+  s += '<rect x="' + x0 + '" y="' + y0 + '" width="' + (xe - x0) + '" height="' + H + '" fill="#fff"/><rect x="' + x0 + '" y="' + y0 + '" width="' + (xe - x0) + '" height="' + hh + '" fill="#eef1f5"/><rect x="' + x0 + '" y="' + y0 + '" width="' + cw0 + '" height="' + H + '" fill="#eef1f5"/>';
+  R.forEach(function(r, i){ var mx = (cx[i + 1] + cx[i + 2]) / 2; s += fmTx(mx, y0 + 24, r[0], {size: 15, bold: 1, anchor: 'middle'}) + fmTx(mx, y0 + 43, r[1], {size: 10.5, it: 1, anchor: 'middle', fill: '#444'}); });
+  lig.forEach(function(l, j){ var y = y0 + hh + j * rh + 28; s += fmTx(x0 + cw0 / 2, y, l[0], {size: 15, bold: 1, anchor: 'middle'}); R.forEach(function(r, i){ s += fmTx((cx[i + 1] + cx[i + 2]) / 2, y, r[l[1]], {size: 15, bold: l[1] === 4 ? 1 : 0, anchor: 'middle'}); }); });
+  for (k = 0; k < nr; k++) s += '<line x1="' + x0 + '" x2="' + xe + '" y1="' + (y0 + hh + k * rh) + '" y2="' + (y0 + hh + k * rh) + '" stroke="#1a1a1a" stroke-width="' + (k ? 1.2 : 2) + '"/>';
+  for (k = 1; k < cx.length - 1; k++) s += '<line x1="' + cx[k] + '" x2="' + cx[k] + '" y1="' + y0 + '" y2="' + (y0 + H) + '" stroke="#1a1a1a" stroke-width="' + (k === 1 ? 2 : 1.2) + '"/>';
+  s += '<rect x="' + x0 + '" y="' + y0 + '" width="' + (xe - x0) + '" height="' + H + '" fill="none" stroke="#1a1a1a" stroke-width="2.2"/>';
+  if (T) s += '<rect x="' + x0 + '" y="' + (y0 + hh + 2 * rh) + '" width="' + (xe - x0) + '" height="' + rh + '" fill="none" stroke="' + FM_C.t + '" stroke-width="4"/>' + fmTx(x0, y0 + H + 26, 'densité = masse ÷ volume (masse volumique de l\'eau : 1 g/cm³)', {size: 12.5, it: 1, fill: FM_C.t});
+  /* flèches horizontales : à gauche les intitulés, à droite le contenu */
+  var ym = y0 + hh + rh / 2, yh = y0 + hh / 2, yd = y0 + hh + 2 * rh + rh / 2, xb = xe + 20;
+  s += fmFl(144, yh, 166, yh, 's') + fmBulle(6, yh - 16, 1, 'Tracé soigné', 's');
+  s += fmFl(144, ym, 166, ym, 's') + fmBulle(6, ym - 24, 2, ['Intitulés', 'avec unités'], 's');
+  s += fmFl(xb - 2, yh, xe + 4, yh, 'p') + fmBulle(xb, yh - 24, 4, ['Toutes les roches', 'comparées'], 'p');
+  s += fmFl(xb - 2, ym, xe + 4, ym, 'p') + fmBulle(xb, ym - 24, 3, ['Décimales', 'significatives'], 'p');
+  s += fmFl(xb - 2, yd, xe + 4, yd, 't') + fmBulle(xb, yd - 24, 6, ['Ligne calculée :', 'elle répond'], 't');
+  return fmSvg(920, T ? 360 : 300, s);
+},
+dessin: function(){
+  var s = fmTitre('Cellules de l\'épiderme d\'oignon (× 400)', 'les cellules de l\'épiderme d\'oignon possèdent-elles un noyau ?'), g = ' fill="none" stroke="#3a3a3a" stroke-width="1.8" stroke-linejoin="round"';
+  s += '<rect x="40" y="96" width="560" height="306" fill="#fff" stroke="#b9c6d4"/>';
+  ['M70 130L250 126L254 210L72 216Z', 'M250 126L450 132L446 214L254 210Z', 'M72 216L190 214L192 300L74 304Z', 'M190 214L254 210L446 214L444 296L192 300Z', 'M74 304L192 300L444 296L442 372L76 374Z'].forEach(function(d){ s += '<path d="' + d + '"' + g + '/>'; });
+  s += '<path d="M200 222L438 222L436 288L200 292Z" fill="none" stroke="#6a6a6a" stroke-width="1.1"/>';
+  [[108, 170, 15, 10], [404, 180, 16, 11], [128, 262, 13, 10], [222, 256, 14, 10], [250, 340, 15, 10]].forEach(function(n){ s += '<ellipse cx="' + n[0] + '" cy="' + n[1] + '" rx="' + n[2] + '" ry="' + n[3] + '"' + g + '/><circle cx="' + (n[0] + 3) + '" cy="' + (n[1] - 1) + '" r="2.4" fill="#3a3a3a"/>'; });
+  [[449, 150, 'Paroi'], [420, 180, 'Noyau'], [430, 218, 'Cytoplasme'], [400, 262, 'Vacuole']].forEach(function(l){ s += '<line x1="' + l[0] + '" y1="' + l[1] + '" x2="482" y2="' + l[1] + '" stroke="#1a1a1a" stroke-width="1.2"/>' + fmTx(488, l[1] + 5, l[2], {size: 14, bold: l[2] === 'Noyau' ? 1 : 0}); });
+  s += fmIf('p', fmTx(46, 432, 'Observation au microscope optique, coloration à l\'eau iodée.', {size: 13.5, it: 1}));
+  /* flèches horizontales : chaque bulle est à la hauteur de ce qu'elle montre */
+  s += fmFl(610, 131, 454, 131, 's') + fmBulle(612, 107, 1, ['Tracé net et précis,', 'de taille adaptée'], 's');
+  s += fmFl(610, 180, 548, 180, 't') + fmBulle(612, 156, 6, ['Le noyau, légendé,', 'répond au problème'], 't');
+  s += fmFl(610, 262, 552, 262, 's') + fmBulle(612, 238, 2, ['Titre, légendes', 'et grossissement'], 's');
+  s += fmFl(610, 320, 446, 320, 'p') + fmBulle(612, 296, 3, ['Représentation fidèle', 'et proportionnée'], 'p');
+  s += fmFl(610, 376, 603, 376, 't') + fmBulle(612, 352, 5, ['Zone choisie', 'et mise en page'], 't');
+  s += fmFl(610, 428, 466, 428, 'p') + fmBulle(612, 404, 4, ['Conditions techniques', 'd\'observation'], 'p');
+  return fmSvg(860, 460, s);
+},
+schema: function(){
+  var s = fmTitre('Les deux croûtes terrestres', 'pourquoi les continents sont-ils plus élevés que les fonds océaniques ?');
+  s += '<rect x="60" y="110" width="500" height="306" fill="#fff" stroke="#b9c6d4"/>';
+  s += '<rect x="300" y="170" width="260" height="28" fill="#8fc3e6"/><line x1="60" y1="170" x2="560" y2="170" stroke="#2a6a96" stroke-width="1" stroke-dasharray="5 4"/>' + fmTx(548, 164, 'niveau de la mer', {size: 11, fill: '#2a6a96', anchor: 'end'});
+  s += '<path d="M60 166L120 158L150 146L178 158L280 164L320 198L560 198V416H60Z" fill="#8db04a" stroke="#1a1a1a" stroke-width="1.5"/>';
+  s += '<path d="M60 166L120 158L150 146L178 158L280 164L320 198L330 244L300 346L60 346Z" fill="#e9b8a8" stroke="#1a1a1a" stroke-width="1.8"/>';
+  s += '<path d="M320 198L560 198V240L330 244Z" fill="#4f5257" stroke="#1a1a1a" stroke-width="1.8"/><line x1="326" y1="210" x2="560" y2="210" stroke="#7a7d82" stroke-width="1"/>';
+  s += fmTx(180, 252, 'croûte continentale', {size: 14, bold: 1, anchor: 'middle'}) + fmTx(180, 272, '(granites' + (fmOk('p') ? ', d ≈ 2,7' : '') + ')', {size: 13, anchor: 'middle'});
+  s += fmTx(440, 322, 'croûte océanique', {size: 13, bold: 1, anchor: 'middle'}) + fmTx(440, 340, '(basaltes, gabbros' + (fmOk('p') ? ', d ≈ 2,9 à 3' : '') + ')', {size: 12, anchor: 'middle'}) + '<line x1="440" y1="308" x2="440" y2="238" stroke="#1a1a1a" stroke-width="1.2"/>';
+  s += fmTx(220, 392, 'manteau (péridotites' + (fmOk('p') ? ', d ≈ 3,3' : '') + ')', {size: 14, bold: 1, anchor: 'middle', fill: '#24391a'});
+  if (fmOk('p')) s += '<path d="M76 166V346M70 172l6 -8l6 8M70 340l6 8l6 -8" fill="none" stroke="' + FM_C.p + '" stroke-width="2"/>' + fmTx(84, 312, '30 km', {size: 12.5, bold: 1, fill: FM_C.p});
+  if (fmOk('p')) s += '<path d="M540 198V240M534 204l6 -8l6 8M534 234l6 8l6 -8" fill="none" stroke="' + FM_C.p + '" stroke-width="2"/>' + fmTx(532, 226, '7 km', {size: 12.5, bold: 1, fill: FM_C.p, anchor: 'end'});
+  s += '<rect x="572" y="92" width="272" height="104" fill="#fff" stroke="' + FM_C.s + '" stroke-width="2.5"/>' + fmNum(580, 99, 2, 's') + fmTx(612, 117, 'Titre et légende', {size: 13.5, bold: 1, fill: FM_C.s});
+  [['#e9b8a8', 'Croûte continentale', 584, 152], ['#4f5257', 'Croûte océanique', 584, 180], ['#8db04a', 'Manteau', 744, 152], ['#8fc3e6', 'Eau de mer', 744, 180]].forEach(function(l){ s += '<rect x="' + l[2] + '" y="' + (l[3] - 11) + '" width="20" height="13" fill="' + l[0] + '" stroke="#1a1a1a"/>' + fmTx(l[2] + 26, l[3], l[1], {size: 12.5}); });
+  s += fmIf('t', '<rect x="60" y="432" width="500" height="54" fill="#fff" stroke="' + FM_C.t + '" stroke-width="2.5"/>' + fmLignes(72, 454, ['La croûte continentale, épaisse et peu dense, est haute ;', 'la croûte océanique, fine et plus dense, est basse.'], {size: 13, bold: 1, fill: FM_C.t, lh: 19}));
+  /* flèches horizontales : chaque bulle est à la hauteur de ce qu'elle montre */
+  s += fmFl(570, 222, 548, 222, 'p') + fmBulle(572, 204, 3, 'Simplifié mais proportionné', 'p');
+  s += fmFl(570, 290, 320, 290, 't') + fmBulle(572, 272, 5, 'Éléments choisis, côte à côte', 't');
+  s += fmFl(570, 336, 532, 336, 'p') + fmBulle(572, 318, 4, 'Densités ajoutées', 'p');
+  s += fmFl(570, 390, 563, 390, 's') + fmBulle(572, 372, 1, 'Formes simples, tracé net', 's');
+  s += fmFl(570, 459, 563, 459, 't') + fmBulle(572, 441, 6, 'Réponse au problème', 't');
+  return fmSvg(860, fmOk('t') ? 500 : 430, s);
+},
+image: function(){
+  var s = fmTitre('Cellules de la pointe d\'une racine d\'oignon (× 400)', 'les cellules de la pointe de la racine se divisent-elles ?'), rnd = ctRng(512);
+  s += '<rect x="50" y="100" width="320" height="320" fill="#111"/><clipPath id="fmChamp"><circle cx="210" cy="260" r="150"/></clipPath><g clip-path="url(#fmChamp)"><rect x="50" y="100" width="320" height="320" fill="#f2d8e3"/>';
+  for (var r = 0; r < 10; r++){ for (var c = 0; c < 8; c++){
+    var x = 52 + c * 42 + (r % 2) * 8, y = 104 + r * 32;
+    s += '<rect x="' + x + '" y="' + y + '" width="40" height="30" fill="#f6e2ea" stroke="#c99ab0" stroke-width="1.4"/>';
+    if (r === 8 && c === 4) s += '<g fill="#5a1f4a"><rect x="' + (x + 6) + '" y="' + (y + 10) + '" width="7" height="10" rx="2"/><rect x="' + (x + 27) + '" y="' + (y + 10) + '" width="7" height="10" rx="2"/></g>';
+    else if (r === 3 && c === 5) s += '<rect x="' + (x + 18) + '" y="' + (y + 5) + '" width="5" height="20" rx="2" fill="#5a1f4a"/>';
+    else s += '<ellipse cx="' + f1(x + 20 + (rnd() - .5) * 6) + '" cy="' + f1(y + 15) + '" rx="7" ry="6" fill="#8a3a74"/>';
+  } }
+  s += '</g><circle cx="210" cy="260" r="150" fill="none" stroke="#000" stroke-width="3"/>';
+  var zoomI = fmOk('p');
+  if (!zoomI) s += '<line x1="334" y1="183" x2="390" y2="183" stroke="#fff" stroke-width="3"/><line x1="334" y1="183" x2="390" y2="183" stroke="#1a1a1a" stroke-width="1.3"/>' + fmTx(396, 188, 'Noyau', {size: 14, bold: 1});
+  if (zoomI) s += '<rect x="218" y="358" width="44" height="34" fill="none" stroke="#1a1a1a" stroke-width="3"/><path d="M218 358L420 150M262 358L420 350" stroke="#1a1a1a" stroke-width="1.3" stroke-dasharray="5 4"/>';
+  if (zoomI) s += '<rect x="420" y="150" width="180" height="200" fill="#f6e2ea" stroke="#1a1a1a" stroke-width="2.5"/><rect x="436" y="186" width="148" height="90" fill="#f9ecf1" stroke="#c99ab0" stroke-width="3"/>';
+  if (zoomI) s += '<g fill="#5a1f4a">' + [0, 1, 2, 3].map(function(k){ return '<rect x="' + (452 + (k % 2) * 6) + '" y="' + (198 + k * 17) + '" width="16" height="7" rx="3" transform="rotate(' + (k % 2 ? 12 : -12) + ' 460 ' + (201 + k * 17) + ')"/><rect x="' + (548 - (k % 2) * 6) + '" y="' + (198 + k * 17) + '" width="16" height="7" rx="3" transform="rotate(' + (k % 2 ? -12 : 12) + ' 556 ' + (201 + k * 17) + ')"/>'; }).join('') + '</g>';
+  if (zoomI) s += '<line x1="470" y1="200" x2="470" y2="172" stroke="#1a1a1a" stroke-width="1.2"/>' + fmTx(450, 168, 'Chromosomes', {size: 13, bold: 1});
+  s += fmIf('t', fmLignes(432, 306, ['Cellule en anaphase :', 'elle se divise.'], {size: 13, bold: 1, fill: FM_C.t, lh: 19}));
+  s += fmIf('p', fmTx(50, 446, 'Microscope optique, coloration à l\'orcéine acétique.', {size: 13.5, it: 1}));
+  /* flèches horizontales : chaque bulle est à la hauteur de ce qu'elle montre */
+  s += fmFl(610, 120, 374, 120, 's') + fmBulle(612, 96, 1, ['Image nette', 'et contrastée'], 's');
+  s += zoomI ? fmFl(610, 166, 554, 166, 's') + fmBulle(612, 146, 2, ['Titre, légendes', 'et grossissement'], 's') : fmFl(610, 183, 446, 183, 's') + fmBulle(612, 163, 2, ['Titre, légendes', 'et grossissement'], 's');
+  s += fmFl(610, 226, 604, 226, 'p') + fmBulle(612, 202, 3, ['Cadrage avec', 'le zoom'], 'p');
+  s += fmFl(610, 314, 578, 314, 't') + fmBulle(612, 290, 6, ['Annotation qui', 'répond au problème'], 't');
+  s += fmFl(610, 375, 266, 375, 't') + fmBulle(612, 351, 5, ['Choix de la zone', 'numérisée'], 't');
+  s += fmFl(610, 442, 418, 442, 'p') + fmBulle(612, 418, 4, ['Conditions techniques', 'd\'obtention'], 'p');
+  return fmSvg(860, fmOk('p') ? 480 : 440, s);
 }
-function gfMini(type){
-  if (type === 'courbe') return '<svg viewBox="0 0 120 80" aria-hidden="true"><path d="M4 4V76H116" fill="none" stroke="currentColor" stroke-width="2.5"/><polyline points="12,70 34,58 56,40 78,28 100,20" fill="none" stroke="currentColor" stroke-width="2.5"/>' + [[12,70],[34,58],[56,40],[78,28],[100,20]].map(function(p){ return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="4" fill="currentColor"/>'; }).join('') + '</svg>';
-  return '<svg viewBox="0 0 120 80" aria-hidden="true"><path d="M4 4V76H116" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="14" y="36" width="18" height="40" fill="currentColor"/><rect x="40" y="14" width="18" height="62" fill="currentColor"/><rect x="66" y="50" width="18" height="26" fill="currentColor"/><rect x="92" y="26" width="18" height="50" fill="currentColor"/></svg>';
+};
+
+/* ---------- Petits dessins des encadrés de fin ---------- */
+var FM_MINI = {
+courbe: '<svg viewBox="0 0 120 80" aria-hidden="true"><path d="M4 4V76H116" fill="none" stroke="#1a1a1a" stroke-width="2.5"/><polyline points="12,70 34,58 56,40 78,28 100,20" fill="none" stroke="#1a1a1a" stroke-width="2.5"/><g fill="#1a1a1a"><circle cx="12" cy="70" r="4"/><circle cx="34" cy="58" r="4"/><circle cx="56" cy="40" r="4"/><circle cx="78" cy="28" r="4"/><circle cx="100" cy="20" r="4"/></g></svg>',
+histo: '<svg viewBox="0 0 120 80" aria-hidden="true"><path d="M4 4V76H116" fill="none" stroke="#1a1a1a" stroke-width="2.5"/><g fill="#1a1a1a"><rect x="14" y="36" width="18" height="40"/><rect x="40" y="14" width="18" height="62"/><rect x="66" y="50" width="18" height="26"/><rect x="92" y="26" width="18" height="50"/></g></svg>',
+camembert: '<svg viewBox="0 0 120 80" aria-hidden="true"><circle cx="60" cy="40" r="34" fill="#e2b3a2" stroke="#1a1a1a" stroke-width="2"/><path d="M60 40V6A34 34 0 0 1 92 51Z" fill="#7c9a3e" stroke="#1a1a1a" stroke-width="2"/><path d="M60 40L92 51A34 34 0 0 1 40 67Z" fill="#4a4c52" stroke="#1a1a1a" stroke-width="2"/></svg>',
+simple: '<svg viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" fill="#fff" stroke="#1a1a1a" stroke-width="2"/><rect x="6" y="6" width="108" height="17" fill="#d8dee6" stroke="#1a1a1a" stroke-width="2"/><path d="M42 6V74M78 6V74M6 40H114M6 57H114" stroke="#1a1a1a" stroke-width="1.5"/></svg>',
+double: '<svg viewBox="0 0 120 80" aria-hidden="true"><rect x="6" y="6" width="108" height="68" fill="#fff" stroke="#1a1a1a" stroke-width="2"/><rect x="6" y="6" width="108" height="17" fill="#d8dee6"/><rect x="6" y="6" width="36" height="68" fill="#d8dee6"/><path d="M6 6L42 23" stroke="#1a1a1a" stroke-width="1.2"/><path d="M42 6V74M78 6V74M6 23H114M6 40H114M6 57H114" stroke="#1a1a1a" stroke-width="1.5"/><rect x="6" y="6" width="108" height="68" fill="none" stroke="#1a1a1a" stroke-width="2"/></svg>',
+tissu: '<svg viewBox="0 0 120 80" aria-hidden="true"><rect x="2" y="2" width="116" height="76" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"/><g fill="none" stroke="#1a1a1a" stroke-width="1">' + [0, 1, 2, 3, 4, 5].map(function(r){ return [0, 1, 2, 3, 4, 5, 6].map(function(c){ var x = 6 + c * 16 + (r % 2) * 5, y = 6 + r * 12; return '<rect x="' + x + '" y="' + y + '" width="15" height="11"/><circle cx="' + (x + 5) + '" cy="' + (y + 5) + '" r="1.6"/>'; }).join(''); }).join('') + '</g></svg>',
+cellules: '<svg viewBox="0 0 120 80" aria-hidden="true"><rect x="2" y="2" width="116" height="76" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"/><g fill="none" stroke="#1a1a1a" stroke-width="1.8"><path d="M10 10L60 8L62 40L12 42Z"/><path d="M60 8L110 12L108 42L62 40Z"/><path d="M12 42L62 40L64 72L14 74Z"/><ellipse cx="26" cy="24" rx="7" ry="5"/><ellipse cx="94" cy="26" rx="7" ry="5"/><ellipse cx="32" cy="58" rx="7" ry="5"/></g><g fill="none" stroke="#1a1a1a" stroke-width="1"><path d="M66 56H100"/></g><text x="102" y="59" font-size="8" font-family="Arial">noyau</text></svg>',
+schemafct: '<svg viewBox="0 0 120 80" aria-hidden="true"><g fill="#fff" stroke="#1a1a1a" stroke-width="2"><rect x="4" y="28" width="30" height="22" rx="3"/><rect x="46" y="28" width="30" height="22" rx="3"/><rect x="88" y="28" width="28" height="22" rx="3"/></g><path d="M34 39H44M76 39H86" stroke="#1a1a1a" stroke-width="2.5"/><path d="M44 39l-5 -4v8ZM86 39l-5 -4v8Z" fill="#1a1a1a"/></svg>',
+structure: '<svg viewBox="0 0 120 80" aria-hidden="true"><rect x="4" y="8" width="112" height="18" fill="#e9b8a8" stroke="#1a1a1a" stroke-width="2"/><rect x="4" y="26" width="112" height="16" fill="#4f5257" stroke="#1a1a1a" stroke-width="2"/><rect x="4" y="42" width="112" height="30" fill="#8db04a" stroke="#1a1a1a" stroke-width="2"/></svg>',
+entier: '<svg viewBox="0 0 120 80" aria-hidden="true"><rect width="120" height="80" fill="#111"/><circle cx="60" cy="40" r="36" fill="#f2d8e3"/><g fill="#8a3a74">' + [0, 1, 2, 3, 4, 5].map(function(r){ return [0, 1, 2, 3, 4, 5].map(function(c){ var x = 32 + c * 11 + (r % 2) * 3, y = 14 + r * 10; return Math.hypot(x - 60, y - 40) < 30 ? '<circle cx="' + x + '" cy="' + y + '" r="2.2"/>' : ''; }).join(''); }).join('') + '</g></svg>',
+zoom: '<svg viewBox="0 0 120 80" aria-hidden="true"><rect x="10" y="4" width="100" height="72" fill="#f6e2ea" stroke="#1a1a1a" stroke-width="2"/><rect x="20" y="14" width="80" height="52" fill="#f9ecf1" stroke="#c99ab0" stroke-width="2"/><g fill="#5a1f4a"><rect x="28" y="24" width="12" height="5" rx="2"/><rect x="30" y="34" width="12" height="5" rx="2"/><rect x="28" y="44" width="12" height="5" rx="2"/><rect x="80" y="24" width="12" height="5" rx="2"/><rect x="78" y="34" width="12" height="5" rx="2"/><rect x="80" y="44" width="12" height="5" rx="2"/></g></svg>'
+};
+
+/* ---------- Contenu des fiches (critères d'après la grille des ECE) ---------- */
+var FICHES_FM = {
+graphique: {
+  intro: 'On utilise un <b>graphique</b> pour <u>présenter des résultats chiffrés</u> et répondre au problème posé : une <b>courbe</b> montre comment une mesure évolue en fonction d\'un facteur (temps, température…), un <b>histogramme</b> compare des valeurs entre plusieurs catégories (espèces, sols…).',
+  crit: [['s', 'Des axes orientés, gradués régulièrement, avec une grandeur et une unité.'], ['s', 'Un titre, une légende et les conditions de l\'expérience.'], ['p', 'Des informations ajoutées qui expliquent le graphique.'], ['t', 'Choix d\'un graphique adapté au contexte.'], ['t', 'Le graphique montre clairement ce qui répond au problème.']],
+  enc: [[1, 'Quel axe pour quoi ?', '<p><b>Abscisse</b> (axe horizontal) : ce que je fais varier.</p><p><b>Ordonnée</b> (axe vertical) : la valeur que je mesure.</p>'], [2, 'Le titre', '<p>Évolution de <b>[ce que je mesure, en ordonnée]</b> en fonction de <b>[ce que je fais varier, en abscisse]</b></p>']],
+  alt: 'Exemple de graphique annoté : évolution de la concentration en dioxygène en fonction du temps, avec et sans chlorelles, à la lumière puis à l\'obscurité.',
+  fin: [4, 'Courbe ou histogramme ?', [['courbe', 'Courbe', 'La valeur mesurée varie en continu (temps, température, concentration…)'], ['histo', 'Histogramme', 'Je compare des catégories séparées (espèces, sols, organes, groupes…)']]]
+},
+histogramme: {
+  intro: 'On utilise un <b>histogramme</b> pour <u>comparer des valeurs chiffrées</u> entre plusieurs catégories séparées (roches, espèces, organes…), et un <b>diagramme circulaire</b> pour montrer comment un tout se répartit en parts.',
+  crit: [['s', 'Représentation soignée : barres de même largeur, axe gradué avec grandeur et unité.'], ['s', 'Titre adapté et légende des catégories ou des secteurs.'], ['p', 'Hauteurs des barres ou angles des parts exacts.'], ['p', 'Valeurs chiffrées et informations explicatives ajoutées.'], ['t', 'Choix du type de représentation.'], ['t', 'Représentation qui montre clairement la réponse au problème.']],
+  enc: [[1, 'Quel axe pour quoi ?', '<p><b>Abscisse</b> (axe horizontal) : les catégories comparées, une barre chacune.</p><p><b>Ordonnée</b> (axe vertical) : la valeur mesurée, avec son unité.</p>'], [2, 'Le titre', '<p><b>[Ce que je mesure]</b> selon <b>[les catégories comparées]</b></p><p>Exemple : vitesse des ondes P dans différentes roches.</p>']],
+  alt: 'Exemple d\'histogramme annoté : vitesse des ondes P dans l\'argile, le granite, le basalte et la péridotite.',
+  fin: [5, 'Histogramme ou diagramme circulaire ?', [['histo', 'Histogramme', 'Je compare des valeurs entre des catégories séparées (vitesses, masses, effectifs…)'], ['camembert', 'Diagramme circulaire', 'Je montre les parts d\'un tout, en % (par exemple, la composition d\'une roche en minéraux)']]]
+},
+tableau: {
+  intro: 'On utilise un <b>tableau</b> pour <u>présenter de façon organisée</u> des mesures ou des observations et les comparer : chaque case contient une seule information.',
+  crit: [['s', 'Tracé soigné du cadre et des cases, de taille adaptée au contenu.'], ['s', 'Titre adapté, intitulés des lignes et des colonnes, avec unités.'], ['p', 'Valeurs exactes, avec un nombre de décimales significatif.'], ['p', 'Nombre suffisant de lignes et de colonnes (essais, témoin, répétitions).'], ['t', 'Choix d\'une structure à simple ou à double entrée.'], ['t', 'Lignes ou colonnes ajoutées, issues d\'un calcul, qui répondent au problème.']],
+  enc: [[1, 'Où mettre quoi ?', '<p><b>Les objets étudiés</b> d\'un côté (une colonne ou une ligne chacun).</p><p><b>Ce que je mesure ou j\'observe</b> de l\'autre, avec l\'unité dans l\'intitulé.</p>'], [2, 'Le titre', '<p><b>[Ce que je mesure ou j\'observe]</b> de <b>[les objets étudiés]</b></p><p>Exemple : densité de trois roches des croûtes terrestres.</p>']],
+  alt: 'Exemple de tableau annoté : masse, volume et densité du granite, du basalte et du gabbro.',
+  fin: [5, 'Simple ou double entrée ?', [['simple', 'Simple entrée', 'Les objets étudiés d\'un côté, les mesures de l\'autre (comme dans l\'exemple).'], ['double', 'Double entrée', 'Deux facteurs croisés : chaque case correspond à une condition (par exemple : tube × température).']]]
+},
+dessin: {
+  intro: 'On réalise un <b>dessin d\'observation</b> pour <u>représenter fidèlement ce que l\'on voit</u> (à l\'œil nu, à la loupe ou au microscope) et montrer les éléments utiles pour répondre au problème.',
+  crit: [['s', 'Tracé net et précis, de taille adaptée.'], ['s', 'Titre adapté, légendes exactes et grossissement.'], ['p', 'Représentation fidèle et proportionnée.'], ['p', 'Conditions techniques d\'observation (instrument, coloration…).'], ['t', 'Choix de la zone représentée et mise en page pertinente.'], ['t', 'Dessin qui montre clairement la réponse au problème.']],
+  enc: [[1, 'Le tracé', '<p>Crayon à papier bien taillé, traits fins et continus, sans ombre ni coloriage.</p><p>Je dessine <b>seulement ce que je vois</b>.</p>'], [2, 'Le titre et les légendes', '<p><b>Titre</b> : ce que j\'observe, avec le grossissement.</p><p><b>Légendes</b> : à droite, alignées, reliées par des traits horizontaux à la règle qui ne se croisent pas.</p>']],
+  alt: 'Exemple de dessin d\'observation annoté : cellules de l\'épiderme d\'oignon au microscope.',
+  fin: [5, 'Choisir la zone à dessiner', [['tissu', 'Tout le champ', 'Trop de cellules, trop petites : on ne voit pas ce qui répond au problème.'], ['cellules', 'Quelques cellules', 'Je dessine assez grand les cellules utiles pour montrer ce qui répond au problème.']]]
+},
+schema: {
+  intro: 'On réalise un <b>schéma</b> pour <u>représenter de façon simplifiée</u> une organisation ou un fonctionnement (une structure, les étapes d\'un mécanisme) et répondre au problème.',
+  crit: [['s', 'Tracé net et précis, formes simples.'], ['s', 'Titre adapté et légendes exactes.'], ['p', 'Représentation simplifiée mais proportionnée.'], ['p', 'Informations explicatives ajoutées (flèches, code couleur, échelle).'], ['t', 'Choix des éléments représentés et organisation spatiale pertinente.'], ['t', 'Schéma qui montre clairement la réponse au problème.']],
+  enc: [[1, 'Le tracé', '<p>Des formes simples, à la règle si possible.</p><p>Je <b>simplifie</b> : je ne garde que ce qui est utile pour répondre au problème.</p>'], [2, 'Le titre et la légende', '<p><b>Titre</b> : ce que je représente.</p><p><b>Légende</b> : un code couleur expliqué, ou une légende pour chaque élément.</p>']],
+  alt: 'Exemple de schéma annoté : la croûte continentale et la croûte océanique côte à côte, sur le manteau.',
+  fin: [5, 'Schéma de structure ou schéma fonctionnel ?', [['structure', 'Schéma de structure', 'Je montre comment c\'est organisé (couches, enveloppes, parties).'], ['schemafct', 'Schéma fonctionnel', 'Je montre ce qui se passe, avec des flèches (étapes, transformations).']]]
+},
+image: {
+  intro: 'On utilise une <b>image numérique</b> (photographie au microscope, capture d\'écran d\'un logiciel) pour <u>garder une trace fidèle</u> d\'une observation et la rendre exploitable pour répondre au problème.',
+  crit: [['s', 'Image nette et bien contrastée.'], ['s', 'Titre adapté, légendes exactes et grossissement.'], ['p', 'Cadrage pertinent avec utilisation du zoom.'], ['p', 'Conditions techniques d\'obtention (coloration, logiciel…).'], ['t', 'Choix de la zone numérisée et mise en page pertinente.'], ['t', 'Image annotée qui montre clairement la réponse au problème.']],
+  enc: [[1, 'Une image nette', '<p>Mise au point fine, lumière réglée, pas de reflet.</p><p>Je <b>vérifie à l\'écran</b> avant d\'enregistrer.</p>'], [2, 'Le titre et les légendes', '<p><b>Titre</b> : ce que montre l\'image, avec le grossissement.</p><p><b>Légendes</b> : des traits ou des flèches vers les éléments utiles.</p>']],
+  alt: 'Exemple d\'image numérique annotée : cellules de la pointe d\'une racine d\'oignon au microscope, avec un zoom sur une cellule en anaphase.',
+  fin: [5, 'Choisir la zone à numériser', [['entier', 'Tout le champ', 'La cellule utile se perd au milieu des autres.'], ['zoom', 'Zone choisie', 'Je numérise la zone utile : elle se voit tout de suite.']]]
 }
-function renderGraphFiche(m){
-  var C = GF_COUL;
-  function num(n, c){ return '<span class="gf-n" style="background:' + c + '">' + n + '</span>'; }
-  var h = '<div class="view mf gf"><header class="gf-head"><span class="fr-tag">' + esc(m.etape) + '</span><h1>Fiche méthode : Le graphique</h1>'
-    + '<div class="gf-niv"><span style="--n:' + C.s + '">Seconde</span><span style="--n:' + C.p + '">Première</span><span style="--n:' + C.t + '">Terminale</span></div>'
-    + '<p class="gf-lead">On utilise un <b>graphique</b> pour <u>présenter des résultats chiffrés</u> et répondre au problème posé : une <b>courbe</b> montre comment une mesure évolue en fonction d\'un facteur (temps, température…), un <b>histogramme</b> compare des valeurs entre plusieurs catégories (espèces, sols…).</p></header>';
-  var crit = [['s', 'Des axes orientés, gradués régulièrement, avec une grandeur et une unité.'], ['s', 'Un titre, une légende et les conditions de l\'expérience.'], ['p', 'Des informations ajoutées qui expliquent le graphique.'], ['t', 'Je choisis moi-même le type de graphique adapté.'], ['t', 'Le graphique montre clairement ce qui répond au problème.']];
-  h += '<ol class="gf-crit">' + crit.map(function(c, i){ return '<li style="--n:' + C[c[0]] + ';--nx:' + (crit[i + 1] ? C[crit[i + 1][0]] : 'transparent') + '"><span>' + (i + 1) + '.</span> ' + esc(c[1]) + '</li>'; }).join('') + '</ol>';
-  h += '<div class="gf-duo">'
-    + '<section class="gf-box" style="--n:' + C.s + '"><h2>' + num(1, C.s) + 'Quel axe pour quoi ?</h2><p><b>Abscisse</b> (axe horizontal) : ce que je fais varier.</p><p><b>Ordonnée</b> (axe vertical) : la valeur que je mesure.</p></section>'
-    + '<section class="gf-box" style="--n:' + C.s + '"><h2>' + num(2, C.s) + 'Le titre</h2><p>Évolution de <b>[ce que je mesure, en ordonnée]</b> en fonction de <b>[ce que je fais varier, en abscisse]</b></p></section></div>';
-  h += '<figure class="gf-fig"><img src="data:image/svg+xml;charset=utf-8,' + encodeURIComponent(gfSvg()) + '" alt="Exemple de graphique annoté : évolution de la concentration en dioxygène en fonction du temps, avec et sans chlorelles, à la lumière puis à l\'obscurité. Les repères 1 à 5 correspondent aux critères." data-zoom tabindex="0" role="button"><figcaption>Touche le graphique pour l\'agrandir.</figcaption></figure>';
-  h += '<section class="gf-box gf-4" style="--n:' + C.t + '"><h2>' + num(4, C.t) + 'Courbe ou histogramme ?</h2><div class="gf-types">'
-    + '<div>' + gfMini('courbe') + '<div><h3>Courbe</h3><p>La valeur mesurée varie en continu (temps, température, concentration…)</p></div></div>'
-    + '<div>' + gfMini('histo') + '<div><h3>Histogramme</h3><p>Je compare des catégories séparées (espèces, sols, organes, groupes…)</p></div></div></div></section>';
-  return h;
+};
+
+function renderFicheFM(m){
+  var F = FICHES_FM[m.id], par = {s: [], p: [], t: []}, nv = FM_NV;
+  F.crit.forEach(function(c, i){ par[c[0]].push('<li><b>' + (i + 1) + '.</b> ' + esc(c[1]) + '</li>'); });
+  var ol = function(k){ return par[k].length ? '<ol>' + par[k].join('') + '</ol>' : ''; };
+  var boite = function(n, k, titre, inner){ return '<section class="fm-box ' + k + '"><h3><span class="fm-n">' + n + '</span>' + esc(titre) + '</h3>' + inner + '</section>'; };
+  /* cadres emboîtés : seulement jusqu'au niveau choisi */
+  var cr = '<div class="fm-cr s">' + ol('s') + '</div>';
+  if (fmOk('p')) cr = '<div class="fm-cr p">' + cr + ol('p') + '</div>';
+  if (fmOk('t')) cr = '<div class="fm-cr t">' + cr + ol('t') + '</div>';
+  else cr = '<div class="fm-crw">' + cr + '</div>';
+  var NV = [['s', 'Seconde'], ['p', 'Première'], ['t', 'Terminale']];
+  return '<div class="view mf fm"><div class="fm-sheet">'
+    + '<h1 class="fm-t">Fiche méthode : ' + esc(m.titre) + '</h1>'
+    + '<p class="fm-choix">Choisis ton niveau :</p>'
+    + '<div class="fm-niv" role="group" aria-label="Niveau">' + NV.map(function(n){ return '<button type="button" class="' + n[0] + (n[0] === nv ? ' on' : '') + '" data-nv="' + n[0] + '" aria-pressed="' + (n[0] === nv) + '">' + n[1] + '</button>'; }).join('') + '</div>'
+    + '<p class="fm-lead">' + F.intro + '</p>'
+    + '<h2 class="fm-h">Critères de réussite à maîtriser</h2>' + cr
+    + '<div class="fm-duo">' + F.enc.map(function(e){ return boite(e[0], 's', e[1], e[2]); }).join('') + '</div>'
+    + '<figure class="fm-fig"><img src="data:image/svg+xml;charset=utf-8,' + encodeURIComponent(FM_EX[m.id]()) + '" alt="' + esc(F.alt) + '" data-zoom tabindex="0" role="button"><figcaption>Touche l\'exemple pour l\'agrandir.</figcaption></figure>'
+    + (fmOk('t') ? boite(F.fin[0], 't', F.fin[1], '<div class="fm-types">' + F.fin[2].map(function(x){ return '<div>' + FM_MINI[x[0]] + '<div><h4>' + esc(x[1]) + '</h4><p>' + esc(x[2]) + '</p></div></div>'; }).join('') + '</div>') : '')
+    + '</div>';
 }
+function fmBindNiveau(){
+  app.querySelectorAll('.fm-lien').forEach(function(b){ b.onclick = function(){ go('methode', {methode: b.dataset.goto}); }; });
+  app.querySelectorAll('[data-nv]').forEach(function(b){
+    b.onclick = function(){ FM_NV = b.dataset.nv; try { localStorage.setItem('svt_fm_niv', FM_NV); } catch(e){} var y = window.pageYOffset; renderMethode(); window.scrollTo(0, y); };
+  });
+}
+
+/* ---------- Fiches méthode de la démarche (compte rendu, stratégie, présenter, calculer, exploiter, conclure) ---------- */
+function fmLien(id, label){ return '<button type="button" class="fm-lien" data-goto="' + id + '">' + label + ' →</button>'; }
+function fmEntete(titre, prob){ return fmTx(24, 38, titre, {size: 17, bold: 1}) + fmTx(24, 66, '<tspan font-weight="700">Problème :</tspan> ' + prob, {size: 14}); }
+function fmRich(x, y, t, o){ o = o || {}; var s = ''; String(t).split('**').forEach(function(p, i){ if (p) s += i % 2 ? '<tspan font-weight="700">' + p + '</tspan>' : p; }); return fmTx(x, y, s, {size: o.size || 14, it: o.it, fill: o.fill}); }
+function fmTable(x, y, T){
+  var s = '', rh = 28, W = 0, n = T.rows.length, cx = [x], i, j;
+  T.cols.forEach(function(w){ W += w; cx.push(cx[cx.length - 1] + w); });
+  s += '<rect x="' + x + '" y="' + y + '" width="' + W + '" height="' + (n * rh) + '" fill="#fff"/><rect x="' + x + '" y="' + y + '" width="' + W + '" height="' + rh + '" fill="#eef1f5"/>';
+  for (j = 0; j < n; j++) for (i = 0; i < T.cols.length; i++) s += fmTx(f1((cx[i] + cx[i + 1]) / 2), y + j * rh + 19, T.rows[j][i], {size: 13.5, bold: j === 0 ? 1 : 0, anchor: 'middle'});
+  for (j = 1; j < n; j++) s += '<line x1="' + x + '" x2="' + (x + W) + '" y1="' + (y + j * rh) + '" y2="' + (y + j * rh) + '" stroke="#1a1a1a" stroke-width="' + (j === 1 ? 1.8 : 1.1) + '"/>';
+  for (i = 1; i < T.cols.length; i++) s += '<line x1="' + cx[i] + '" x2="' + cx[i] + '" y1="' + y + '" y2="' + (y + n * rh) + '" stroke="#1a1a1a" stroke-width="1.1"/>';
+  s += '<rect x="' + x + '" y="' + y + '" width="' + W + '" height="' + (n * rh) + '" fill="none" stroke="#1a1a1a" stroke-width="1.8"/>';
+  if (T.hl !== undefined) s += '<rect x="' + cx[T.hl] + '" y="' + y + '" width="' + T.cols[T.hl] + '" height="' + (n * rh) + '" fill="none" stroke="' + FM_C.t + '" stroke-width="3.5"/>';
+  return {s: s, h: n * rh};
+}
+/* Exemple rédigé : une copie, des blocs de texte ; chaque bulle est à la hauteur de son bloc (flèches horizontales) */
+function fmCopie(titre, prob, blocs){
+  var y = 96, x0 = 40, x1 = 580, corps = '', bulles = '';
+  blocs.forEach(function(b){
+    if (b.lv && !fmOk(b.lv)) return;
+    if (b.only && FM_NV !== b.only) return;
+    var yy = y + 8, part = '';
+    if (b.head){ part += fmTx(x0 + 16, yy + 16, b.head, {size: 14.5, bold: 1, fill: '#1f4e79'}); yy += 26; }
+    (b.lines || []).forEach(function(l){ part += fmRich(x0 + 16, yy + 15, l, {it: b.it, fill: b.it ? '#444' : '#1a1a1a'}); yy += 21; });
+    var xf = x1 + 4;
+    if (b.table){ var r = fmTable(x0 + 16, yy + 2, b.table); part += r.s; yy += r.h + 6; xf = x0 + 16 + b.table.cols.reduce(function(a, w){ return a + w; }, 0) + 4; }
+    var th = yy - y + 6, bh = th, calls = (b.calls || (b.call ? [b.call] : [])).filter(function(c){ return fmOk(c[2]); });
+    var hs = calls.map(function(c){ var nl = typeof c[1] === 'string' ? 1 : c[1].length; return 14 + nl * 13 * 1.3; });
+    var need = hs.reduce(function(a, h){ return a + h + 6; }, 0);
+    if (bh < need + 4) bh = need + 4;
+    var cy = y + (bh - need) / 2 + 3;
+    calls.forEach(function(c, i){ var m = cy + hs[i] / 2; bulles += fmFl(598, f1(m), xf, f1(m), c[2]) + fmBulle(600, f1(m - hs[i] / 2), c[0], c[1], c[2]); cy += hs[i] + 6; });
+    corps += bh > th ? '<g transform="translate(0 ' + f1((bh - th) / 2) + ')">' + part + '</g>' : part; y += bh;
+  });
+  return fmSvg(860, y + 22, fmEntete(titre, prob) + '<rect x="' + x0 + '" y="90" width="' + (x1 - x0) + '" height="' + (y - 84) + '" fill="#fff" stroke="#b9c6d4"/>' + corps + bulles);
+}
+var fmM = function(svg){ return '<svg viewBox="0 0 120 80" aria-hidden="true">' + svg + '</svg>'; };
+FM_MINI.question = fmM('<rect x="30" y="6" width="60" height="68" rx="4" fill="#fff" stroke="#1a1a1a" stroke-width="2"/><text x="60" y="56" font-size="46" font-weight="700" font-family="Arial" text-anchor="middle" fill="#1a1a1a">?</text>');
+FM_MINI.coche = fmM('<rect x="30" y="6" width="60" height="68" rx="4" fill="#fff" stroke="#1a1a1a" stroke-width="2"/><path d="M44 40l12 13l22 -26" fill="none" stroke="#0aa24a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>');
+FM_MINI.tubes = fmM('<g fill="none" stroke="#1a1a1a" stroke-width="2"><path d="M34 8v52a10 10 0 0 0 20 0V8"/><path d="M68 8v52a10 10 0 0 0 20 0V8"/></g><path d="M36 36h16v24a8 8 0 0 1 -16 0Z" fill="#f2b83b"/><path d="M70 36h16v24a8 8 0 0 1 -16 0Z" fill="#bfe0f2"/><text x="44" y="30" font-size="9" font-family="Arial" text-anchor="middle">essai</text><text x="78" y="30" font-size="9" font-family="Arial" text-anchor="middle">témoin</text>');
+FM_MINI.micro = fmM('<g fill="#1a1a1a"><rect x="54" y="6" width="12" height="30" rx="3"/><rect x="50" y="36" width="20" height="8"/><rect x="38" y="52" width="44" height="6" rx="2"/><path d="M76 14q14 20 0 48h-6q12 -26 0 -46Z"/><rect x="34" y="68" width="56" height="8" rx="3"/></g>');
+FM_MINI.egal = fmM('<path d="M6 74H114" stroke="#1a1a1a" stroke-width="2"/><rect x="22" y="40" width="22" height="34" fill="#9aa"/><rect x="22" y="22" width="22" height="18" fill="#0aa24a"/><rect x="74" y="40" width="22" height="34" fill="#9aa"/><rect x="74" y="32" width="22" height="8" fill="#0aa24a"/>');
+FM_MINI.diff = fmM('<path d="M6 74H114" stroke="#1a1a1a" stroke-width="2"/><rect x="22" y="48" width="22" height="26" fill="#9aa"/><rect x="22" y="30" width="22" height="18" fill="#0aa24a"/><rect x="74" y="20" width="22" height="54" fill="#9aa"/><rect x="74" y="10" width="22" height="10" fill="#0aa24a"/><text x="60" y="44" font-size="16" font-weight="700" font-family="Arial" text-anchor="middle">%</text>');
+FM_MINI.tous = fmM('<path d="M6 6V74H114" fill="none" stroke="#1a1a1a" stroke-width="2"/><polyline points="14,20 26,28 38,36 50,44 62,50 74,56 86,60 98,62" fill="none" stroke="#1a1a1a" stroke-width="2"/><g fill="#ee7a33">' + [14, 26, 38, 50, 62, 74, 86, 98].map(function(x, i){ return '<circle cx="' + x + '" cy="' + [20, 28, 36, 44, 50, 56, 60, 62][i] + '" r="4"/>'; }).join('') + '</g>');
+FM_MINI.utiles = fmM('<path d="M6 6V74H114" fill="none" stroke="#1a1a1a" stroke-width="2"/><polyline points="14,20 26,28 38,36 50,44 62,50 74,56 86,60 98,62" fill="none" stroke="#1a1a1a" stroke-width="2"/><g fill="#0aa24a"><circle cx="14" cy="20" r="5"/><circle cx="98" cy="62" r="5"/></g><path d="M98 62V20H14" fill="none" stroke="#0aa24a" stroke-width="1.5" stroke-dasharray="3 3"/>');
+
+FM_EX['compte-rendu'] = function(){
+  return fmCopie('Exemple de compte rendu', 'la salive transforme-t-elle l\'amidon ?', [
+    {head: 'Étape 1 · Je propose une stratégie', lines: ['**Hypothèse** : la salive transforme l\'amidon.', 'Je mets de l\'amidon et de la salive dans un tube, à 37 °C.', 'Après 10 min, je teste la présence d\'amidon avec de l\'eau iodée.'], call: [1, ['Les étapes', 'dans l\'ordre'], 's']},
+    {lv: 'p', lines: ['**Témoin** : un tube avec de l\'amidon et de l\'eau, sans salive.'], call: [3, ['Ce que je fais,', 'avec le témoin'], 'p']},
+    {lv: 't', lines: ['**J\'attends** : si la salive transforme l\'amidon, l\'eau iodée', 'ne bleuira pas dans le tube avec salive.'], call: [5, ['Démarche choisie', 'et justifiée'], 't']},
+    {head: 'Étape 2 · Je réalise le protocole', lines: ['(évaluée pendant la manipulation)'], it: 1},
+    {head: 'Étape 3 · Je présente mes résultats', table: {cols: [110, 170, 200], rows: [['Tube', 'Contenu', 'Couleur de l\'eau iodée'], [fmOk('p') ? '1 (témoin)' : '1', 'amidon + eau', 'bleu-noir'], ['2', 'amidon + salive', 'orangée']]}, call: [2, ['Résultats sous', 'forme de tableau'], 's']},
+    {head: 'Étape 4 · J\'exploite mes résultats et je conclus', only: 's', lines: ['Dans le tube 2, l\'eau iodée ne bleuit pas : il n\'y a plus d\'amidon.']},
+    {head: 'Étape 4 · J\'exploite mes résultats et je conclus', lv: 'p', lines: ['Avec la salive, l\'eau iodée reste orangée : l\'amidon a disparu,', 'alors que dans le témoin, elle bleuit : l\'amidon est toujours là.'], call: [4, ['Comparaison', 'au témoin'], 'p']},
+    {lines: ['**Donc** la salive transforme l\'amidon.']},
+    {lv: 't', lines: ['Un seul essai a été réalisé : il faudrait le refaire pour confirmer.'], call: [6, ['Conclusion', 'et fiabilité'], 't']}
+  ]);
+};
+FM_EX.strategie = function(){
+  return fmCopie('Exemple de stratégie', 'la levure consomme-t-elle du glucose ?', [
+    {head: 'Ma question et mon hypothèse', lines: ['**Question** : la levure consomme-t-elle du glucose ?', '**Hypothèse** : la levure utilise le glucose pour produire son énergie.']},
+    {head: 'Ce que je fais', lines: ['Je place de la levure dans une solution de glucose, à 30 °C.'], call: [1, 'Ce que je fais', 's']},
+    {lines: ['Je mesure la concentration en glucose (g/L) toutes les 5 min,', 'pendant 30 min, avec des bandelettes test.'], call: [2, ['Ce que je mesure,', 'avec quel matériel'], 's']},
+    {lv: 'p', lines: ['**Témoin** : la même solution de glucose, **sans levure**,', 'dans les mêmes conditions.'], call: [3, ['Témoin : une seule', 'différence'], 'p']},
+    {lv: 'p', head: 'Ce que j\'attends', lines: ['Si la levure consomme du glucose, sa concentration diminue', 'seulement dans le tube avec levure.'], call: [4, ['Résultats', 'attendus'], 'p']},
+    {lv: 't', lines: ['Je choisis les bandelettes car elles donnent une valeur chiffrée,', 'que je peux comparer entre les deux tubes.'], call: [5, ['Protocole choisi', 'et justifié'], 't']},
+    {lv: 't', lines: ['Si la concentration reste stable dans les deux tubes,', 'l\'hypothèse est rejetée.'], call: [6, ['Valider ou', 'rejeter'], 't']}
+  ]);
+};
+FM_EX.presenter = function(){
+  var P = fmOk('p'), T = fmOk('t');
+  var rows = [['Tube', 'Contenu', 'Couleur de l\'eau iodée'], [P ? '1 (témoin)' : '1', 'amidon + eau', 'bleu-noir'], ['2', 'amidon + salive', 'orangée']];
+  if (T){ rows[0].push('Amidon'); rows[1].push('présent'); rows[2].push('absent'); }
+  return fmCopie('Exemple de présentation', 'la salive transforme-t-elle l\'amidon ?', [
+    {lines: ['**Couleur de l\'eau iodée dans les tubes**'], call: [2, 'Titre et légendes', 's']},
+    {lv: 'p', lines: ['Après 10 min à 37 °C ; le tube 1 est le témoin, sans salive.'], it: 1, call: [3, ['Conditions', 'et témoin'], 'p']},
+    {table: {cols: T ? [100, 150, 160, 90] : [110, 170, 200], rows: rows, hl: T ? 3 : undefined}, calls: [[1, 'Un tableau, pas un texte', 's'], [4, 'Les deux tubes réunis', 'p'], [6, 'Colonne qui répond', 't']]},
+    {lv: 't', lines: ['Un tableau, car il s\'agit de comparer des couleurs, sans valeurs.'], it: 1, call: [5, ['Mode choisi', 'et justifié'], 't']}
+  ]);
+};
+FM_EX.calculer = function(){
+  return fmCopie('Exemple de calcul', 'l\'engrais favorise-t-il la croissance des plantes ?', [
+    {lines: ['Plante avec engrais : 20,0 g au départ, 26,0 g une semaine après.', 'Plante témoin, sans engrais : 25,0 g au départ, 27,5 g après.'], it: 1},
+    {lines: ['Variation = masse finale − masse initiale'], call: [1, 'La formule', 's']},
+    {lines: ['Variation = 26,0 g − 20,0 g = **6,0 g**'], call: [2, ['Valeurs et résultat', 'avec unités'], 's']},
+    {lv: 'p', lines: ['Pourcentage = 6,0 ÷ 20,0 × 100 = **30 %**'], call: [3, 'Résultat arrondi', 'p']},
+    {lv: 'p', lines: ['Témoin : (27,5 − 25,0) ÷ 25,0 × 100 = **10 %**'], call: [4, ['Essai et témoin', 'calculés'], 'p']},
+    {lv: 't', lines: ['Je calcule un pourcentage, car les masses de départ', 'sont différentes.'], call: [5, ['Calcul choisi', 'selon le problème'], 't']},
+    {lv: 't', lines: ['La masse augmente de 30 % avec engrais contre 10 % sans :', 'l\'engrais favorise la croissance.'], call: [6, ['Une phrase', 'qui répond'], 't']}
+  ]);
+};
+FM_EX.exploiter = function(){
+  return fmCopie('Exemple d\'exploitation', 'la levure consomme-t-elle du glucose ?', [
+    {lines: ['Résultats : avec levure, le glucose passe de 10 à 4 g/L en 30 min ;', 'sans levure (témoin), il reste à 10 g/L.'], it: 1},
+    {lines: ['Avec la levure, la concentration en glucose **diminue** de 10 à', '4 g/L en 30 min.'], call: [1, ['Je décris,', 'avec des valeurs'], 's']},
+    {lines: ['Dans le témoin, elle reste à 10 g/L, soit **6 g/L de plus**', 'qu\'avec la levure à 30 min.'], call: [2, ['Je compare', 'au témoin'], 's']},
+    {lv: 'p', lines: ['**Or** les cellules de levure utilisent le glucose pour produire', 'leur énergie.'], call: [3, ['Mes', 'connaissances'], 'p']},
+    {lv: 'p', lines: ['Le document 2 montre aussi que la levure rejette du CO₂', 'pendant ce temps.'], call: [4, ['Lien avec', 'un document'], 'p']},
+    {lv: 't', lines: ['Je m\'appuie sur la mesure à 30 min, où l\'écart est le plus grand.'], call: [5, ['Résultats utiles', 'choisis'], 't']},
+    {lv: 't', lines: ['La seule différence entre les tubes est la levure : **donc** la', 'levure consomme du glucose.'], call: [6, ['Raisonnement', 'or… donc'], 't']}
+  ]);
+};
+FM_EX.conclure = function(){
+  return fmCopie('Exemple de conclusion', 'la levure consomme-t-elle du glucose ?', [
+    {lines: ['**Oui, la levure consomme du glucose.**'], call: [1, ['Je réponds', 'au problème'], 's']},
+    {lines: ['Avec la levure, le glucose passe de 10 à 4 g/L en 30 min,', 'alors qu\'il reste à 10 g/L dans le témoin.'], call: [2, ['Je m\'appuie sur', 'mes résultats'], 's']},
+    {lv: 'p', lines: ['**Or** le document 2 montre que la levure utilise le glucose', 'pour produire son énergie.'], call: [3, ['Documents et', 'connaissances'], 'p']},
+    {lv: 'p', lines: ['La différence ne vient que de la levure, **donc** c\'est bien elle', 'qui fait disparaître le glucose.'], call: [4, ['Mots de liaison :', 'or, donc'], 'p']},
+    {lv: 't', lines: ['L\'écart (6 g/L) est bien plus grand que la précision des mesures', '(0,5 g/L), mais un seul essai a été réalisé.'], call: [5, ['Fiabilité', 'discutée'], 't']},
+    {lv: 't', lines: ['Il faudrait refaire l\'expérience, et tester d\'autres sucres.'], call: [6, ['Une suite', 'proposée'], 't']}
+  ]);
+};
+
+FICHES_FM['compte-rendu'] = {
+  intro: 'Un <b>compte rendu de TP</b> suit toujours <u>les mêmes étapes</u>, en biologie comme en géologie : je prévois, je réalise, je présente mes résultats, puis je les exploite pour répondre au problème.',
+  crit: [['s', 'Les étapes du compte rendu, dans l\'ordre.'], ['s', 'Des résultats présentés sous une forme adaptée, jamais par un texte seul.'], ['p', 'Une stratégie qui précise ce que je fais, ce que je mesure et le témoin.'], ['p', 'Une exploitation qui compare les résultats au témoin.'], ['t', 'Une démarche choisie et justifiée, du problème à la conclusion.'], ['t', 'Une conclusion qui répond au problème et discute la fiabilité.']],
+  enc: [[1, 'Les 4 étapes et leurs fiches', '<ol class="fm-etapes"><li><b>Étape 1</b> · Je propose une stratégie : je formule le problème (une question), une hypothèse et les résultats attendus<br>' + fmLien('strategie', 'Construire une stratégie') + '</li><li><b>Étape 2</b> · Je réalise le protocole</li><li><b>Étape 3</b> · Je présente mes résultats<br>' + fmLien('presenter', 'Présenter ses résultats') + fmLien('calculer', 'Calculer') + '</li><li><b>Étape 4</b> · J\'exploite mes résultats et je conclus<br>' + fmLien('exploiter', 'Exploiter ses résultats') + fmLien('conclure', 'Conclure') + '</li></ol>'], [2, 'Avant de commencer', '<p>Je lis toute la consigne et je repère le <b>problème</b> : tout mon compte rendu y répond.</p>' + fmLien('decrypter', 'Décrypter une consigne')]],
+  alt: 'Exemple de compte rendu annoté : la salive transforme-t-elle l\'amidon ?',
+  fin: [5, 'Du problème à la conclusion', [['question', 'Au début', 'Je recopie le problème : chaque étape sert à y répondre.'], ['coche', 'À la fin', 'Ma conclusion répond au problème, avec mes résultats.']]]
+};
+FICHES_FM.strategie = {
+  intro: 'Avant de manipuler, je construis une <b>stratégie</b> : je dis <u>ce que je vais faire</u>, comment, et ce que j\'attends pour répondre au problème.',
+  crit: [['s', 'Ce que je fais (manipulation ou observation).'], ['s', 'Ce que je mesure ou j\'observe, avec quel matériel.'], ['p', 'Un témoin qui ne diffère que par le facteur testé.'], ['p', 'Les résultats attendus si l\'hypothèse est juste.'], ['t', 'Un protocole choisi et justifié selon le problème.'], ['t', 'Une stratégie qui permet de valider ou de rejeter l\'hypothèse.']],
+  enc: [[1, 'Ce que je fais', '<p>Je fais… <b>pour</b>… : je teste <b>un seul facteur</b> et je garde tout le reste identique.</p>'], [2, 'Ce que je mesure', '<p>Une grandeur, avec son <b>unité</b> et le <b>matériel</b> : « je mesure la concentration en glucose (g/L) avec des bandelettes ».</p>' + fmLien('compte-rendu', 'Structurer un compte rendu de TP')]],
+  alt: 'Exemple de stratégie annotée : la levure consomme-t-elle du glucose ?',
+  fin: [5, 'Expérience ou observation ?', [['tubes', 'Expérience', 'Je teste un facteur : un essai et un témoin.'], ['micro', 'Observation', 'J\'observe ou je mesure un objet (roche, cellule) : pas toujours de témoin.']]]
+};
+FICHES_FM.presenter = {
+  intro: 'Je <b>présente mes résultats</b> sous une forme qui les rend <u>lisibles et comparables</u>, pour répondre au problème : jamais par un texte seul.',
+  crit: [['s', 'Des résultats présentés sous une forme adaptée, jamais par un texte seul.'], ['s', 'Une présentation soignée, avec un titre et des légendes.'], ['p', 'Les informations utiles : unités, conditions, témoin.'], ['p', 'Plusieurs résultats réunis sur un même support pour les comparer.'], ['t', 'Choix du mode de présentation le plus adapté.'], ['t', 'Une présentation qui montre clairement la réponse au problème.']],
+  enc: [[1, 'Quelle forme pour quels résultats ?', '<ul class="fm-etapes"><li>Des valeurs à comparer<br>' + fmLien('tableau', 'Le tableau') + fmLien('histogramme', 'L\'histogramme') + '</li><li>Une évolution<br>' + fmLien('graphique', 'Le graphique') + '</li><li>Une observation<br>' + fmLien('dessin', 'Le dessin d\'observation') + fmLien('image', 'L\'image numérique') + '</li><li>Une organisation, un mécanisme<br>' + fmLien('schema', 'Le schéma') + '</li></ul>'], [2, 'Le titre', '<p>Il dit <b>ce que montrent</b> les résultats.</p><p>Exemple : couleur de l\'eau iodée dans les tubes.</p>']],
+  alt: 'Exemple de présentation annotée : tableau de la couleur de l\'eau iodée dans les tubes.',
+  fin: [5, 'Quel mode de présentation ?', [['simple', 'Comparer des valeurs', 'Un tableau ou un histogramme.'], ['courbe', 'Suivre une évolution', 'Un graphique (courbe).']]]
+};
+FICHES_FM.calculer = {
+  intro: 'Je <b>calcule</b> pour <u>tirer un résultat de mes mesures</u> : un calcul que l\'on peut suivre, du début à la fin.',
+  crit: [['s', 'La formule, écrite avant de calculer.'], ['s', 'Les valeurs et le résultat, chacun avec son unité.'], ['p', 'Un résultat arrondi avec un nombre de chiffres adapté.'], ['p', 'Les calculs faits pour l\'essai et pour le témoin.'], ['t', 'Choix du calcul utile au problème (variation, pourcentage, moyenne…).'], ['t', 'Une phrase qui donne le résultat et ce qu\'il montre.']],
+  enc: [[1, 'Écrire un calcul', '<p>1. La <b>formule</b>, en mots.</p><p>2. Les <b>valeurs</b>, avec leurs unités.</p><p>3. Le <b>résultat</b>, avec son unité.</p>'], [2, 'Les calculs fréquents', '<p><b>Variation</b> = valeur finale − valeur initiale</p><p><b>Pourcentage</b> = variation ÷ valeur initiale × 100</p><p><b>Moyenne</b> = somme des valeurs ÷ nombre de valeurs</p><p><b>Grossissement</b> = oculaire × objectif</p>']],
+  alt: 'Exemple de calcul annoté : variation et pourcentage d\'augmentation de la masse de deux plantes.',
+  fin: [5, 'Variation ou pourcentage ?', [['egal', 'Variation', 'Mêmes valeurs de départ : la différence suffit.'], ['diff', 'Pourcentage', 'Valeurs de départ différentes : je compare en %.']]]
+};
+FICHES_FM.exploiter = {
+  intro: 'J\'<b>exploite mes résultats</b> pour <u>leur donner un sens</u> : je décris, je compare au témoin, puis j\'interprète pour avancer vers la réponse au problème.',
+  crit: [['s', 'Description des résultats, avec des valeurs.'], ['s', 'Comparaison avec le témoin, avec l\'écart chiffré.'], ['p', 'Interprétation avec mes connaissances.'], ['p', 'Mise en relation des résultats et des documents.'], ['t', 'Choix des résultats utiles pour répondre au problème.'], ['t', 'Raisonnement construit avec des mots de liaison (or, donc…).']],
+  enc: [[1, 'Décrire', '<p>Ce qui change, dans quel sens, de combien : « passe de … à … en … ».</p><p>Avec des <b>valeurs</b> et leurs unités.</p>'], [2, 'Comparer au témoin', '<p><b>Au même moment</b>, avec l\'<b>écart chiffré</b> : « … de plus que le témoin ».</p>' + fmLien('conclure', 'Conclure')]],
+  alt: 'Exemple d\'exploitation annotée : la levure consomme-t-elle du glucose ?',
+  fin: [5, 'Quels résultats utiliser ?', [['tous', 'Tout citer', 'Trop long : l\'essentiel se perd.'], ['utiles', 'Choisir', 'Les valeurs utiles : début, fin, plus grand écart.']]]
+};
+FICHES_FM.conclure = {
+  intro: 'Je <b>conclus</b> en <u>répondant au problème</u>, parfois seulement en partie, avec des arguments.',
+  crit: [['s', 'Une réponse claire au problème posé.'], ['s', 'Une réponse appuyée sur les résultats.'], ['p', 'Des documents et des connaissances utilisés en plus.'], ['p', 'Des idées reliées par des mots de liaison (car, or, donc…).'], ['t', 'Une fiabilité discutée : témoin, précision, nombre d\'essais.'], ['t', 'Une suite proposée si la réponse n\'est que partielle.']],
+  enc: [[1, 'Répondre au problème', '<p>Je reprends les mots du problème : « <b>Oui</b>, la levure consomme du glucose ».</p>'], [2, 'M\'appuyer sur mes résultats', '<p>Je cite le résultat qui le prouve, <b>avec une valeur</b>.</p>' + fmLien('exploiter', 'Exploiter ses résultats')]],
+  alt: 'Exemple de conclusion annotée : la levure consomme-t-elle du glucose ?',
+  fin: [5, 'Mes résultats sont-ils fiables ?', [['coche', 'Plutôt fiables', 'Témoin, plusieurs essais, écart plus grand que la précision.'], ['question', 'À vérifier', 'Un seul essai, écart faible, pas de témoin.']]]
+};
+
 function renderMethode(){
   var list = METHODES.filter(visible), m = null, idx = -1;
   list.forEach(function(x, i){ if (x.id === S.methode){ m = x; idx = i; } });
   if (!m){ renderMethodes(); return; }
   document.body.style.cssText = colorVars(m.couleur || METH_COUL);
-  if (m.special === 'graphique'){
+  if (m.special === 'fm'){
     var nx0 = list[idx + 1];
-    app.innerHTML = renderGraphFiche(m) + '<nav class="mf-nav"><button class="btn" id="mList">← Toutes les fiches</button>' + (nx0 ? '<button class="btn" id="mNext">' + esc(nx0.titre) + ' →</button>' : '') + '</nav></div>';
+    app.innerHTML = renderFicheFM(m) + '<nav class="mf-nav"><button class="btn" id="mList">← Toutes les fiches</button>' + (nx0 ? '<button class="btn" id="mNext">' + esc(nx0.titre) + ' →</button>' : '') + '</nav></div>';
     $('mList').onclick = function(){ go('methodes'); };
     if (nx0) $('mNext').onclick = function(){ go('methode', {methode: nx0.id}); };
+    fmBindNiveau();
     return;
   }
   function card(cls, titre, inner){ return '<section class="mf-card' + (cls ? ' ' + cls : '') + '">' + (titre ? '<h2>' + esc(titre) + '</h2>' : '') + inner + '</section>'; }
